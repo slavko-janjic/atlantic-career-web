@@ -5,7 +5,62 @@
 
 /* === TOKENS === */
 
+:root {
+  /* Colors */
+  --atl-red:    #ED1C2B;
+  --atl-dark:   #333333;
+  --atl-bg:     #F5F5F5;
+  --atl-border: #D2D5D7;
+  --atl-white:  #FFFFFF;
+  --atl-accent: #ED1C2B;
+
+  /* Fonts — SAP platform registers these font-family names via @font-face */
+  --atl-font-book:   'custom1cdc72a1280c488ba8954', sans-serif;
+  --atl-font-medium: 'customa4cf9070d1c841e28b809', sans-serif;
+  --atl-font-black:  'custom7a590e3d1f3945ba91932', sans-serif;
+
+  /* Spacing scale (8px grid) */
+  --atl-sp-1:  8px;
+  --atl-sp-2:  16px;
+  --atl-sp-3:  24px;
+  --atl-sp-4:  32px;
+  --atl-sp-6:  48px;
+  --atl-sp-8:  64px;
+  --atl-sp-12: 96px;
+  --atl-sp-16: 128px;
+
+  /* Layout */
+  --atl-container-max: 1440px;
+  --atl-gap: 32px;
+
+  /* Breakpoints — reference comments only, cannot be used in @media */
+  /* --atl-bp-md: 768px  (tablet)  */
+  /* --atl-bp-lg: 1280px (desktop) */
+}
+
 /* === RESET === */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Override SAP/Bootstrap h1-h4 color injection */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--atl-font-black);
+  color: var(--atl-red);
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+}
 
 /* === TYPOGRAPHY === */
 
