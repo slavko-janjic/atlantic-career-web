@@ -316,6 +316,56 @@ a {
   }
 }
 
+/* ---- atl-accordion ---- */
+
+.atl-accordion__item {
+  border-bottom: 1px solid rgba(51, 51, 51, 0.2);
+}
+
+.atl-accordion__trigger {
+  width: 100%;
+  background: transparent;
+  border: none;
+  text-align: left;
+  padding: 24px 0;
+  font-family: var(--atl-font-black);
+  font-size: clamp(1.4rem, 2vw, 2rem);
+  color: var(--atl-dark);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.atl-accordion__trigger::after {
+  content: '+';
+  font-size: 2rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.atl-accordion__trigger.is-open {
+  border-bottom: 1px solid transparent;
+}
+
+.atl-accordion__trigger.is-open::after {
+  content: '−';
+}
+
+.atl-accordion__panel {
+  display: none;
+  padding: 0 0 24px;
+  font-family: var(--atl-font-book);
+  font-size: clamp(1rem, 1.2vw, 1.6rem);
+  line-height: 1.7;
+  color: var(--atl-dark);
+  border-bottom: 1px solid rgba(51, 51, 51, 0.2);
+}
+
+.atl-accordion__panel.is-open {
+  display: block;
+}
+
 /* === UTILITIES === */
 
 /* === LANGUAGE OVERRIDES === */

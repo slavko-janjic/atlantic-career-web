@@ -110,6 +110,50 @@
     </div>
   </div>
 
+  <div class="atl-section atl-section--alt">
+    <div class="atl-container">
+      <p class="preview-label">Accordion</p>
+      <div class="atl-accordion">
+        <div class="atl-accordion__item">
+          <button class="atl-accordion__trigger is-open">Što je uvođenje u posao i zašto je važno?</button>
+          <div class="atl-accordion__panel is-open">
+            Svaki novi Atlantikovac dobiva Buddy mentora koji ga uvodi u kulturu i procese kompanije tokom prvih 90 dana.
+          </div>
+        </div>
+        <div class="atl-accordion__item">
+          <button class="atl-accordion__trigger">Tko je Buddy?</button>
+          <div class="atl-accordion__panel">
+            Buddy je iskusan kolega koji pomaže novom zaposleniku da se snađe u prvim tjednima rada.
+          </div>
+        </div>
+        <div class="atl-accordion__item">
+          <button class="atl-accordion__trigger">Kako izgleda onboarding plan?</button>
+          <div class="atl-accordion__panel">
+            Onboarding plan traje 90 dana i uključuje upoznavanje s kompanijom, timom i procesima rada.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.querySelectorAll('.atl-accordion__trigger').forEach(function(trigger) {
+      trigger.addEventListener('click', function() {
+        var panel = this.nextElementSibling;
+        var isOpen = this.classList.contains('is-open');
+        var accordion = this.closest('.atl-accordion');
+        accordion.querySelectorAll('.atl-accordion__trigger').forEach(function(t) {
+          t.classList.remove('is-open');
+          t.nextElementSibling.classList.remove('is-open');
+        });
+        if (!isOpen) {
+          this.classList.add('is-open');
+          panel.classList.add('is-open');
+        }
+      });
+    });
+  </script>
+
   <!-- Components will be added here as tasks complete -->
 
 </body>
