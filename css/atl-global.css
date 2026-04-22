@@ -64,6 +64,81 @@ a {
 
 /* === TYPOGRAPHY === */
 
+.atl-heading-1 {
+  font-family: var(--atl-font-black);
+  font-size: clamp(3rem, 6vw, 7.2rem);
+  color: var(--atl-red);
+  line-height: 1.05;
+  margin: 0;
+}
+
+.atl-heading-2 {
+  font-family: var(--atl-font-black);
+  font-size: clamp(2.4rem, 4vw, 5rem);
+  color: var(--atl-red);
+  line-height: 1.1;
+  margin: 0;
+}
+
+.atl-heading-3 {
+  font-family: var(--atl-font-black);
+  font-size: clamp(2rem, 3vw, 3.6rem);
+  color: var(--atl-red);
+  line-height: 1.15;
+  margin: 0;
+}
+
+.atl-heading-4 {
+  font-family: var(--atl-font-black);
+  font-size: clamp(1.6rem, 2vw, 2.4rem);
+  color: var(--atl-dark);
+  line-height: 1.2;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0;
+}
+
+.atl-subheading {
+  font-family: var(--atl-font-medium);
+  font-size: clamp(1.2rem, 1.5vw, 1.8rem);
+  color: var(--atl-dark);
+  line-height: 1.3;
+  margin: 0;
+}
+
+.atl-lead {
+  font-family: var(--atl-font-book);
+  font-size: clamp(1.4rem, 2vw, 2.4rem);
+  color: var(--atl-dark);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.atl-body {
+  font-family: var(--atl-font-book);
+  font-size: clamp(1rem, 1.2vw, 1.6rem);
+  color: var(--atl-dark);
+  line-height: 1.7;
+  margin: 0;
+}
+
+.atl-caption {
+  font-family: var(--atl-font-book);
+  font-size: 1.2rem;
+  color: #666;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.atl-label {
+  font-family: var(--atl-font-medium);
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--atl-dark);
+  margin: 0;
+}
+
 /* === GRID === */
 
 /* === COMPONENTS === */
