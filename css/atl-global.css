@@ -366,6 +366,66 @@ a {
   display: block;
 }
 
+/* ---- atl-carousel ---- */
+
+.atl-carousel {
+  position: relative;
+  overflow: hidden;
+}
+
+.atl-carousel__track {
+  display: flex;
+  transition: transform 0.4s ease-in-out;
+}
+
+.atl-carousel__slide {
+  flex: 0 0 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: var(--atl-sp-12) 10vw;
+}
+
+.atl-carousel__nav {
+  position: absolute;
+  bottom: var(--atl-sp-4);
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--atl-sp-2);
+}
+
+.atl-carousel__prev,
+.atl-carousel__next {
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: var(--atl-dark);
+  padding: 4px 8px;
+  line-height: 1;
+}
+
+.atl-carousel__dots {
+  display: flex;
+  gap: 8px;
+}
+
+.atl-carousel__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #ccc;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.atl-carousel__dot.is-active {
+  background: var(--atl-accent);
+}
+
 /* === UTILITIES === */
 
 /* === LANGUAGE OVERRIDES === */

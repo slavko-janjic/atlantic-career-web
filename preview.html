@@ -154,6 +154,69 @@
     });
   </script>
 
+  <div class="atl-section">
+    <div class="preview-label" style="padding-left:32px">Carousel (testimonials)</div>
+    <div class="atl-carousel" style="background:var(--atl-bg)">
+      <div class="atl-carousel__track">
+        <div class="atl-carousel__slide">
+          <p class="atl-lead">"Farmacia mi je pružila prostor za stručni rast i razvoj koji nisam mogla pronaći nigdje drugdje."</p>
+          <p class="atl-caption" style="margin-top:16px">– Lara Ismailovski, mag. pharm.</p>
+        </div>
+        <div class="atl-carousel__slide">
+          <p class="atl-lead">"Svaki dan je nova prilika za učenje. Ovdje zaista osjećam da me kompanija podržava."</p>
+          <p class="atl-caption" style="margin-top:16px">– Mirela Dimitrović, mag. pharm.</p>
+        </div>
+        <div class="atl-carousel__slide">
+          <p class="atl-lead">"Atlantic mi je dao krila — razvila sam se od magistre farmacije do voditeljice tima."</p>
+          <p class="atl-caption" style="margin-top:16px">– Ivančica Drča, farm. teh.</p>
+        </div>
+      </div>
+      <div class="atl-carousel__nav">
+        <button class="atl-carousel__prev">&#8592;</button>
+        <div class="atl-carousel__dots"></div>
+        <button class="atl-carousel__next">&#8594;</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function() {
+      var track = document.querySelector('.atl-carousel__track');
+      var slides = document.querySelectorAll('.atl-carousel__slide');
+      var dotsWrapper = document.querySelector('.atl-carousel__dots');
+      var current = 0;
+
+      function render() {
+        track.style.transform = 'translateX(-' + (current * 100) + '%)';
+        dotsWrapper.querySelectorAll('.atl-carousel__dot').forEach(function(d, i) {
+          d.classList.toggle('is-active', i === current);
+        });
+      }
+
+      function buildDots() {
+        slides.forEach(function(_, i) {
+          var dot = document.createElement('button');
+          dot.className = 'atl-carousel__dot';
+          dot.addEventListener('click', function() { current = i; render(); });
+          dotsWrapper.appendChild(dot);
+        });
+      }
+
+      document.querySelector('.atl-carousel__prev').addEventListener('click', function() {
+        current = (current - 1 + slides.length) % slides.length;
+        render();
+      });
+
+      document.querySelector('.atl-carousel__next').addEventListener('click', function() {
+        current = (current + 1) % slides.length;
+        render();
+      });
+
+      buildDots();
+      render();
+    })();
+  </script>
+
   <!-- Components will be added here as tasks complete -->
 
 </body>
