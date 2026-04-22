@@ -285,6 +285,37 @@ a {
   margin: 0;
 }
 
+/* ---- atl-two-col ---- */
+
+.atl-two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--atl-gap);
+  align-items: center;
+}
+
+.atl-two-col img {
+  width: 100%;
+  height: auto;
+}
+
+.atl-two-col--reverse {
+  direction: rtl;
+}
+
+.atl-two-col--reverse > * {
+  direction: ltr;
+}
+
+@media (max-width: 767px) {
+  .atl-two-col {
+    grid-template-columns: 1fr;
+  }
+  .atl-two-col--reverse {
+    direction: ltr;
+  }
+}
+
 /* === UTILITIES === */
 
 /* === LANGUAGE OVERRIDES === */
