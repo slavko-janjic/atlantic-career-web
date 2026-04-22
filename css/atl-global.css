@@ -426,6 +426,39 @@ a {
   background: var(--atl-accent);
 }
 
+/* ---- atl-cta ---- */
+
+.atl-cta {
+  background-color: var(--atl-bg);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.atl-cta__cell {
+  padding: var(--atl-sp-8);
+  display: flex;
+  flex-direction: column;
+  gap: var(--atl-sp-3);
+  align-items: flex-start;
+}
+
+.atl-cta__cell + .atl-cta__cell {
+  border-left: 1px solid var(--atl-border);
+}
+
+@media (max-width: 767px) {
+  .atl-cta {
+    grid-template-columns: 1fr;
+  }
+  .atl-cta__cell + .atl-cta__cell {
+    border-left: none;
+    border-top: 1px solid var(--atl-border);
+  }
+  .atl-cta__cell {
+    padding: var(--atl-sp-6) var(--atl-sp-4);
+  }
+}
+
 /* === UTILITIES === */
 
 /* === LANGUAGE OVERRIDES === */
