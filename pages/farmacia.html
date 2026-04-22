@@ -1,0 +1,244 @@
+<style>
+/* ============================================================ */
+/* FARMACIA THEME — paste this style block at the top of the   */
+/* Farmacia custom code component (before all HTML)             */
+/* ============================================================ */
+
+/* Override accent to Farmacia green */
+:root {
+  --atl-accent: #23BE55;
+  --atl-pharma-green: #23BE55;
+  --atl-pharma-grey: #F1F4F7;
+}
+
+/* ---- atl-intro (Farmacia hero) ---- */
+.atl-intro {
+  background: var(--atl-pharma-grey);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 90vh;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.atl-intro__container {
+  width: 80vw;
+  max-width: var(--atl-container-max);
+  display: flex;
+  align-items: stretch;
+  gap: var(--atl-sp-8);
+  height: 100%;
+}
+
+.atl-intro__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--atl-sp-2);
+  padding: var(--atl-sp-12) 0;
+}
+
+.atl-intro__image {
+  width: 50%;
+  flex-shrink: 0;
+  display: flex;
+  align-items: flex-end;
+}
+
+.atl-intro__image img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+@media (max-width: 1024px) {
+  .atl-intro {
+    min-height: auto;
+    padding: var(--atl-sp-8) 0;
+  }
+  .atl-intro__container {
+    flex-direction: column;
+    align-items: center;
+    width: 90vw;
+  }
+  .atl-intro__image {
+    width: 100%;
+  }
+}
+
+/* ---- atl-categories (2x2 grid of category links) ---- */
+.atl-categories {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--atl-sp-8);
+  padding: var(--atl-sp-12) 10vw;
+  max-width: var(--atl-container-max);
+  margin: 0 auto;
+}
+
+@media (max-width: 767px) {
+  .atl-categories {
+    grid-template-columns: 1fr;
+    padding: var(--atl-sp-8) var(--atl-sp-4);
+  }
+}
+
+.atl-category {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  text-decoration: none !important;
+  color: inherit;
+  transition: transform 0.1s ease;
+  gap: var(--atl-sp-4);
+}
+
+.atl-category:hover {
+  transform: scale(1.02);
+}
+
+.atl-category img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+}
+
+.atl-category__title {
+  font-family: var(--atl-font-black);
+  font-size: clamp(1.8rem, 2.5vw, 3rem);
+  color: var(--atl-pharma-green);
+}
+
+/* ---- atl-roles (image + text pairs) ---- */
+.atl-roles {
+  padding: var(--atl-sp-12) 0;
+}
+
+.atl-roles__container {
+  max-width: 80vw;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--atl-sp-12);
+}
+
+.atl-roles__item {
+  display: flex;
+  align-items: center;
+  gap: var(--atl-sp-8);
+}
+
+.atl-roles__item img {
+  width: 100%;
+  max-width: 560px;
+  height: auto;
+}
+
+.atl-roles__content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--atl-sp-3);
+}
+
+@media (max-width: 1024px) {
+  .atl-roles__item {
+    flex-direction: column;
+  }
+  .atl-roles__container {
+    max-width: 90vw;
+  }
+}
+
+/* ---- atl-apply (application CTA row) ---- */
+.atl-apply-wrapper {
+  background: var(--atl-pharma-grey);
+  padding: var(--atl-sp-8) 0;
+}
+
+.atl-apply-divider {
+  height: 1px;
+  background: var(--atl-border);
+  width: 80vw;
+  margin: var(--atl-sp-4) auto;
+}
+
+.atl-apply {
+  display: block;
+  text-decoration: none !important;
+  color: inherit;
+}
+
+.atl-apply__container {
+  max-width: 80vw;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--atl-sp-8);
+}
+
+.atl-apply__text {
+  font-family: var(--atl-font-black);
+  font-size: clamp(2rem, 3vw, 4rem);
+  color: var(--atl-dark);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--atl-sp-1);
+}
+
+.atl-apply__text .atl-apply__email {
+  color: var(--atl-pharma-green);
+  text-decoration: underline;
+}
+
+.atl-apply__arrow img {
+  max-height: 64px;
+  width: auto;
+  transition: opacity 0.2s ease;
+}
+
+.atl-apply:hover .atl-apply__arrow img {
+  opacity: 0.7;
+}
+
+@media (max-width: 767px) {
+  .atl-apply__container {
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 90vw;
+  }
+  .atl-apply__text { font-size: 2rem; }
+}
+
+/* ---- atl-pharma-logos ---- */
+.atl-pharma-logos {
+  padding: var(--atl-sp-8) 0 0;
+}
+
+.atl-pharma-logos__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--atl-sp-8);
+  max-width: 80vw;
+  margin: 0 auto;
+}
+
+.atl-pharma-logos__container img {
+  max-height: 64px;
+  width: auto;
+}
+
+@media (max-width: 767px) {
+  .atl-pharma-logos__container {
+    flex-direction: column;
+    gap: var(--atl-sp-4);
+  }
+}
+</style>
+
+<!-- HTML sections added in Task 17 -->
