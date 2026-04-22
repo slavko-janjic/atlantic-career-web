@@ -461,4 +461,35 @@ a {
 
 /* === UTILITIES === */
 
-/* === LANGUAGE OVERRIDES === */
+.atl-center { text-align: center; }
+.atl-left   { text-align: left; }
+.atl-right  { text-align: right; }
+
+.atl-color-red   { color: var(--atl-red) !important; }
+.atl-color-dark  { color: var(--atl-dark) !important; }
+.atl-color-white { color: var(--atl-white) !important; }
+
+.atl-bg-alt   { background-color: var(--atl-bg); }
+.atl-bg-white { background-color: var(--atl-white); }
+
+.atl-hide-mobile {
+  display: none;
+}
+@media (min-width: 768px) {
+  .atl-hide-mobile  { display: revert; }
+  .atl-hide-desktop { display: none; }
+}
+
+.atl-fill-link {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  text-decoration: none !important;
+}
+
+/* === LANGUAGE OVERRIDES ===
+   Use html[lang] selectors to scope layout changes to specific locales.
+   Populated as differences are discovered across HR/EN/SL/SR.
+   Example:
+   html[lang="sl-SI"] .atl-hero__content { max-width: 65%; }
+*/
