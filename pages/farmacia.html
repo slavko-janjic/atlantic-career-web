@@ -112,6 +112,76 @@
   color: var(--atl-pharma-green);
 }
 
+/* ---- atl-description (why section) ---- */
+.atl-description {
+  padding: var(--atl-sp-12) 10vw;
+  max-width: var(--atl-container-max);
+  margin: 0 auto;
+}
+
+.atl-description p {
+  margin-bottom: var(--atl-sp-4);
+}
+
+/* ---- atl-benefits (two-column perks list) ---- */
+.atl-benefits {
+  padding: var(--atl-sp-12) 10vw;
+  max-width: var(--atl-container-max);
+  margin: 0 auto;
+}
+
+.atl-benefits__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--atl-sp-10);
+  margin-top: var(--atl-sp-8);
+}
+
+@media (max-width: 767px) {
+  .atl-benefits__grid {
+    grid-template-columns: 1fr;
+  }
+  .atl-benefits {
+    padding: var(--atl-sp-8) var(--atl-sp-4);
+  }
+}
+
+.atl-benefits__column-title {
+  font-family: var(--atl-font-black);
+  font-size: clamp(1.6rem, 2vw, 2.4rem);
+  color: var(--atl-dark);
+  margin-bottom: var(--atl-sp-4);
+}
+
+.atl-benefits__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--atl-sp-3);
+}
+
+.atl-perk-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--atl-sp-3);
+}
+
+.atl-perk-item img {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  object-fit: contain;
+  margin-top: 2px;
+}
+
+.atl-perk-item span {
+  font-size: clamp(1.3rem, 1.5vw, 1.8rem);
+  line-height: 1.5;
+  color: var(--atl-dark);
+}
+
 /* ---- atl-roles (image + text pairs) ---- */
 .atl-roles {
   padding: var(--atl-sp-12) 0;
@@ -239,6 +309,415 @@
     gap: var(--atl-sp-4);
   }
 }
+
+/* ---- atl-footer ---- */
+.atl-footer {
+  padding: var(--atl-sp-8) 0;
+  background: var(--atl-pharma-grey);
+}
+
+.atl-footer__container {
+  max-width: 80vw;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--atl-sp-6);
+}
+
+.atl-footer__logo img {
+  max-height: 48px;
+  width: auto;
+}
+
+.atl-footer__social {
+  display: flex;
+  gap: var(--atl-sp-4);
+  align-items: center;
+}
+
+.atl-footer__social a img {
+  max-height: 32px;
+  width: auto;
+  transition: opacity 0.2s ease;
+}
+
+.atl-footer__social a:hover img {
+  opacity: 0.7;
+}
+
+@media (max-width: 767px) {
+  .atl-footer__container {
+    flex-direction: column;
+    max-width: 90vw;
+  }
+}
+
+/* ---- atl-carousel (testimonial carousel) ---- */
+.atl-carousel {
+  padding: var(--atl-sp-12) 0;
+  overflow: hidden;
+}
+
+.atl-carousel__track {
+  display: flex;
+  transition: transform 0.4s ease;
+}
+
+.atl-carousel__slide {
+  min-width: 100%;
+  box-sizing: border-box;
+  padding: 0 10vw;
+}
+
+.atl-carousel__slide-inner {
+  display: flex;
+  align-items: center;
+  gap: var(--atl-sp-8);
+  max-width: var(--atl-container-max);
+  margin: 0 auto;
+}
+
+.atl-carousel__slide-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--atl-sp-3);
+}
+
+.atl-carousel__slide-image {
+  width: 280px;
+  flex-shrink: 0;
+}
+
+.atl-carousel__slide-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+@media (max-width: 767px) {
+  .atl-carousel__slide-inner {
+    flex-direction: column;
+  }
+  .atl-carousel__slide-image {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+.atl-carousel__nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--atl-sp-4);
+  margin-top: var(--atl-sp-6);
+}
+
+.atl-carousel__prev,
+.atl-carousel__next {
+  background: none;
+  border: 1px solid var(--atl-border);
+  cursor: pointer;
+  padding: var(--atl-sp-2) var(--atl-sp-3);
+  font-size: 1.5rem;
+  border-radius: 4px;
+  line-height: 1;
+}
+
+.atl-carousel__prev:hover,
+.atl-carousel__next:hover {
+  background: var(--atl-pharma-grey);
+}
+
+.atl-carousel__dots {
+  display: flex;
+  gap: var(--atl-sp-2);
+}
+
+.atl-carousel__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  background: var(--atl-border);
+  cursor: pointer;
+  padding: 0;
+}
+
+.atl-carousel__dot.is-active {
+  background: var(--atl-pharma-green);
+}
 </style>
 
-<!-- HTML sections added in Task 17 -->
+<!-- ============================================================ -->
+<!-- SECTION: Intro hero                                          -->
+<!-- ============================================================ -->
+<div class="atl-intro">
+  <div class="atl-intro__container">
+    <div class="atl-intro__content">
+      <h1 class="atl-heading-1" style="color:var(--atl-dark)">Farmacia – mjesto za vrhunske farmaceutske eksperte</h1>
+    </div>
+    <div class="atl-intro__image">
+      <img src="https://rmkcdn.successfactors.com/fbe9912e/7fc08c7f-7062-4d2c-bd84-d.jpg" alt="Farmaceut">
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- SECTION: Categories grid                                     -->
+<!-- ============================================================ -->
+<div class="atl-categories">
+  <a class="atl-category" href="https://careers.atlanticgrupa.com/content/Farmaceut/?locale=hr_HR#">
+    <img src="https://rmkcdn.successfactors.com/fbe9912e/61313fa5-26e9-4a1c-a094-e.jpg" alt="Farmaceut">
+    <p class="atl-category__title">Farmaceut</p>
+    <button class="atl-btn atl-btn--primary">Zaposli se</button>
+  </a>
+  <a class="atl-category" href="https://careers.atlanticgrupa.com/content/Farmaceutski%20Tehnicar/?locale=hr_HR#">
+    <img src="https://rmkcdn.successfactors.com/fbe9912e/21954a8c-9d53-4d05-ba3c-8.jpg" alt="Farmaceutski tehničar">
+    <p class="atl-category__title">Farmaceutski tehničar</p>
+    <button class="atl-btn atl-btn--primary">Zaposli se</button>
+  </a>
+</div>
+
+<!-- ============================================================ -->
+<!-- SECTION: Testimonial carousel                                -->
+<!-- ============================================================ -->
+<div class="atl-carousel" style="background:var(--atl-bg)">
+  <div class="atl-carousel__track">
+    <div class="atl-carousel__slide">
+      <div class="atl-carousel__slide-inner">
+        <div class="atl-carousel__slide-content">
+          <h3 class="atl-heading-3" style="color:var(--atl-pharma-green)">Tim vrhunskih eksperata koji zajedno stvara izvrsnost</h3>
+          <p class="atl-lead">Put u Farmaciji počela sam kao farmaceut pripravnik. U godinama rada u Farmaciji naučila sam koliko je važna podrška kolega. Kao voditeljici ljekarne cilj mi je uvijek bio stvoriti okruženje u kojem se svi osjećaju sigurno, motivirano i podržano u profesionalnom razvoju. Samo snažan tim može pružiti najbolju skrb pacijentima.</p>
+          <p class="atl-caption">– Mirela Dimitrović, mag.pharm.</p>
+        </div>
+        <div class="atl-carousel__slide-image">
+          <img src="https://rmkcdn.successfactors.com/fbe9912e/2bc0a1a5-57b8-46b7-ab7b-e.jpg" alt="Mirela Dimitrović">
+        </div>
+      </div>
+    </div>
+    <div class="atl-carousel__slide">
+      <div class="atl-carousel__slide-inner">
+        <div class="atl-carousel__slide-content">
+          <h3 class="atl-heading-3" style="color:var(--atl-pharma-green)">Mjesto gdje se prepoznaju vrhunska ekspertiza i uspjeh</h3>
+          <p class="atl-lead">Prije sedam godina bojala sam se izazova rada u ljekarni. Danas sam zamjenik voditelja i magistrica s najboljim radnim portfolijem u 2022. godini. Farmacia je prepoznala moju ambiciju i trud te mi omogućila daljnje usavršavanje. Ovdje nikada nisi sam – uspjesi su timski, a podrška je stalna.</p>
+          <p class="atl-caption">– Lara Ismailovski, mag. pharm.</p>
+        </div>
+        <div class="atl-carousel__slide-image">
+          <img src="https://rmkcdn.successfactors.com/fbe9912e/a656223d-1d6c-43ce-8b76-3.jpg" alt="Lara Ismailovski">
+        </div>
+      </div>
+    </div>
+    <div class="atl-carousel__slide">
+      <div class="atl-carousel__slide-inner">
+        <div class="atl-carousel__slide-content">
+          <h3 class="atl-heading-3" style="color:var(--atl-pharma-green)">Vrhunska ekspertiza koja se cijeni i nagrađuje</h3>
+          <p class="atl-lead">Farmacia je mjesto gdje se trud i znanje cijene. Dodatnim edukacijama, razvojem i mogućnostima napredovanja zaposlenici imaju priliku osigurati stabilnost i financijski rast. Nakon 29 godina karijere, od kojih sam već 10 u Farmaciji, mogu reći da je ovo posao koji pruža sigurnost i nagrađuje angažman.</p>
+          <p class="atl-caption">– Ivančica Drča, farm. teh.</p>
+        </div>
+        <div class="atl-carousel__slide-image">
+          <img src="https://rmkcdn.successfactors.com/fbe9912e/bf72b7af-59ba-4b10-968b-f.jpg" alt="Ivančica Drča">
+        </div>
+      </div>
+    </div>
+    <div class="atl-carousel__slide">
+      <div class="atl-carousel__slide-inner">
+        <div class="atl-carousel__slide-content">
+          <h3 class="atl-heading-3" style="color:var(--atl-pharma-green)">Prvi korak u karijeri vrhunskih farmaceutskih eksperata</h3>
+          <p class="atl-lead">Farmaciju sam odabrao za stažiranje, ali sam ostao jer sam pronašao sustav koji nudi razvoj, jasne strukture i priliku za napredak. Iskustvo koje sam stekao ovdje dalo mi je jasnu sliku javnog ljekarništva i njegove važnosti u zajednici.</p>
+          <p class="atl-caption">– Tibor Gašparić, mag. pharm.</p>
+        </div>
+        <div class="atl-carousel__slide-image">
+          <img src="https://rmkcdn.successfactors.com/fbe9912e/b1b09841-e631-4f80-87ac-a.jpg" alt="Tibor Gašparić">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="atl-carousel__nav">
+    <button class="atl-carousel__prev">&#8592;</button>
+    <div class="atl-carousel__dots"></div>
+    <button class="atl-carousel__next">&#8594;</button>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- SECTION: Why Farmacia description                            -->
+<!-- ============================================================ -->
+<div class="atl-description">
+  <h2 class="atl-heading-2" style="color:var(--atl-dark)">Zašto odabrati Farmaciju?</h2>
+  <p class="atl-body">Farmacia posluje kao <strong>dio Atlantic Grupe s kojom je u posljednjih 15 godina značajno unaprijedila ljekarničko poslovanje</strong>, portfelj proizvoda i donijela brojne inovacije na tržištu.</p>
+  <p class="atl-body">Danas smo <strong>najveći privatni ljekarnički lanac</strong> koji se ističe modernim radnim procesima, specijaliziranim savjetovalištima i najnaprednijim programima usmjerenima na razvoj vrhunskih stručnjaka.</p>
+  <p class="atl-body">Farmacia je <strong>mjesto za vrhunske farmaceutske eksperte</strong> koji žele priliku razvijati se, usvajati vještine ključne za pružanje vrhunske skrbi za pacijente te unaprjeđivati javno-zdravstvenu ulogu koju farmaceuti ponosno ističu.</p>
+  <p class="atl-body"><strong>U Farmaciji vjerujemo da vrhunska skrb počinje vrhunskim farmaceutskim ekspertima – pridruži nam se i očekuj više.</strong></p>
+</div>
+
+<!-- ============================================================ -->
+<!-- SECTION: Benefits / Perks                                    -->
+<!-- ============================================================ -->
+<div class="atl-benefits">
+  <h2 class="atl-heading-2" style="color:var(--atl-dark)">Benefiti</h2>
+  <div class="atl-benefits__grid">
+    <!-- Column 1: Professional development -->
+    <div>
+      <p class="atl-benefits__column-title">Tvoj razvoj do vrhunskog farmaceutskog eksperta</p>
+      <ul class="atl-benefits__list">
+        <li><div class="atl-perk-item"><img src="https://rmkcdn.successfactors.com/fbe9912e/b4265417-6e79-454c-b46b-5.png" alt=""><span><strong>Edukacije kroz Farmacia centre ekspertize</strong> – Kontinuirani razvoj i usavršavanje.</span></div></li>
+        <li><div class="atl-perk-item"><img src="https://rmkcdn.successfactors.com/fbe9912e/cff6786c-486a-4251-897c-1.png" alt=""><span><strong>Stručne edukacije s HLJK bodovima</strong> – organizirane edukacije u Farmacia Centru ekspertize s bodovima Hrvatske ljekarničke komore.</span></div></li>
+        <li><div class="atl-perk-item"><img src="https://rmkcdn.successfactors.com/fbe9912e/c1335cbf-3dbd-4800-86e9-6.png" alt=""><span><strong>Pokrivamo članarinu u HLJK</strong> – Farmacia osigurava godišnju članarinu u Hrvatskoj ljekarničkoj komori za magistre farmacije.</span></div></li>
+        <li><div class="atl-perk-item"><img src="https://rmkcdn.successfactors.com/fbe9912e/929c731c-aadd-4100-b090-a.png" alt=""><span><strong>Licence za članstvo u Komori</strong> – pokrivene profesionalne članarine.</span></div></li>
+        <li><div class="atl-perk-item"><img src="https://rmkcdn.successfactors.com/fbe9912e/455d4a40-aeaa-43e2-97e8-5.png" alt=""><span><strong>Mentoriranje studenata</strong> – prilika za iskusne farmaceute da mentoriraju studente, prenose znanje i prikupljaju HLJK bodove.</span></div></li>
+        <li><div class="atl-perk-item"><img src="https://rmkcdn.successfactors.com/fbe9912e/e061ab23-2dd0-492f-ab0e-0.png" alt=""><span><strong>Priprema pripravnika za stručni ispit</strong> – sustavno mentorstvo i edukacija novih farmaceuta za uspješno polaganje stručnog ispita.</span></div></li>
+        <li><div class="atl-perk-item"><img src="https://rmkcdn.successfactors.com/fbe9912e/afe96243-5beb-4990-b352-0.png" alt=""><span><strong>Vrhunska farmaceutska skrb za pacijente</strong> – najbolja praksa u javnom ljekarništvu.</span></div></li>
+        <li><div class="atl-perk-item"><img src="https://rmkcdn.successfactors.com/fbe9912e/c7c9fed3-2989-453c-9f27-8.png" alt=""><span><strong>Kotizacija za konferencije i kongrese</strong> – stručno usavršavanje bez dodatnih troškova.</span></div></li>
+      </ul>
+    </div>
+    <!-- Column 2: Wellbeing -->
+    <div>
+      <p class="atl-benefits__column-title">Tvoje zdravo radno okruženje</p>
+      <ul class="atl-benefits__list">
+        <li><div class="atl-perk-item"><img src="https://rmkcdn.successfactors.com/fbe9912e/e8a27c42-34d8-43ad-9178-a.png" alt=""><span><strong>Besplatni sistematski pregled</strong> – briga o zdravlju zaposlenika.</span></div></li>
+        <li><div class="atl-perk-item"><img src="https://rmkcdn.successfactors.com/fbe9912e/b5dcf508-c73f-4770-ba4e-d.png" alt=""><span><strong>Besplatna psihološka pomoć</strong> – podrška mentalnom zdravlju.</span></div></li>
+        <li><div class="atl-perk-item"><img src="https://rmkcdn.successfactors.com/fbe9912e/adc37c68-6218-462c-9664-6.png" alt=""><span><strong>Slobodan dan za rođendan</strong> – tvoj poseban dan, tvoj slobodan dan.</span></div></li>
+        <li><div class="atl-perk-item"><img src="https://rmkcdn.successfactors.com/fbe9912e/ff413ce2-53a1-4983-9b0d-b.png" alt=""><span><strong>Slobodan dan za roditelje prvašića</strong> – podrška zaposlenim roditeljima.</span></div></li>
+        <li><div class="atl-perk-item"><img src="https://rmkcdn.successfactors.com/fbe9912e/4c69537b-9de4-40a9-9f8d-0.png" alt=""><span><strong>Druženja i timske aktivnosti</strong> – jačanje timskog duha zajedničkim okupljanjima i suradnjom.</span></div></li>
+        <li><div class="atl-perk-item"><img src="https://rmkcdn.successfactors.com/fbe9912e/10d59fd7-d8c3-41f7-be2a-e.png" alt=""><span><strong>Sportski klubovi i sportske igre</strong> – aktivnosti za zdrav duh u zdravom tijelu.</span></div></li>
+        <li><div class="atl-perk-item"><img src="https://rmkcdn.successfactors.com/fbe9912e/8beb9b23-59d4-48ff-9b67-2.png" alt=""><span><strong>Multisport kartica</strong> – pristup sportskim centrima.</span></div></li>
+        <li><div class="atl-perk-item"><img src="https://rmkcdn.successfactors.com/fbe9912e/46f30707-3b0e-483a-9d94-1.png" alt=""><span><strong>Program solidarne pomoći zaposlenicima i njihovim obiteljima</strong> – pomoć u teškim trenucima.</span></div></li>
+        <li><div class="atl-perk-item"><img src="https://rmkcdn.successfactors.com/fbe9912e/067fada3-91ba-4ce8-818a-6.png" alt=""><span><strong>Programi volontiranja</strong> – doprinos zajednici humanitarnim aktivnostima.</span></div></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- SECTION: Roles                                               -->
+<!-- ============================================================ -->
+<div class="atl-roles">
+  <div class="atl-roles__container">
+    <h2 class="atl-heading-2" style="color:var(--atl-dark);text-align:center">Pronađi svoje mjesto u Farmaciji!</h2>
+    <div class="atl-roles__item">
+      <img src="https://rmkcdn.successfactors.com/fbe9912e/7ad51f75-2147-41a6-8db0-c.jpg" alt="Farmaceutkinja u ljekarni">
+      <div class="atl-roles__content">
+        <h3 class="atl-heading-3" style="color:var(--atl-pharma-green)">Farmaceuti i tehničari</h3>
+        <p class="atl-body">Vrhunska skrb za pacijente počinje vrhunskom podrškom – u Farmaciji se možeš osloniti na tim s više od 600 farmaceutskih eksperata iz cijele Hrvatske, ekstenzivan sustav edukacija i savjetodavne centre kako bi s povjerenjem odgovorio na svaki ljekarnički upit.</p>
+      </div>
+    </div>
+    <div class="atl-roles__item">
+      <img src="https://rmkcdn.successfactors.com/fbe9912e/efa2d2e1-2113-47d9-8d9b-3.jpg" alt="Voditelj ljekarne">
+      <div class="atl-roles__content">
+        <h3 class="atl-heading-3" style="color:var(--atl-pharma-green)">Voditelji ljekarni</h3>
+        <p class="atl-body">Voditelji ljekarni u Farmaciji razvijaju liderske kompetencije edukacijama u Farmacia Centru ekspertize, s naglaskom na organizacijskim vještinama i odnosima s ljudima. Iskustvo pokazuje da promjena lokacija, izazovni zadaci i mentorska podrška seniorskih kolega pridonose njihovom profesionalnom rastu i razvoju voditeljskih sposobnosti.</p>
+      </div>
+    </div>
+    <div class="atl-roles__item">
+      <img src="https://rmkcdn.successfactors.com/fbe9912e/485aa22b-b150-4b82-bef9-5.jpg" alt="Studentica u laboratoriju">
+      <div class="atl-roles__content">
+        <h3 class="atl-heading-3" style="color:var(--atl-pharma-green)">Studenti i stažisti</h3>
+        <p class="atl-body">Stipendisti Farmacije imaju osiguranu stručnu praksu za učenike koji se školuju za zvanje farmaceutskih tehničara nakon 3. razreda srednje škole te stručno osposobljavanje za studente farmacije nakon završene 5. godine studija. Radom uz iskusne magistre farmacije stječu ključne praktične vještine i primjenjuju teorijska znanja u radu s pacijentima. Nakon školovanja Farmacia stipendistima osigurava zaposlenje pružajući im stabilan početak karijere.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- SECTION: Apply CTA                                           -->
+<!-- ============================================================ -->
+<div class="atl-apply-wrapper">
+  <div class="atl-apply-divider"></div>
+  <a class="atl-apply" href="https://www.linkedin.com/showcase/farmaciahr/" target="_blank">
+    <div class="atl-apply__container">
+      <div class="atl-apply__text">
+        <span>Prati Farmaciju na</span>
+        <span class="atl-apply__email">LinkedIn-u</span>
+      </div>
+      <div class="atl-apply__arrow">
+        <img src="https://rmkcdn.successfactors.com/fbe9912e/ba2f80d0-993b-4aa9-a179-1.png" alt="">
+      </div>
+    </div>
+  </a>
+  <div class="atl-apply-divider"></div>
+  <a class="atl-apply" href="mailto:farmacia@atlanticgrupa.com">
+    <div class="atl-apply__container">
+      <div class="atl-apply__text">
+        <span>Svoj CV i motivacijsko pismo pošaljite na</span>
+        <span class="atl-apply__email">farmacia@atlanticgrupa.com</span>
+      </div>
+      <div class="atl-apply__arrow">
+        <img src="https://rmkcdn.successfactors.com/fbe9912e/ba2f80d0-993b-4aa9-a179-1.png" alt="">
+      </div>
+    </div>
+  </a>
+  <div class="atl-apply-divider"></div>
+</div>
+
+<!-- ============================================================ -->
+<!-- SECTION: Pharma logos                                        -->
+<!-- ============================================================ -->
+<div class="atl-pharma-logos">
+  <div class="atl-pharma-logos__container">
+    <a href="https://www.farmacia.hr/"><img src="https://rmkcdn.successfactors.com/fbe9912e/f4f83b5b-28bd-4c73-b2b9-2.png" alt="Farmacia logotip 1"></a>
+    <a href="https://www.farmacia.hr/"><img src="https://rmkcdn.successfactors.com/fbe9912e/a4e39f8e-1968-4221-8145-4.png" alt="Farmacia logotip 2"></a>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- SECTION: Footer                                              -->
+<!-- ============================================================ -->
+<div class="atl-footer">
+  <div class="atl-footer__container">
+    <div class="atl-footer__logo">
+      <img src="https://rmkcdn.successfactors.com/fbe9912e/9b39ff86-5998-4b65-8cce-0.png" alt="Atlantic Grupa">
+    </div>
+    <div class="atl-footer__social">
+      <a href="https://www.linkedin.com/showcase/farmaciahr/" target="_blank">
+        <img src="https://rmkcdn.successfactors.com/fbe9912e/ae077d4e-e9da-4812-b60a-3.png" alt="LinkedIn">
+      </a>
+      <a href="mailto:farmacia@atlanticgrupa.com">
+        <img src="https://rmkcdn.successfactors.com/fbe9912e/00165d7e-6db2-4322-b7e7-f.png" alt="Email">
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- SCRIPT: Carousel                                             -->
+<!-- ============================================================ -->
+<script>
+  (function() {
+    var track = document.querySelector('.atl-carousel__track');
+    var slides = document.querySelectorAll('.atl-carousel__slide');
+    var dotsWrapper = document.querySelector('.atl-carousel__dots');
+    var current = 0;
+
+    function render() {
+      track.style.transform = 'translateX(-' + (current * 100) + '%)';
+      dotsWrapper.querySelectorAll('.atl-carousel__dot').forEach(function(d, i) {
+        d.classList.toggle('is-active', i === current);
+      });
+    }
+
+    function buildDots() {
+      slides.forEach(function(_, i) {
+        var dot = document.createElement('button');
+        dot.className = 'atl-carousel__dot';
+        dot.addEventListener('click', function() { current = i; render(); });
+        dotsWrapper.appendChild(dot);
+      });
+    }
+
+    document.querySelector('.atl-carousel__prev').addEventListener('click', function() {
+      current = (current - 1 + slides.length) % slides.length;
+      render();
+    });
+
+    document.querySelector('.atl-carousel__next').addEventListener('click', function() {
+      current = (current + 1) % slides.length;
+      render();
+    });
+
+    buildDots();
+    render();
+  })();
+</script>
