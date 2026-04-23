@@ -449,6 +449,138 @@
 .atl-carousel__dot.is-active {
   background: var(--atl-pharma-green);
 }
+
+/* ---- atl-description (Why Farmacia text block) ---- */
+.atl-description {
+  padding: var(--atl-sp-12) 10vw;
+  max-width: var(--atl-container-max);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--atl-sp-4);
+}
+
+@media (max-width: 767px) {
+  .atl-description {
+    padding: var(--atl-sp-8) var(--atl-sp-4);
+  }
+}
+
+/* ---- atl-benefits (Benefits / perks section) ---- */
+.atl-benefits {
+  padding: var(--atl-sp-12) 10vw;
+  max-width: var(--atl-container-max);
+  margin: 0 auto;
+  background: var(--atl-pharma-grey);
+  display: flex;
+  flex-direction: column;
+  gap: var(--atl-sp-8);
+}
+
+.atl-benefits__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--atl-sp-8);
+}
+
+@media (max-width: 767px) {
+  .atl-benefits {
+    padding: var(--atl-sp-8) var(--atl-sp-4);
+  }
+  .atl-benefits__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.atl-benefits__column-title {
+  font-family: var(--atl-font-black);
+  font-size: clamp(1.6rem, 2vw, 2.2rem);
+  color: var(--atl-pharma-green);
+  margin: 0 0 var(--atl-sp-4);
+  line-height: 1.2;
+}
+
+.atl-benefits__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--atl-sp-3);
+}
+
+/* ---- atl-perk-item (icon + text row) ---- */
+.atl-perk-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--atl-sp-2);
+}
+
+.atl-perk-item img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.atl-perk-item span {
+  font-family: var(--atl-font-book);
+  font-size: clamp(1rem, 1.2vw, 1.4rem);
+  color: var(--atl-dark);
+  line-height: 1.6;
+}
+
+/* ---- atl-footer ---- */
+.atl-footer {
+  padding: var(--atl-sp-8) 10vw;
+  background: var(--atl-pharma-grey);
+}
+
+.atl-footer__container {
+  max-width: var(--atl-container-max);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--atl-sp-4);
+  flex-wrap: wrap;
+}
+
+.atl-footer__logo img {
+  max-height: 48px;
+  width: auto;
+}
+
+.atl-footer__social {
+  display: flex;
+  gap: var(--atl-sp-3);
+  align-items: center;
+}
+
+.atl-footer__social a {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--atl-sp-1);
+  text-decoration: none;
+  font-family: var(--atl-font-medium);
+  font-size: 1.4rem;
+  color: var(--atl-dark);
+}
+
+.atl-footer__social a:hover {
+  color: var(--atl-pharma-green);
+}
+
+@media (max-width: 767px) {
+  .atl-footer {
+    padding: var(--atl-sp-6) var(--atl-sp-4);
+  }
+  .atl-footer__container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
 </style>
 
 <!-- ============================================================ -->
@@ -472,12 +604,12 @@
   <a class="atl-category" href="https://careers.atlanticgrupa.com/content/Farmaceut/?locale=hr_HR#">
     <img src="https://rmkcdn.successfactors.com/fbe9912e/61313fa5-26e9-4a1c-a094-e.jpg" alt="Farmaceut">
     <p class="atl-category__title">Farmaceut</p>
-    <button class="atl-btn atl-btn--primary">Zaposli se</button>
+    <a class="atl-btn atl-btn--primary" href="https://careers.atlanticgrupa.com/go/Sve-poslovne-mogucnosti/9208201/">Zaposli se</a>
   </a>
   <a class="atl-category" href="https://careers.atlanticgrupa.com/content/Farmaceutski%20Tehnicar/?locale=hr_HR#">
     <img src="https://rmkcdn.successfactors.com/fbe9912e/21954a8c-9d53-4d05-ba3c-8.jpg" alt="Farmaceutski tehničar">
     <p class="atl-category__title">Farmaceutski tehničar</p>
-    <button class="atl-btn atl-btn--primary">Zaposli se</button>
+    <a class="atl-btn atl-btn--primary" href="https://careers.atlanticgrupa.com/go/Sve-poslovne-mogucnosti/9208201/">Zaposli se</a>
   </a>
 </div>
 
