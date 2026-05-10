@@ -82,7 +82,7 @@ a {
 
 .atl-heading-3 {
   font-family: var(--atl-font-black);
-  font-size: clamp(2rem, 3vw, 3.6rem);
+  font-size: clamp(1.6rem, 2.2vw, 2.8rem);
   color: var(--atl-red);
   line-height: 1.15;
   margin: 0;

@@ -18,6 +18,13 @@
       src: url('https://rmkcdn.successfactors.com/fbe9912e/a4cf9070-d1c8-41e2-8b80-9.otf');
     }
     body { margin: 0; }
+
+    /* ---- job link rows ---- */
+    .atl-apply-wrapper { background: var(--atl-bg); }
+    .atl-apply { display: block; text-decoration: none !important; color: inherit; padding: var(--atl-sp-8) 0; }
+    .atl-apply__inner { display: flex; align-items: center; justify-content: space-between; gap: var(--atl-sp-8); }
+    .atl-apply__text { font-family: var(--atl-font-black); font-size: clamp(1.4rem, 1.8vw, 2.4rem); color: var(--atl-red); }
+    .atl-apply__arrow { flex-shrink: 0; }
   </style>
   <link rel="stylesheet" href="../css/atl-global.css">
 </head>
@@ -29,27 +36,26 @@
 <!-- ============================================================ -->
 
 <!-- ============================================================ -->
-<!-- SECTION: Intro — headline + hero image                       -->
+<!-- SECTION: Hero                                                -->
 <!-- ============================================================ -->
-<div class="atl-section">
-  <div class="atl-container">
-    <div class="atl-two-col">
-      <div class="atl-stack-4">
-        <h1 class="atl-heading-1">Tražimo kreatore novih ideja i okusa!</h1>
-      </div>
-      <img src="https://rmkcdn.successfactors.com/fbe9912e/0fcc274c-6457-4bb1-ba1f-9.jpg" alt="Kreatori ideja">
-    </div>
+<div class="atl-hero atl-hero--split" style="background-color: #E8E8E8">
+  <div class="atl-hero__content">
+    <h1 class="atl-heading-1">Tražimo kreatore novih ideja i okusa!</h1>
+  </div>
+  <div class="atl-hero__image">
+    <img src="https://rmkcdn.successfactors.com/fbe9912e/0fcc274c-6457-4bb1-ba1f-9.jpg" alt="Kreatori ideja">
   </div>
 </div>
 
 <!-- ============================================================ -->
 <!-- SECTION: Brand statement                                      -->
 <!-- ============================================================ -->
-<div class="atl-section">
+<div class="atl-section atl-section--statement">
   <div class="atl-container">
     <div class="atl-row">
       <div class="atl-col-12 atl-center">
-        <h2 class="atl-heading-2">Okusi su naš zajednički jezik!</h2>
+        <img src="https://rmkcdn.successfactors.com/fbe9912e/b4050d8f-69bd-45ad-b834-7.jpg" alt="" style="width: 100%; height: auto; display: block; margin-bottom: var(--atl-sp-6);">
+        <h2 class="atl-heading-2" style="margin-bottom: var(--atl-sp-4);">Okusi su naš zajednički jezik!</h2>
         <p class="atl-lead">
           Atlantic Grupa je kompanija koja stvara: stvara novu vrijednost za svoje dioničare i za ekonomiju,
           karijerne prilike za zaposlenike i poslovne prilike za svoje partnere. Uz kontinuiranu brigu prema
@@ -65,22 +71,25 @@
 <!-- ============================================================ -->
 <!-- SECTION: Values banner                                        -->
 <!-- ============================================================ -->
-<div class="atl-hero" style="background-image: url('https://rmkcdn.successfactors.com/fbe9912e/e8f369fa-d713-485b-8c5c-8.jpg')">
+<div class="atl-hero atl-hero--split" style="background-color: #67737C">
   <div class="atl-hero__content">
-    <h2 class="atl-heading-2">Vrijednosti koje vrijede!</h2>
-    <p class="atl-lead">
+    <h2 class="atl-heading-1 atl-color-white">Vrijednosti koje vrijede!</h2>
+    <p class="atl-body atl-color-white">
       Njegujući OTVORENOST ka novim idejama, nezasitnu STRAST za boljim, novim i neistraženim, iz dana u
       dan, zajedno RASTemo. Koristimo t(r)ajne sastojke poput znatiželje, ljubavi i BRIGE za postizanje
       dobrobiti svih kolega, partnera i kupaca, kao i onih koji nam tek dolaze.
     </p>
+  </div>
+  <div class="atl-hero__image">
+    <img src="https://rmkcdn.successfactors.com/fbe9912e/e8f369fa-d713-485b-8c5c-8.jpg" alt="">
   </div>
 </div>
 
 <!-- ============================================================ -->
 <!-- SECTION: Values intro heading                                 -->
 <!-- ============================================================ -->
-<div class="atl-section">
-  <div class="atl-container">
+<div class="atl-section atl-section--values-intro">
+  <div class="atl-container atl-stack-4">
     <h2 class="atl-heading-2">Upoznajte naše vrijednosti</h2>
     <p class="atl-body">Vrijednosti koje njegujemo</p>
   </div>
@@ -89,24 +98,23 @@
 <!-- ============================================================ -->
 <!-- SECTION: Value — RAST                                        -->
 <!-- ============================================================ -->
-<div class="atl-section atl-section--alt">
+<div class="atl-section atl-section--value">
   <div class="atl-container">
-    <div class="atl-two-col">
+    <div class="atl-two-col" style="gap: var(--atl-sp-8);">
       <div class="atl-two-col__media">
-        <iframe
-          width="100%"
-          height="460"
-          src="https://www.youtube.com/embed/uued_bSXRy4?modestbranding=1&autohide=1&showinfo=0&controls=0"
-          title="Rast - Atlantic Grupa"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen>
-        </iframe>
+        <a href="https://www.youtube.com/watch?v=uued_bSXRy4" target="_blank" rel="noopener" style="display: block; position: relative; text-decoration: none; aspect-ratio: 4/3; overflow: hidden;">
+          <img src="https://img.youtube.com/vi/uued_bSXRy4/maxresdefault.jpg" alt="Rast - Atlantic Grupa" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+          <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;">
+            <svg width="80" height="56" viewBox="0 0 80 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="80" height="56" rx="12" fill="#FF0000"/>
+              <polygon points="32,16 32,40 56,28" fill="white"/>
+            </svg>
+          </div>
+        </a>
       </div>
-      <div class="atl-two-col__body">
-        <h2 class="atl-heading-2">RAST: STVARAMO NOVU VRIJEDNOST</h2>
-        <p class="atl-lead">
+      <div class="atl-two-col__body atl-stack-4">
+        <h2 class="atl-heading-3">RAST: STVARAMO NOVU VRIJEDNOST</h2>
+        <p class="atl-body">
           Zato što uvijek težimo napretku, nikad ne gubimo apetit za stalnim i stabilnim rastom. Izlazimo
           iz svoje zone ugode, uvijek gladni novih izazova, stremimo rastu naših brendova, tržišta i profita
           te razvitku potencijala naših zaposlenika.
@@ -119,43 +127,46 @@
 <!-- ============================================================ -->
 <!-- SECTION: Testimonials — RAST                                 -->
 <!-- ============================================================ -->
-<div class="atl-section">
+<div class="atl-section atl-section--testimonials">
   <div class="atl-container">
-    <h3 class="atl-heading-3">Što kažu naši Atlantikovci</h3>
-    <div class="atl-row">
+    <div class="atl-stack-8">
+      <h2 class="atl-heading-2">Što kažu naši Atlantikovci</h2>
+      <div class="atl-row" style="gap: 4rem;">
 
-      <div class="atl-col-4">
-        <p class="atl-lead">
-          "Drago mi je što sam u takvoj jednoj firmi koja od te moje '94. godine do danas raste. Stalno je
-          inovativna i uvijek nešto novo možeš naučiti i proširiti vidike. U nekom periodu ja sam mijenjala
-          i radne pozicije što je iz moje točke gledišta meni koristilo. Mnogo sam ljudi upoznala, i dalje
-          upoznajem. Kako raste kompanija, tako i mi s kompanijom rastemo i sazrijevamo."
-        </p>
-        <p class="atl-caption">Violeta Rakić, specijalist za sigurnost i zdravlje na radu</p>
+        <div class="atl-col-4 atl-stack-4">
+          <img src="https://rmkcdn.successfactors.com/fbe9912e/254c6868-abed-4a84-a823-d.jpg" alt="Violeta Rakić" style="width: 100%; height: auto; display: block;">
+          <div class="atl-stack-2">
+            <div>
+              <p class="atl-subheading">Violeta Rakić</p>
+              <p class="atl-caption"><strong>specijalist za sigurnost i zdravlje na radu</strong></p>
+            </div>
+            <p class="atl-caption">"Drago mi je što sam u takvoj jednoj firmi koja od te moje '94. godine do danas raste. Stalno je inovativna i uvijek nešto novo možeš naučiti i proširiti vidike. U nekom periodu ja sam mijenjala i radne pozicije što je iz moje točke gledišta meni koristilo. Mnogo sam ljudi upoznala, i dalje upoznajem. Kako raste kompanija, tako i mi s kompanijom rastemo i sazrijevamo."</p>
+          </div>
+        </div>
+
+        <div class="atl-col-4 atl-stack-4">
+          <img src="https://rmkcdn.successfactors.com/fbe9912e/06719320-a78c-42aa-8ae9-2.jpg" alt="Nina Pirnat Vuković" style="width: 100%; height: auto; display: block;">
+          <div class="atl-stack-2">
+            <div>
+              <p class="atl-subheading">Nina Pirnat Vuković</p>
+              <p class="atl-caption"><strong>direktorica odjela</strong></p>
+            </div>
+            <p class="atl-caption">„U Atlanticu sam osjetila snažnu želju ljudi da rastu i razvijaju se. Od prvog dana bila sam uključena u projekte koji su me motivirali da učim i doprinosim. Posebno me dojmila otvorenost kolega i spremnost da podijele znanje. Takvo okruženje mi je omogućilo da se osjećam sigurno i da razvijam svoje vještine. Iako više nisam dio kompanije, to iskustvo mi je ostalo kao važna prekretnica u karijeri."</p>
+          </div>
+        </div>
+
+        <div class="atl-col-4 atl-stack-4">
+          <img src="https://rmkcdn.successfactors.com/fbe9912e/28cdbeb6-3128-4d54-8b9a-e.jpg" alt="Jelica Sinđelić" style="width: 100%; height: auto; display: block;">
+          <div class="atl-stack-2">
+            <div>
+              <p class="atl-subheading">Jelica Sinđelić</p>
+              <p class="atl-caption"><strong>specijalist za SAP rješenja</strong></p>
+            </div>
+            <p class="atl-caption">"Prvo ste otvoreni ka nekim novim saznanjima, nekim novim izazovima, onda je neminovno, ako se time intenzivno bavite, dođete do tog rasta i te dvije vrijednosti se tokom godina isprepliću i to je zapravo i moj uvod u prelazak iz biznisa distribucije u IT. Dakle, prve tri godine sam se bavila organizacijom rada i procesima u distribuciji, a onda sam se odlučila preusmjeriti prema IT-u."</p>
+          </div>
+        </div>
+
       </div>
-
-      <div class="atl-col-4">
-        <p class="atl-lead">
-          „U Atlanticu sam osjetila snažnu želju ljudi da rastu i razvijaju se. Od prvog dana bila sam
-          uključena u projekte koji su me motivirali da učim i doprinosim. Posebno me dojmila otvorenost
-          kolega i spremnost da podijele znanje. Takvo okruženje mi je omogućilo da se osjećam sigurno i da
-          razvijam svoje vještine. Iako više nisam dio kompanije, to iskustvo mi je ostalo kao važna
-          prekretnica u karijeri."
-        </p>
-        <p class="atl-caption">Nina Pirnat Vuković, direktorica odjela</p>
-      </div>
-
-      <div class="atl-col-4">
-        <p class="atl-lead">
-          "Prvo ste otvoreni ka nekim novim saznanjima, nekim novim izazovima, onda je neminovno, ako se
-          time intenzivno bavite, dođete do tog rasta i te dvije vrijednosti se tokom godina isprepliću i to
-          je zapravo i moj uvod u prelazak iz biznisa distribucije u IT. Dakle, prve tri godine sam se
-          bavila organizacijom rada i procesima u distribuciji, a onda sam se odlučila preusmjeriti prema
-          IT-u."
-        </p>
-        <p class="atl-caption">Jelica Sinđelić, specijalist za SAP rješenja</p>
-      </div>
-
     </div>
   </div>
 </div>
@@ -163,24 +174,23 @@
 <!-- ============================================================ -->
 <!-- SECTION: Value — STRAST                                      -->
 <!-- ============================================================ -->
-<div class="atl-section atl-section--alt">
+<div class="atl-section atl-section--value">
   <div class="atl-container">
-    <div class="atl-two-col">
+    <div class="atl-two-col" style="gap: var(--atl-sp-8);">
       <div class="atl-two-col__media">
-        <iframe
-          width="100%"
-          height="460"
-          src="https://www.youtube.com/embed/JmWfVFwD71s?modestbranding=1&autohide=1&showinfo=0&controls=0"
-          title="Strast - Atlantic Grupa"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen>
-        </iframe>
+        <a href="https://www.youtube.com/watch?v=JmWfVFwD71s" target="_blank" rel="noopener" style="display: block; position: relative; text-decoration: none; aspect-ratio: 4/3; overflow: hidden;">
+          <img src="https://img.youtube.com/vi/JmWfVFwD71s/maxresdefault.jpg" alt="Strast - Atlantic Grupa" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+          <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;">
+            <svg width="80" height="56" viewBox="0 0 80 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="80" height="56" rx="12" fill="#FF0000"/>
+              <polygon points="32,16 32,40 56,28" fill="white"/>
+            </svg>
+          </div>
+        </a>
       </div>
-      <div class="atl-two-col__body">
-        <h2 class="atl-heading-2">STRAST: STVARAMO ENTUZIJAZAM</h2>
-        <p class="atl-lead">
+      <div class="atl-two-col__body atl-stack-4">
+        <h2 class="atl-heading-3">STRAST: STVARAMO ENTUZIJAZAM</h2>
+        <p class="atl-body">
           Nije samo stvar u tome što radimo, već način na koji to radimo. Poput posebnog začina, strast
           kojom oplemenjujemo naš rad čini razliku i pomaže u ostvarivanju boljih rezultata. Predanost je
           tajni sastojak koji naše proizvode čini boljim, a budućnost svjetlijom.
@@ -193,38 +203,46 @@
 <!-- ============================================================ -->
 <!-- SECTION: Testimonials — STRAST                               -->
 <!-- ============================================================ -->
-<div class="atl-section">
+<div class="atl-section atl-section--testimonials">
   <div class="atl-container">
-    <h3 class="atl-heading-3">Što kažu naši Atlantikovci</h3>
-    <div class="atl-row">
+    <div class="atl-stack-8">
+      <h2 class="atl-heading-2">Što kažu naši Atlantikovci</h2>
+      <div class="atl-row" style="gap: 4rem;">
 
-      <div class="atl-col-4">
-        <p class="atl-lead">
-          "Ne možeš naći svoje mjesto ako nemaš tu strast u onome što radiš. Upravljamo marketingom za
-          jednu od najpoznatijih robnih marki u regiji. Ako nemaš osjećaj strasti i pripadnosti, ne možeš
-          pridonijeti poslu. Toliko je ljudi koji to imaju i to se na koncu vidi na rezultatima."
-        </p>
-        <p class="atl-caption">Vida Kos, voditelj marketinga za razvoj kategorija</p>
+        <div class="atl-col-4 atl-stack-4">
+          <img src="https://rmkcdn.successfactors.com/fbe9912e/fb643577-1e62-471d-a52a-a.jpg" alt="Vida Kos" style="width: 100%; height: auto; display: block;">
+          <div class="atl-stack-2">
+            <div>
+              <p class="atl-subheading">Vida Kos</p>
+              <p class="atl-caption"><strong>voditelj marketinga za razvoj kategorija</strong></p>
+            </div>
+            <p class="atl-caption">"Ne možeš naći svoje mjesto ako nemaš tu strast u onome što radiš. Upravljamo marketingom za jednu od najpoznatijih robnih marki u regiji. Ako nemaš osjećaj strasti i pripadnosti, ne možeš pridonijeti poslu. Toliko je ljudi koji to imaju i to se na koncu vidi na rezultatima."</p>
+          </div>
+        </div>
+
+        <div class="atl-col-4 atl-stack-4">
+          <img src="https://rmkcdn.successfactors.com/fbe9912e/513eca9b-d6fe-4bee-aac4-3.jpg" alt="Majda Berislavić" style="width: 100%; height: auto; display: block;">
+          <div class="atl-stack-2">
+            <div>
+              <p class="atl-subheading">Majda Berislavić</p>
+              <p class="atl-caption"><strong>rukovoditelj marketinških promocija</strong></p>
+            </div>
+            <p class="atl-caption">"Ako nema strasti u poslu, jednostavno ne uživaš. Onda radiš samo da ti prođe vrijeme. Strast, mislim da je to jedna od jačih vrlina i vrijednosti u Atlanticu."</p>
+          </div>
+        </div>
+
+        <div class="atl-col-4 atl-stack-4">
+          <img src="https://rmkcdn.successfactors.com/fbe9912e/ecc82947-ffef-47c8-b56a-1.jpg" alt="Mirsad Seferaj" style="width: 100%; height: auto; display: block;">
+          <div class="atl-stack-2">
+            <div>
+              <p class="atl-subheading">Mirsad Seferaj</p>
+              <p class="atl-caption"><strong>menadžer ključnih kupaca</strong></p>
+            </div>
+            <p class="atl-caption">"Konstantna želja za postizanjem poslovnih ciljeva i kad je more mirno i kad je turbulentno uz jedan začin, a to je strast koja nas sve vodi da izađemo iz komfor zone, da se kontinuirano usavršavamo, razvijamo, da učimo i da rastemo zajedno s našim brendovima i našom kompanijom na tržištu i da na kraju tjedna, mjeseca, kvartala, godine podijelimo s kolegama tu radost uspjeha."</p>
+          </div>
+        </div>
+
       </div>
-
-      <div class="atl-col-4">
-        <p class="atl-lead">
-          "Ako nema strasti u poslu, jednostavno ne uživaš. Onda radiš samo da ti prođe vrijeme. Strast,
-          mislim da je to jedna od jačih vrlina i vrijednosti u Atlanticu."
-        </p>
-        <p class="atl-caption">Majda Berislavić, rukovoditelj marketinških promocija</p>
-      </div>
-
-      <div class="atl-col-4">
-        <p class="atl-lead">
-          "Konstantna želja za postizanjem poslovnih ciljeva i kad je more mirno i kad je turbulentno uz
-          jedan začin, a to je strast koja nas sve vodi da izađemo iz komfor zone, da se kontinuirano
-          usavršavamo, razvijamo, da učimo i da rastemo zajedno s našim brendovima i našom kompanijom na
-          tržištu i da na kraju tjedna, mjeseca, kvartala, godine podijelimo s kolegama tu radost uspjeha."
-        </p>
-        <p class="atl-caption">Mirsad Seferaj, menadžer ključnih kupaca</p>
-      </div>
-
     </div>
   </div>
 </div>
@@ -232,24 +250,23 @@
 <!-- ============================================================ -->
 <!-- SECTION: Value — BRIGA                                       -->
 <!-- ============================================================ -->
-<div class="atl-section atl-section--alt">
+<div class="atl-section atl-section--value">
   <div class="atl-container">
-    <div class="atl-two-col">
+    <div class="atl-two-col" style="gap: var(--atl-sp-8);">
       <div class="atl-two-col__media">
-        <iframe
-          width="100%"
-          height="460"
-          src="https://www.youtube.com/embed/BVg-0WfRPGU?modestbranding=1&autohide=1&showinfo=0&controls=0"
-          title="Briga - Atlantic Grupa"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen>
-        </iframe>
+        <a href="https://www.youtube.com/watch?v=BVg-0WfRPGU" target="_blank" rel="noopener" style="display: block; position: relative; text-decoration: none; aspect-ratio: 4/3; overflow: hidden;">
+          <img src="https://img.youtube.com/vi/BVg-0WfRPGU/maxresdefault.jpg" alt="Briga - Atlantic Grupa" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+          <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;">
+            <svg width="80" height="56" viewBox="0 0 80 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="80" height="56" rx="12" fill="#FF0000"/>
+              <polygon points="32,16 32,40 56,28" fill="white"/>
+            </svg>
+          </div>
+        </a>
       </div>
-      <div class="atl-two-col__body">
-        <h2 class="atl-heading-2">BRIGA: STVARAMO BOLJU OKOLINU</h2>
-        <p class="atl-lead">
+      <div class="atl-two-col__body atl-stack-4">
+        <h2 class="atl-heading-3">BRIGA: STVARAMO BOLJU OKOLINU</h2>
+        <p class="atl-body">
           Mi smo organizacija koja mari — marimo jedni o drugima, pazimo na dobrobit naših kolega,
           njegujemo poslovne odnose i vodimo brigu o tome kakav svijet ostavljamo budućim generacijama.
         </p>
@@ -261,37 +278,46 @@
 <!-- ============================================================ -->
 <!-- SECTION: Testimonials — BRIGA                                -->
 <!-- ============================================================ -->
-<div class="atl-section">
+<div class="atl-section atl-section--testimonials">
   <div class="atl-container">
-    <h3 class="atl-heading-3">Što kažu naši Atlantikovci</h3>
-    <div class="atl-row">
+    <div class="atl-stack-8">
+      <h2 class="atl-heading-2">Što kažu naši Atlantikovci</h2>
+      <div class="atl-row" style="gap: 4rem;">
 
-      <div class="atl-col-4">
-        <p class="atl-lead">
-          "Od svih mjesta gdje sam radila, tu se osjećam najsigurnije i to je ta briga za zaposlenike,
-          potrošače, partnere koja je prisutna. To je kultura društva i tvrtka živi te vrijednosti."
-        </p>
-        <p class="atl-caption">Šepla Cocej Minatti, regionalni voditelj za upravljanje brendovima</p>
+        <div class="atl-col-4 atl-stack-4">
+          <img src="https://rmkcdn.successfactors.com/fbe9912e/42ff7984-23e6-42b8-aeb4-a.jpg" alt="Šepla Cocej Minatti" style="width: 100%; height: auto; display: block;">
+          <div class="atl-stack-2">
+            <div>
+              <p class="atl-subheading">Šepla Cocej Minatti</p>
+              <p class="atl-caption"><strong>regionalni voditelj za upravljanje brendovima</strong></p>
+            </div>
+            <p class="atl-caption">"Od svih mjesta gdje sam radila, tu se osjećam najsigurnije i to je ta briga za zaposlenike, potrošače, partnere koja je prisutna. To je kultura društva i tvrtka živi te vrijednosti."</p>
+          </div>
+        </div>
+
+        <div class="atl-col-4 atl-stack-4">
+          <img src="https://rmkcdn.successfactors.com/fbe9912e/7582c20f-154e-4eb5-87ac-9.jpg" alt="Siniša Kovačević" style="width: 100%; height: auto; display: block;">
+          <div class="atl-stack-2">
+            <div>
+              <p class="atl-subheading">Siniša Kovačević</p>
+              <p class="atl-caption"><strong>rukovoditelj ključnih kupaca</strong></p>
+            </div>
+            <p class="atl-caption">"Mislim da je u današnje vrijeme i nakon pandemije nastala briga kompanije koja se pokazala kao jako ključna i bitna. Briga i sigurnost u kompaniji ljudima daje prostora da budu još kreativniji, proaktivniji, inovativniji. Kad znaju da firma brine o njima, mogu iskazati sav svoj potencijal."</p>
+          </div>
+        </div>
+
+        <div class="atl-col-4 atl-stack-4">
+          <img src="https://rmkcdn.successfactors.com/fbe9912e/57bfb005-c316-4ca9-bd1c-0.jpg" alt="Predrag Zlatar" style="width: 100%; height: auto; display: block;">
+          <div class="atl-stack-2">
+            <div>
+              <p class="atl-subheading">Predrag Zlatar</p>
+              <p class="atl-caption"><strong>stariji specijalist za SAP rješenja</strong></p>
+            </div>
+            <p class="atl-caption">"Atlantic nije ostao po strani. Kada su bile poplave, pomagali su ljudima koji su bili ugroženi, kada se dogodio COVID, pomagali su svakoj od država u borbi protiv pandemije tako da mi se dopada ta briga i svjesnost o zajednici u kojoj radi."</p>
+          </div>
+        </div>
+
       </div>
-
-      <div class="atl-col-4">
-        <p class="atl-lead">
-          "Mislim da je u današnje vrijeme i nakon pandemije nastala briga kompanije koja se pokazala kao
-          jako ključna i bitna. Briga i sigurnost u kompaniji ljudima daje prostora da budu još kreativniji,
-          proaktivniji, inovativniji. Kad znaju da firma brine o njima, mogu iskazati sav svoj potencijal."
-        </p>
-        <p class="atl-caption">Siniša Kovačević, rukovoditelj ključnih kupaca</p>
-      </div>
-
-      <div class="atl-col-4">
-        <p class="atl-lead">
-          "Atlantic nije ostao po strani. Kada su bile poplave, pomagali su ljudima koji su bili ugroženi,
-          kada se dogodio COVID, pomagali su svakoj od država u borbi protiv pandemije tako da mi se dopada
-          ta briga i svjesnost o zajednici u kojoj radi."
-        </p>
-        <p class="atl-caption">Predrag Zlatar, stariji specijalist za SAP rješenja</p>
-      </div>
-
     </div>
   </div>
 </div>
@@ -299,24 +325,23 @@
 <!-- ============================================================ -->
 <!-- SECTION: Value — OTVORENOST                                  -->
 <!-- ============================================================ -->
-<div class="atl-section atl-section--alt">
+<div class="atl-section atl-section--value">
   <div class="atl-container">
-    <div class="atl-two-col">
+    <div class="atl-two-col" style="gap: var(--atl-sp-8);">
       <div class="atl-two-col__media">
-        <iframe
-          width="100%"
-          height="460"
-          src="https://www.youtube.com/embed/U0gw9BUgfj8?modestbranding=1&autohide=1&showinfo=0&controls=0"
-          title="Otvorenost - Atlantic Grupa"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen>
-        </iframe>
+        <a href="https://www.youtube.com/watch?v=U0gw9BUgfj8" target="_blank" rel="noopener" style="display: block; position: relative; text-decoration: none; aspect-ratio: 4/3; overflow: hidden;">
+          <img src="https://img.youtube.com/vi/U0gw9BUgfj8/maxresdefault.jpg" alt="Otvorenost - Atlantic Grupa" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+          <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;">
+            <svg width="80" height="56" viewBox="0 0 80 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="80" height="56" rx="12" fill="#FF0000"/>
+              <polygon points="32,16 32,40 56,28" fill="white"/>
+            </svg>
+          </div>
+        </a>
       </div>
-      <div class="atl-two-col__body">
-        <h2 class="atl-heading-2">OTVORENOST: STVARAMO BOLJE OTVORENOG UMA</h2>
-        <p class="atl-lead">
+      <div class="atl-two-col__body atl-stack-4">
+        <h2 class="atl-heading-3">OTVORENOST: STVARAMO BOLJE OTVORENOG UMA</h2>
+        <p class="atl-body">
           Što god radili, nikad ne prestajemo biti znatiželjni, uvijek neustrašivi (i na greškama se uči!)
           i žedni svježih ideja i novih iskustava. Prihvaćamo raznolikost pristupa i različita mišljenja
           znajući da će nas dovesti do boljih rješenja svakodnevnih zadataka i izazova.
@@ -329,61 +354,82 @@
 <!-- ============================================================ -->
 <!-- SECTION: Testimonials — OTVORENOST                          -->
 <!-- ============================================================ -->
-<div class="atl-section">
+<div class="atl-section atl-section--testimonials">
   <div class="atl-container">
-    <h3 class="atl-heading-3">Što kažu naši Atlantikovci</h3>
-    <div class="atl-row">
+    <div class="atl-stack-8">
+      <h2 class="atl-heading-2">Što kažu naši Atlantikovci</h2>
+      <div class="atl-row" style="gap: 4rem;">
 
-      <div class="atl-col-4">
-        <p class="atl-lead">
-          „Kada sam došla u Atlantic, odmah sam osjetila da je komunikacija temelj svega. Bez obzira na
-          poziciju, uvijek sam mogla pitati, tražiti pomoć ili savjet. Taj osjećaj zajedništva i otvorenosti
-          bio je ključan za moj profesionalni razvoj. Radili smo kao tim, dijelili znanje i podržavali jedni
-          druge. To je iskustvo koje me oblikovalo i koje i danas nosim sa sobom u svakom novom izazovu."
-        </p>
-        <p class="atl-caption">Iva Starc, specijalistica za digitalni marketing</p>
+        <div class="atl-col-4 atl-stack-4">
+          <img src="https://rmkcdn.successfactors.com/fbe9912e/c3a02f52-e669-4dbe-bf8e-1.jpg" alt="Iva Starc" style="width: 100%; height: auto; display: block;">
+          <div class="atl-stack-2">
+            <div>
+              <p class="atl-subheading">Iva Starc</p>
+              <p class="atl-caption"><strong>specijalistica za digitalni marketing</strong></p>
+            </div>
+            <p class="atl-caption">„Kada sam došla u Atlantic, odmah sam osjetila da je komunikacija temelj svega. Bez obzira na poziciju, uvijek sam mogla pitati, tražiti pomoć ili savjet. Taj osjećaj zajedništva i otvorenosti bio je ključan za moj profesionalni razvoj. Radili smo kao tim, dijelili znanje i podržavali jedni druge. To je iskustvo koje me oblikovalo i koje i danas nosim sa sobom u svakom novom izazovu."</p>
+          </div>
+        </div>
+
+        <div class="atl-col-4 atl-stack-4">
+          <img src="https://rmkcdn.successfactors.com/fbe9912e/3bc4c73e-b9bb-4a20-9919-3.jpg" alt="Predrag Zlatar" style="width: 100%; height: auto; display: block;">
+          <div class="atl-stack-2">
+            <div>
+              <p class="atl-subheading">Predrag Zlatar</p>
+              <p class="atl-caption"><strong>stariji specijalist za SAP rješenja</strong></p>
+            </div>
+            <p class="atl-caption">"Za dobrog SAP konzultanta je jako bitna spremnost i otvorenost ka učenju. Da se čovjek suoči sa strahom od nepoznatog i uhvati u koštac jer se stvari nonstop mijenjaju. Problemi nisu uvijek isti i ponavljajući, za njih robotiziramo procese. Potrebna je spremnost da stvari neće upaliti iz trećeg ili 17og puta i biti otvoren za konstantno učenje."</p>
+          </div>
+        </div>
+
+        <div class="atl-col-4 atl-stack-4">
+          <img src="https://rmkcdn.successfactors.com/fbe9912e/2ec4528a-1042-4597-83e3-6.jpg" alt="Mojca Pesendorfer" style="width: 100%; height: auto; display: block;">
+          <div class="atl-stack-2">
+            <div>
+              <p class="atl-subheading">Mojca Pesendorfer</p>
+              <p class="atl-caption"><strong>voditeljica marketinga za razvoj kategorije</strong></p>
+            </div>
+            <p class="atl-caption">„U Atlanticu sam prvi put doživjela radno okruženje u kojem se kolegice i kolege međusobno podržavaju i dijele znanje bez zadršce. Naš mali tim bio je izvor inspiracije i sigurnosti — mogli smo razgovarati o svemu, učiti jedni od drugih i zajedno rasti. Taj osjećaj pripadnosti i međusobnog povjerenja bio je nešto što me svakodnevno motiviralo i ostavilo snažan trag u mom profesionalnom razvoju."</p>
+          </div>
+        </div>
+
       </div>
-
-      <div class="atl-col-4">
-        <p class="atl-lead">
-          "Za dobrog SAP konzultanta je jako bitna spremnost i otvorenost ka učenju. Da se čovjek suoči sa
-          strahom od nepoznatog i uhvati u koštac jer se stvari nonstop mijenjaju. Problemi nisu uvijek isti
-          i ponavljajući, za njih robotiziramo procese. Potrebna je spremnost da stvari neće upaliti iz
-          trećeg ili 17og puta i biti otvoren za konstantno učenje."
-        </p>
-        <p class="atl-caption">Predrag Zlatar, stariji specijalist za SAP rješenja</p>
-      </div>
-
-      <div class="atl-col-4">
-        <p class="atl-lead">
-          „U Atlanticu sam prvi put doživjela radno okruženje u kojem se kolegice i kolege međusobno
-          podržavaju i dijele znanje bez zadršce. Naš mali tim bio je izvor inspiracije i sigurnosti —
-          mogli smo razgovarati o svemu, učiti jedni od drugih i zajedno rasti. Taj osjećaj pripadnosti i
-          međusobnog povjerenja bio je nešto što me svakodnevno motiviralo i ostavilo snažan trag u mom
-          profesionalnom razvoju."
-        </p>
-        <p class="atl-caption">Mojca Pesendorfer, voditeljica marketinga za razvoj kategorije</p>
-      </div>
-
     </div>
   </div>
 </div>
 
 <!-- ============================================================ -->
-<!-- SECTION: CTA                                                 -->
+<!-- SECTION: Jobs                                                -->
 <!-- ============================================================ -->
-<div class="atl-cta">
-  <div class="atl-cta__cell">
-    <h3 class="atl-heading-3">Pregledaj otvorene pozicije</h3>
-    <p class="atl-body">Pronađi svoju sljedeću priliku u Atlantic Grupi.</p>
-    <a class="atl-btn atl-btn--primary" href="https://careers.atlanticgrupa.com/go/Sve-poslovne-mogucnosti/9208201/">Pogledaj poslove</a>
+<div class="atl-section atl-section--jobs" style="padding-bottom: var(--atl-sp-8);">
+  <div class="atl-container">
+    <h2 class="atl-heading-2">Prilika je na stolu, odaberi svoju!</h2>
   </div>
-  <div class="atl-cta__cell">
-    <h3 class="atl-heading-3">Prijavi se u bazu kandidata</h3>
-    <p class="atl-body">Ostavi nam podatke i javi se kada se otvori prava pozicija.</p>
-    <a class="atl-btn atl-btn--outline" href="https://careers.atlanticgrupa.com/content/Talent-Community/">Ostavi podatke</a>
-  </div>
-</div></div></div>
+</div>
+<div class="atl-apply-wrapper">
+  <a class="atl-apply" href="https://careers.atlanticgrupa.com/go/Prodaja/9208201/">
+    <div class="atl-container">
+      <div class="atl-apply__inner">
+        <span class="atl-apply__text">Meni poslova - Pogledaj trenutno otvorene pozicije!</span>
+        <div class="atl-apply__arrow">
+          <img src="https://rmkcdn.successfactors.com/fbe9912e/b0393cdf-434c-414e-bff2-d.png" alt="" style="width:48px; height:auto;">
+        </div>
+      </div>
+    </div>
+  </a>
+  <div class="atl-container"><div style="height: 1px; background: var(--atl-border);"></div></div>
+  <a class="atl-apply" href="https://careers.atlanticgrupa.com/content/Talent-Community/">
+    <div class="atl-container">
+      <div class="atl-apply__inner">
+        <span class="atl-apply__text">Postani dio našeg tima - upiši se u bazu potencijalnih kandidata!</span>
+        <div class="atl-apply__arrow">
+          <img src="https://rmkcdn.successfactors.com/fbe9912e/b0393cdf-434c-414e-bff2-d.png" alt="" style="width:48px; height:auto;">
+        </div>
+      </div>
+    </div>
+  </a>
+</div>
+
 <!-- ============================================================ -->
 <!-- SECTION: Footer                                              -->
 <!-- ============================================================ -->
