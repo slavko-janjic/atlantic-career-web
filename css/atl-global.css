@@ -556,11 +556,9 @@ a {
 
 @media (max-width: 767px) {
   .atl-apply-banner__inner {
-    padding-top: var(--atl-sp-6);
-    padding-bottom: var(--atl-sp-6);
-  }
-  .atl-apply-banner__arrow {
-    width: 56px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--atl-sp-4);
   }
 }
 
