@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="hr-HR">
 <head>
   <meta charset="UTF-8">
@@ -18,6 +18,10 @@
       src: url('https://rmkcdn.successfactors.com/fbe9912e/a4cf9070-d1c8-41e2-8b80-9.otf');
     }
     body { margin: 0; }
+
+    .atl-perk-list { list-style: none; padding: 0; }
+    .atl-perk-list li { padding: 1.2rem 0; border-bottom: 1px solid currentColor; break-inside: avoid; }
+    .atl-perk-list li:last-child { border-bottom: none; }
   </style>
   <link rel="stylesheet" href="../css/atl-global.css">
 </head>
@@ -31,23 +35,26 @@
 <!-- ============================================================ -->
 <!-- SECTION: Hero Banner                                         -->
 <!-- ============================================================ -->
-<div class="atl-hero" style="background-image: url('https://rmkcdn.successfactors.com/fbe9912e/1950472f-cb8b-49b3-a4a5-8.jpg')">
+<div class="atl-hero atl-hero--split">
   <div class="atl-hero__content">
     <p class="atl-label">SEZONA S NAJBOLJIMA</p>
     <h1 class="atl-heading-1">Skladištar</h1>
     <p class="atl-lead">Najbolja tehnologija – najbolji brendovi – najbolja ekipa</p>
+  </div>
+  <div class="atl-hero__image">
+    <img src="https://rmkcdn.successfactors.com/fbe9912e/1950472f-cb8b-49b3-a4a5-8.jpg" alt="">
   </div>
 </div>
 
 <!-- ============================================================ -->
 <!-- SECTION: Work locations                                      -->
 <!-- ============================================================ -->
-<div class="atl-section">
+<div class="atl-section atl-section--locations">
   <div class="atl-container">
     <img src="https://rmkcdn.successfactors.com/fbe9912e/f72ffaf7-962a-4ef1-839a-d.jpg" alt="" style="width: 100%; height: auto; margin-bottom: var(--atl-sp-8);">
-    <div class="atl-stack-4">
-      <h2 class="atl-heading-2">Mjesto rada</h2>
-      <p class="atl-body"><strong>ZAGREB:</strong> Zelena aleja 30, Vukovina &nbsp;|&nbsp; <strong>SPLIT:</strong> Put Vrbovnika b.b., Stobreč &nbsp;|&nbsp; <strong>RIJEKA:</strong> Ulica Tome Strižića 8</p>
+    <div class="atl-center atl-stack-2">
+      <p class="atl-heading-4 atl-color-red">Mjesto rada</p>
+      <p class="atl-body" style="color:#888"><strong style="color:var(--atl-dark)">ZAGREB:</strong> Zelena aleja 30, Vukovina &nbsp;|&nbsp; <strong style="color:var(--atl-dark)">SPLIT:</strong> Put Vrbovnika b.b., Stobreč &nbsp;|&nbsp; <strong style="color:var(--atl-dark)">RIJEKA:</strong> Ulica Tome Strižića 8</p>
     </div>
   </div>
 </div>
@@ -55,21 +62,21 @@
 <!-- ============================================================ -->
 <!-- SECTION: Perks                                               -->
 <!-- ============================================================ -->
-<div class="atl-section atl-section--alt">
+<div class="atl-section atl-section--red">
   <div class="atl-container">
     <div class="atl-stack-8">
       <h2 class="atl-heading-2">Zašto je ovo slatka prilika za tebe</h2>
-      <ul class="atl-body" style="columns: 2; column-gap: 4rem; list-style: none; padding: 0;">
-        <li style="padding: 1.2rem 0; border-bottom: 1px solid currentColor; break-inside: avoid;">Dočekat će te <strong>paket dobrodošlice</strong></li>
-        <li style="padding: 1.2rem 0; border-bottom: 1px solid currentColor; break-inside: avoid;">Dobiješ svog <strong>super-mentora</strong>, čovjeka koji zna što radi i koji ti pomaže od prvog dana</li>
-        <li style="padding: 1.2rem 0; border-bottom: 1px solid currentColor; break-inside: avoid;">Imaš <strong>točno definiran smjenski rad</strong></li>
-        <li style="padding: 1.2rem 0; border-bottom: 1px solid currentColor; break-inside: avoid;">Radni tjedan ti je <strong>od ponedjeljka do petka</strong>, a subote najavljujemo i dodatno plaćamo 80% višu satnicu</li>
-        <li style="padding: 1.2rem 0; border-bottom: 1px solid currentColor; break-inside: avoid;">Imaš <strong>dodatak za topli obrok 100€</strong> i prijevoz po cijeni karte</li>
-        <li style="padding: 1.2rem 0; border-bottom: 1px solid currentColor; break-inside: avoid;">Na poslu su ti <strong>voće i topli napici (kava/čaj) besplatni</strong></li>
-        <li style="padding: 1.2rem 0; border-bottom: 1px solid currentColor; break-inside: avoid;">Tvoja plaća se sastoji od fiksnog i <strong>varijabilnog dijela koji ostvaruje više od 80%</strong> Atlanticove ekipe u skladištu</li>
-        <li style="padding: 1.2rem 0; border-bottom: 1px solid currentColor; break-inside: avoid;">Možeš ostvariti <strong>nagradu za izvanredan rezultat</strong> u sezoni</li>
-        <li style="padding: 1.2rem 0; border-bottom: 1px solid currentColor; break-inside: avoid;">Tu su i <strong>nagrade za najbolje sezonce</strong></li>
-        <li style="padding: 1.2rem 0; break-inside: avoid;">A ako pokažeš rezultate i bude ti dobro kod nas, postoji <strong>mogućnost da ostaneš za stalno</strong></li>
+      <ul class="atl-body atl-perk-list" style="columns: 2; column-gap: 4rem;">
+        <li>Dočekat će te <strong>paket dobrodošlice</strong></li>
+        <li>Dobiješ svog <strong>super-mentora</strong>, čovjeka koji zna što radi i koji ti pomaže od prvog dana</li>
+        <li>Imaš <strong>točno definiran smjenski rad</strong></li>
+        <li>Radni tjedan ti je <strong>od ponedjeljka do petka</strong>, a subote najavljujemo i dodatno plaćamo 80% višu satnicu</li>
+        <li>Imaš <strong>dodatak za topli obrok 100€</strong> i prijevoz po cijeni karte</li>
+        <li>Na poslu su ti <strong>voće i topli napici (kava/čaj) besplatni</strong></li>
+        <li>Tvoja plaća se sastoji od fiksnog i <strong>varijabilnog dijela koji ostvaruje više od 80%</strong> Atlanticove ekipe u skladištu</li>
+        <li>Možeš ostvariti <strong>nagradu za izvanredan rezultat</strong> u sezoni</li>
+        <li>Tu su i <strong>nagrade za najbolje sezonce</strong></li>
+        <li>A ako pokažeš rezultate i bude ti dobro kod nas, postoji <strong>mogućnost da ostaneš za stalno</strong></li>
       </ul>
     </div>
   </div>
@@ -78,7 +85,7 @@
 <!-- ============================================================ -->
 <!-- SECTION: Job description                                     -->
 <!-- ============================================================ -->
-<div class="atl-section">
+<div class="atl-section atl-section--description">
   <div class="atl-container">
     <div class="atl-stack-4">
       <h2 class="atl-heading-2">Što ćeš raditi s najboljima u skladištu</h2>
@@ -91,24 +98,29 @@
 <!-- SECTION: Apply CTA (email)                                   -->
 <!-- ============================================================ -->
 <div class="atl-section atl-section--flush">
-  <a class="atl-btn atl-btn--primary" href="mailto:zaposljavanje@atlanticgrupa.com" style="display: block; text-align: center; padding: 4rem; font-size: 2rem;">
-    Prijavi se na zaposljavanje@atlanticgrupa.com
+  <a class="atl-apply-banner" href="mailto:zaposljavanje@atlanticgrupa.com">
+    <div class="atl-container">
+      <div class="atl-apply-banner__inner">
+        <span>Prijavi se na <strong>zaposljavanje@atlanticgrupa.com</strong></span>
+        <img class="atl-apply-banner__arrow" src="https://rmkcdn.successfactors.com/fbe9912e/5cb6593c-c364-4ca2-a098-0.png" alt="">
+      </div>
+    </div>
   </a>
 </div>
 
 <!-- ============================================================ -->
 <!-- SECTION: Testimonial                                         -->
 <!-- ============================================================ -->
-<div class="atl-section">
+<div class="atl-section atl-section--testimonial">
   <div class="atl-container">
-    <div class="atl-two-col">
+    <div class="atl-two-col" style="grid-template-columns: 2fr 1fr">
       <div class="atl-stack-4">
         <h2 class="atl-heading-2">Skladište s najboljima!</h2>
         <p class="atl-body">Početci su uvijek najteži. Po dolasku u Atlantica na sezonu nisam znao koja očekivanja imat ali vrlo brzo sam bio prihvaćen kao dio tima i svi radni zadatci koje sam trebao odraditi su mi bili jasno objašnjeni. Tehnologija koju koristim je super jer mi ubrzava posao što znači i da brže mogu doći do stimulativnog dijela. Najbitnija stavka u svemu mi je bila da se moj rad cijeni i da je radna atmosfera dobra. Sve to i puno više je nadmašilo moja očekivanja i zato sam nakon odrađene sezone 2022. nastavio raditi ovdje do danas, dakle već skoro četiri godine.</p>
         <p class="atl-caption"><strong>Ivan Šipić</strong>, skladištar-viličar</p>
       </div>
       <div>
-        <img src="https://rmkcdn.successfactors.com/fbe9912e/74badcc4-37e6-40a5-b2d0-d.jpg" alt="Ivan Šipić" style="border-radius: 50%; max-width: 280px; width: 100%;">
+        <img src="https://rmkcdn.successfactors.com/fbe9912e/74badcc4-37e6-40a5-b2d0-d.jpg" alt="Ivan Šipić" style="border-radius: 50%; max-width: 280px; width: 100%; margin-left: auto;">
       </div>
     </div>
   </div>
@@ -129,6 +141,20 @@
     <a class="atl-btn atl-btn--outline" href="https://careers.atlanticgrupa.com/content/Talent-Community/">Ostavi podatke</a>
   </div>
 </div>
-
+<!-- ============================================================ -->
+<!-- SECTION: Footer                                              -->
+<!-- ============================================================ -->
+<footer class="atl-footer">
+  <div class="atl-container">
+    <div class="atl-footer__inner">
+      <img src="https://rmkcdn.successfactors.com/fbe9912e/9b39ff86-5998-4b65-8cce-0.png" alt="Atlantic Grupa" class="atl-footer__logo">
+      <div class="atl-footer__social">
+        <a href="https://www.linkedin.com/company/atlantic-grupa/"><img src="https://rmkcdn.successfactors.com/fbe9912e/ae077d4e-e9da-4812-b60a-3.png" alt="LinkedIn"></a>
+        <a href="https://www.youtube.com/user/atlanticgrupanews"><img src="https://rmkcdn.successfactors.com/fbe9912e/52420cee-4f9f-4754-bda5-1.png" alt="YouTube"></a>
+        <a href="mailto:zaposljavanje@atlanticgrupa.com"><img src="https://rmkcdn.successfactors.com/fbe9912e/00165d7e-6db2-4322-b7e7-f.png" alt="Email"></a>
+      </div>
+    </div>
+  </div>
+</footer>
 </body>
 </html>

@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="hr-HR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prodaja — Atlantic Grupa karijere</title>
+  <style>
+    @font-face {
+      font-family: 'custom1cdc72a1280c488ba8954';
+      src: url('https://rmkcdn.successfactors.com/fbe9912e/1cdc72a1-280c-488b-a895-4.otf');
+    }
+    @font-face {
+      font-family: 'custom7a590e3d1f3945ba91932';
+      src: url('https://rmkcdn.successfactors.com/fbe9912e/7a590e3d-1f39-45ba-9193-2.otf');
+    }
+    @font-face {
+      font-family: 'customa4cf9070d1c841e28b809';
+      src: url('https://rmkcdn.successfactors.com/fbe9912e/a4cf9070-d1c8-41e2-8b80-9.otf');
+    }
+    body { margin: 0; }
+
+    /* ---- partner logos grid ---- */
+    .atl-partner-logos {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      align-items: center;
+      gap: var(--atl-sp-4);
+    }
+
+    .atl-partner-logos img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+
+    @media (max-width: 767px) {
+      .atl-partner-logos {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    /* ---- stats row ---- */
+    .atl-stats {
+      display: flex;
+      gap: var(--atl-sp-8);
+      flex-wrap: wrap;
+    }
+
+    .atl-stat__number {
+      font-family: var(--atl-font-black);
+      font-size: clamp(3.2rem, 5vw, 6.4rem);
+      color: var(--atl-red);
+      line-height: 1;
+      margin: 0;
+    }
+
+    /* ---- job link rows ---- */
+    .atl-apply-wrapper { background: var(--atl-bg); }
+    .atl-apply { display: block; text-decoration: none !important; color: inherit; padding: var(--atl-sp-8) 0; }
+    .atl-apply__inner { display: flex; align-items: center; justify-content: space-between; gap: var(--atl-sp-8); }
+    .atl-apply__text { font-family: var(--atl-font-black); font-size: clamp(1.4rem, 1.8vw, 2.4rem); color: var(--atl-red); }
+    .atl-apply__arrow { flex-shrink: 0; }
+
+    .atl-stat__label {
+      font-family: var(--atl-font-book);
+      font-size: clamp(1rem, 1.2vw, 1.4rem);
+      color: var(--atl-dark);
+      margin: 0;
+    }
+  </style>
+  <link rel="stylesheet" href="../css/atl-global.css">
+</head>
+<body>
+
+<!-- ============================================================ -->
+<!-- PAGE: Prodaja                                                -->
+<!-- SAP: copy everything inside <body> into Custom Code         -->
+<!-- ============================================================ -->
+
+<!-- ============================================================ -->
+<!-- SECTION: Hero                                                -->
+<!-- ============================================================ -->
+<div class="atl-hero atl-hero--split" style="background-color: #E8E8E8">
+  <div class="atl-hero__content">
+    <h1 class="atl-heading-1">Ovaj tekst nije NA prodaju. Ali je ZA prodaju.</h1>
+  </div>
+  <div class="atl-hero__image">
+    <img src="https://rmkcdn.successfactors.com/fbe9912e/79ae31dd-ef4b-44e8-a44a-d.jpg" alt="Prodaja u Atlantic Grupi">
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- SECTION: Začini karijeru                                     -->
+<!-- ============================================================ -->
+<div class="atl-section atl-section--tagline">
+  <div class="atl-container">
+    <div class="atl-stack-6" style="text-align: center;">
+      <img src="https://rmkcdn.successfactors.com/fbe9912e/b4050d8f-69bd-45ad-b834-7.jpg" alt="" style="width: 100%; height: auto; display: block;">
+      <div class="atl-stack-4" style="max-width: 860px; margin: 0 auto;">
+        <p class="atl-label atl-color-red">ZAČINI KARIJERU U ATLANTICU</p>
+        <p class="atl-lead" style="color: var(--atl-red)">Pridružite se timu izvanrednih prodajnih stručnjaka i krenite na put rasta i osobnog razvoja, baš kao naši predani članovi tima koji su pronašli svoju strast i postigli izvanredne uspjehe unutar Atlantic Grupe.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- SECTION: Partners                                            -->
+<!-- ============================================================ -->
+<div class="atl-section atl-section--partners" style="border-top: 1px solid var(--atl-border); padding-top: var(--atl-sp-8); padding-bottom: var(--atl-sp-8);">
+  <div class="atl-container">
+    <div class="atl-stack-6">
+      <p class="atl-body" style="text-align: center; max-width: 900px; margin: 0 auto; color: var(--atl-dark)">S partnerstvima s globalnim liderima poput MARS-a, Unilevera, Ferrera, Raucha i Johnson &amp; Johnsona, bit ćete u vrhu industrije, a tehnološki napredna radna okolina s visokoregalnim skladištima, robotima i digitalizacijom čini nas pametnim izborom za posao.</p>
+      <div class="atl-partner-logos">
+        <img src="https://rmkcdn.successfactors.com/fbe9912e/56da2a15-4a82-4094-81c0-d.png" alt="Johnson & Johnson">
+        <img src="https://rmkcdn.successfactors.com/fbe9912e/f115ea5b-0788-47cd-9ff6-c.png" alt="Unilever">
+        <img src="https://rmkcdn.successfactors.com/fbe9912e/a1c526bd-5b32-4196-b2d6-d.png" alt="Red Bull">
+        <img src="https://rmkcdn.successfactors.com/fbe9912e/890930ef-00ea-4896-9a18-5.png" alt="HiPP">
+        <img src="https://rmkcdn.successfactors.com/fbe9912e/476fd649-7800-4247-8d41-a.png" alt="Duracell">
+        <img src="https://rmkcdn.successfactors.com/fbe9912e/ed70c94c-e5fe-4c23-bd9b-a.png" alt="Nestlé">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- SECTION: Sezona CTA banner                                   -->
+<!-- ============================================================ -->
+<a class="atl-apply-banner" href="https://careers.atlanticgrupa.com/content/Sezona-s-Najboljima/" style="background: var(--atl-red)">
+  <div class="atl-container">
+    <div class="atl-apply-banner__inner">
+      <div>
+        <p class="atl-label" style="color: var(--atl-white); margin-bottom: var(--atl-sp-1)">SEZONA S NAJBOLJIMA</p>
+        <h2 class="atl-heading-3" style="color: var(--atl-white)">Klikni i pridruži se!</h2>
+      </div>
+      <img class="atl-apply-banner__arrow" src="https://rmkcdn.successfactors.com/fbe9912e/5cb6593c-c364-4ca2-a098-0.png" alt="">
+    </div>
+  </div>
+</a>
+
+<!-- ============================================================ -->
+<!-- SECTION: Video + TrAAG                                       -->
+<!-- ============================================================ -->
+<div class="atl-section atl-section--stories">
+  <div class="atl-container">
+    <div class="atl-stack-8">
+      <div class="atl-stack-6">
+        <h2 class="atl-heading-2">Priče iz Atlanticove prodaje</h2>
+        <a href="https://www.youtube.com/watch?v=u37tncAgyJo" target="_blank" rel="noopener" style="display: block; position: relative; text-decoration: none;">
+          <img src="https://img.youtube.com/vi/u37tncAgyJo/maxresdefault.jpg" alt="Savjeti i iskustva u prodaji" style="width: 100%; height: auto; display: block;">
+          <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;">
+            <svg width="80" height="56" viewBox="0 0 80 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="80" height="56" rx="12" fill="#FF0000"/>
+              <polygon points="32,16 32,40 56,28" fill="white"/>
+            </svg>
+          </div>
+        </a>
+      </div>
+      <div class="atl-stack-4">
+        <h2 class="atl-heading-2">Kako razvijamo vrhunske prodajne eksperte</h2>
+        <p class="atl-body">Trade akademija (TrAAG) razvojni je program koji je osmislio tim Atlanticovih prodajnih eksperata, a treninzi su namijenjeni kolegama sa svih tržišta: unapređivačima prodaje, prodajnim predstavnicima, supervizorima, voditeljima, asistentima, voditeljima ključnih kupaca, brend operation menadžerima; specijalistima logistike i prodaje.</p>
+        <p class="atl-body">TrAAG čine treninzi koji zahtijevaju iskustveno i praktično izvođenje te služe za međusobno prenošenje znanja i iskustva kolega. Sudjelovanjem u akademiji, kolege jačaju hard i soft vještine te specifične radne kompetencije potrebne za obavljanje svakodnevnih zadataka u svom radu.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- ============================================================ -->
+<!-- SECTION: Benefits                                            -->
+<!-- ============================================================ -->
+<div class="atl-section atl-section--alt atl-section--benefits">
+  <div class="atl-container">
+    <div class="atl-stack-4">
+      <h2 class="atl-heading-2">Benefiti koji te čekaju</h2>
+      <p class="atl-body">Uz Trade akademiju, svi Atlantikovci imaju na raspolaganju čitav niz razvojnih mogućnosti i benefita o kojima možete saznati više iz naše rubrike "Začini svoju karijeru".</p>
+      <a class="atl-btn atl-btn--primary" href="https://careers.atlanticgrupa.com/content/Benefiti/?locale=hr_HR" style="display: inline-block; align-self: flex-start;">Začini svoju karijeru</a>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- SECTION: Testimonials                                        -->
+<!-- ============================================================ -->
+<div class="atl-section atl-section--testimonials">
+  <div class="atl-container">
+    <div class="atl-stack-8">
+      <h2 class="atl-heading-2">Što kažu naši Atlantikovci</h2>
+      <div class="atl-row" style="gap: 4rem;">
+        <div class="atl-col-4 atl-stack-4">
+          <img src="https://rmkcdn.successfactors.com/fbe9912e/ef4cc147-0209-4d95-8c19-0.jpg" alt="Kristina Kerep" style="width: 100%; height: auto; display: block;">
+          <div class="atl-stack-2">
+            <div>
+              <p class="atl-subheading">Kristina Kerep</p>
+              <p class="atl-caption"><strong>mlađi voditelj ključnih kupaca</strong></p>
+            </div>
+            <p class="atl-caption">"Ono što je stvarno posebno ovdje u Atlanticu je da su nam uvijek na raspolaganju kolege, uvijek će pomoći kad god zatreba. U prijašnjoj kompaniji nisam osjetila toliku povezanost i zajedništvo u timu kako se to osjeti ovdje u Atlanticu. To je ono što me definitivno motiviralo za dalje i to ja nastojim prenositi na naše nove kolege koji dolaze, da se uklope, da i mi njima prenosimo naša znanja koja imamo."</p>
+          </div>
+        </div>
+        <div class="atl-col-4 atl-stack-4">
+          <img src="https://rmkcdn.successfactors.com/fbe9912e/f8f28525-2952-4043-994b-e.jpg" alt="Robert Slunjski" style="width: 100%; height: auto; display: block;">
+          <div class="atl-stack-2">
+            <div>
+              <p class="atl-subheading">Robert Slunjski</p>
+              <p class="atl-caption"><strong>rukovoditelj prodajnog područja</strong></p>
+            </div>
+            <p class="atl-caption">„Mi smo tu da omogućimo našem timu i našim ljudima što jednostavniji i ugodniji rad, a nismo tu samo da šefujemo. Vodimo ih i radimo s njima kako bi što jednostavnije obavljati zadatke koje imaju pred sobom."</p>
+          </div>
+        </div>
+        <div class="atl-col-4 atl-stack-4">
+          <img src="https://rmkcdn.successfactors.com/fbe9912e/59db5885-2e13-4025-a75c-6.jpg" alt="Mia Lisak" style="width: 100%; height: auto; display: block;">
+          <div class="atl-stack-2">
+            <div>
+              <p class="atl-subheading">Mia Lisak</p>
+              <p class="atl-caption"><strong>rukovoditelj divizije Unilever</strong></p>
+            </div>
+            <p class="atl-caption">"Nije važno tko je u kojoj roli. Ako možeš pomoći kolegi, pomozi mu, drugi dan će se isto tako tebi vratiti. Na kraju dana postoji ta ljepota dijeljenja znanja gdje ti stvarno možeš pomoći nekome, sutra vidiš koliko je to toj osobi doprinijelo. Meni je to najveća vrijednost jer ljudi su ti koji čine razliku i ljudi su ti koji na kraju dana iznjedre razno razna rješenja za nešto za što se na početku možda činilo da je ekstra izazovno. Na kraju kad uspiješ, ne bi to uspio sam."</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- SECTION: Parallax image                                      -->
+<!-- ============================================================ -->
+<div class="atl-parallax" style="background-image: url('https://rmkcdn.successfactors.com/fbe9912e/14970800-e236-4470-89aa-e.jpg');"></div>
+
+<!-- ============================================================ -->
+<!-- SECTION: Distribution stats                                  -->
+<!-- ============================================================ -->
+<div class="atl-section atl-section--alt atl-section--distribution">
+  <div class="atl-container">
+    <div class="atl-two-col" style="align-items: center; gap: var(--atl-sp-8);">
+      <div class="atl-stack-4">
+        <h2 class="atl-heading-2">Distribuiramo u velikom broju!</h2>
+        <p class="atl-body">Atlantic Grupa vodeći je distributer robe široke potrošnje u regiji jugoistočne Europe sa 17 distribucijskih centara, više od tisuću vozila i direktnim pristupom u više od 70 tisuća prodajnih mjesta. Uz brendove iz vlastite proizvodnje, naš distribucijski portfelj uključuje neke od najpoznatijih svjetskih i regionalnih marki</p>
+        <a class="atl-btn atl-btn--primary" href="https://www.atlanticgrupa.com/hr/proizvodi-i-distribucija/distribucija/o-distribuciji/" style="display: inline-block; align-self: flex-start;">Distribucija</a>
+      </div>
+      <div>
+        <div style="padding: var(--atl-sp-6) 0;">
+          <p class="atl-stat__number">17</p>
+          <p class="atl-stat__label">DISTRIBUCIJSKIH CENTARA</p>
+        </div>
+        <div style="padding: var(--atl-sp-6) 0; border-top: 1px solid var(--atl-border);">
+          <p class="atl-stat__number">70 000</p>
+          <p class="atl-stat__label">PRODAJNIH MJESTA</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- SECTION: Job links                                           -->
+<!-- ============================================================ -->
+<div class="atl-section atl-section--jobs" style="padding-bottom: var(--atl-sp-8);">
+  <div class="atl-container atl-stack-8">
+    <img src="https://rmkcdn.successfactors.com/fbe9912e/b4050d8f-69bd-45ad-b834-7.jpg" alt="" style="width: 100%; height: auto; display: block;">
+    <h2 class="atl-heading-2">Prilika je na stolu, odaberi svoju!</h2>
+  </div>
+</div>
+<div class="atl-apply-wrapper">
+  <a class="atl-apply" href="https://careers.atlanticgrupa.com/go/Prodaja/9208201/">
+    <div class="atl-container">
+      <div class="atl-apply__inner">
+        <span class="atl-apply__text">Meni poslova - Pogledaj trenutno otvorene pozicije!</span>
+        <div class="atl-apply__arrow">
+          <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="24" fill="var(--atl-red)"/><path d="M20 14l10 10-10 10" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+      </div>
+    </div>
+  </a>
+  <div class="atl-container"><div style="height: 1px; background: var(--atl-border);"></div></div>
+  <a class="atl-apply" href="https://careers.atlanticgrupa.com/content/Talent-Community/">
+    <div class="atl-container">
+      <div class="atl-apply__inner">
+        <span class="atl-apply__text">Postani dio našeg tima - upiši se u bazu potencijalnih kandidata!</span>
+        <div class="atl-apply__arrow">
+          <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="24" fill="var(--atl-red)"/><path d="M20 14l10 10-10 10" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+      </div>
+    </div>
+  </a>
+</div>
+
+<!-- ============================================================ -->
+<!-- SECTION: Footer                                              -->
+<!-- ============================================================ -->
+<footer class="atl-footer">
+  <div class="atl-container">
+    <div class="atl-footer__inner">
+      <img src="https://rmkcdn.successfactors.com/fbe9912e/9b39ff86-5998-4b65-8cce-0.png" alt="Atlantic Grupa" class="atl-footer__logo">
+      <div class="atl-footer__social">
+        <a href="https://www.linkedin.com/company/atlantic-grupa/"><img src="https://rmkcdn.successfactors.com/fbe9912e/ae077d4e-e9da-4812-b60a-3.png" alt="LinkedIn"></a>
+        <a href="https://www.youtube.com/user/atlanticgrupanews"><img src="https://rmkcdn.successfactors.com/fbe9912e/52420cee-4f9f-4754-bda5-1.png" alt="YouTube"></a>
+        <a href="mailto:zaposljavanje@atlanticgrupa.com"><img src="https://rmkcdn.successfactors.com/fbe9912e/00165d7e-6db2-4322-b7e7-f.png" alt="Email"></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================================================ -->
+<!-- SCRIPT: Parallax                                             -->
+<!-- ============================================================ -->
+<script>
+  (function() {
+    var el = document.querySelector('.atl-parallax');
+    function onScroll() {
+      var rect = el.getBoundingClientRect();
+      var center = rect.top + rect.height / 2;
+      var viewH = window.innerHeight;
+      var ratio = (center / viewH - 0.5) * 0.8;
+      el.style.backgroundPositionY = (50 + ratio * 100) + '%';
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  })();
+</script>
+
+</body>
+</html>

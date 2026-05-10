@@ -1,628 +1,478 @@
-<style>
-/* ============================================================ */
-/* FARMACIA THEME — paste this style block at the top of the   */
-/* Farmacia custom code component (before all HTML)             */
-/* ============================================================ */
-
-/* Override accent to Farmacia green */
-:root {
-  --atl-accent: #23BE55;
-  --atl-pharma-green: #23BE55;
-  --atl-pharma-grey: #F1F4F7;
-}
-
-/* ---- atl-intro (Farmacia hero) ---- */
-.atl-intro {
-  background: var(--atl-pharma-grey);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 90vh;
-  padding: 0;
-  position: relative;
-  overflow: hidden;
-}
-
-.atl-intro__container {
-  width: 80vw;
-  max-width: var(--atl-container-max);
-  display: flex;
-  align-items: stretch;
-  gap: var(--atl-sp-8);
-  height: 100%;
-}
-
-.atl-intro__content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: var(--atl-sp-2);
-  padding: var(--atl-sp-12) 0;
-}
-
-.atl-intro__image {
-  width: 50%;
-  flex-shrink: 0;
-  display: flex;
-  align-items: flex-end;
-}
-
-.atl-intro__image img {
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-}
-
-@media (max-width: 1024px) {
-  .atl-intro {
-    min-height: auto;
-    padding: var(--atl-sp-8) 0;
-  }
-  .atl-intro__container {
-    flex-direction: column;
-    align-items: center;
-    width: 90vw;
-  }
-  .atl-intro__image {
-    width: 100%;
-  }
-}
-
-/* ---- atl-categories (2x2 grid of category links) ---- */
-.atl-categories {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: var(--atl-sp-8);
-  padding: var(--atl-sp-12) 10vw;
-  max-width: var(--atl-container-max);
-  margin: 0 auto;
-}
-
-@media (max-width: 767px) {
-  .atl-categories {
-    grid-template-columns: 1fr;
-    padding: var(--atl-sp-8) var(--atl-sp-4);
-  }
-}
-
-.atl-category {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  text-decoration: none !important;
-  color: inherit;
-  transition: transform 0.1s ease;
-  gap: var(--atl-sp-4);
-}
-
-.atl-category:hover {
-  transform: scale(1.02);
-}
-
-.atl-category img {
-  width: 100%;
-  max-width: 400px;
-  height: auto;
-}
-
-.atl-category__title {
-  font-family: var(--atl-font-black);
-  font-size: clamp(1.8rem, 2.5vw, 3rem);
-  color: var(--atl-pharma-green);
-}
-
-/* ---- atl-description (why section) ---- */
-.atl-description {
-  padding: var(--atl-sp-12) 10vw;
-  max-width: var(--atl-container-max);
-  margin: 0 auto;
-}
-
-.atl-description p {
-  margin-bottom: var(--atl-sp-4);
-}
-
-/* ---- atl-benefits (two-column perks list) ---- */
-.atl-benefits {
-  padding: var(--atl-sp-12) 10vw;
-  max-width: var(--atl-container-max);
-  margin: 0 auto;
-}
-
-.atl-benefits__grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: var(--atl-sp-10);
-  margin-top: var(--atl-sp-8);
-}
-
-@media (max-width: 767px) {
-  .atl-benefits__grid {
-    grid-template-columns: 1fr;
-  }
-  .atl-benefits {
-    padding: var(--atl-sp-8) var(--atl-sp-4);
-  }
-}
-
-.atl-benefits__column-title {
-  font-family: var(--atl-font-black);
-  font-size: clamp(1.6rem, 2vw, 2.4rem);
-  color: var(--atl-dark);
-  margin-bottom: var(--atl-sp-4);
-}
-
-.atl-benefits__list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: var(--atl-sp-3);
-}
-
-.atl-perk-item {
-  display: flex;
-  align-items: flex-start;
-  gap: var(--atl-sp-3);
-}
-
-.atl-perk-item img {
-  width: 32px;
-  height: 32px;
-  flex-shrink: 0;
-  object-fit: contain;
-  margin-top: 2px;
-}
-
-.atl-perk-item span {
-  font-size: clamp(1.3rem, 1.5vw, 1.8rem);
-  line-height: 1.5;
-  color: var(--atl-dark);
-}
-
-/* ---- atl-roles (image + text pairs) ---- */
-.atl-roles {
-  padding: var(--atl-sp-12) 0;
-}
-
-.atl-roles__container {
-  max-width: 80vw;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: var(--atl-sp-12);
-}
-
-.atl-roles__item {
-  display: flex;
-  align-items: center;
-  gap: var(--atl-sp-8);
-}
-
-.atl-roles__item img {
-  width: 100%;
-  max-width: 560px;
-  height: auto;
-}
-
-.atl-roles__content {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: var(--atl-sp-3);
-}
-
-@media (max-width: 1024px) {
-  .atl-roles__item {
-    flex-direction: column;
-  }
-  .atl-roles__container {
-    max-width: 90vw;
-  }
-}
-
-/* ---- atl-apply (application CTA row) ---- */
-.atl-apply-wrapper {
-  background: var(--atl-pharma-grey);
-  padding: var(--atl-sp-8) 0;
-}
-
-.atl-apply-divider {
-  height: 1px;
-  background: var(--atl-border);
-  width: 80vw;
-  margin: var(--atl-sp-4) auto;
-}
-
-.atl-apply {
-  display: block;
-  text-decoration: none !important;
-  color: inherit;
-}
-
-.atl-apply__container {
-  max-width: 80vw;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: var(--atl-sp-8);
-}
-
-.atl-apply__text {
-  font-family: var(--atl-font-black);
-  font-size: clamp(2rem, 3vw, 4rem);
-  color: var(--atl-dark);
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--atl-sp-1);
-}
-
-.atl-apply__text .atl-apply__email {
-  color: var(--atl-pharma-green);
-  text-decoration: underline;
-}
-
-.atl-apply__arrow img {
-  max-height: 64px;
-  width: auto;
-  transition: opacity 0.2s ease;
-}
-
-.atl-apply:hover .atl-apply__arrow img {
-  opacity: 0.7;
-}
-
-@media (max-width: 767px) {
-  .atl-apply__container {
-    flex-direction: column;
-    align-items: flex-start;
-    max-width: 90vw;
-  }
-  .atl-apply__text { font-size: 2rem; }
-}
-
-/* ---- atl-pharma-logos ---- */
-.atl-pharma-logos {
-  padding: var(--atl-sp-8) 0 0;
-}
-
-.atl-pharma-logos__container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: var(--atl-sp-8);
-  max-width: 80vw;
-  margin: 0 auto;
-}
-
-.atl-pharma-logos__container img {
-  max-height: 64px;
-  width: auto;
-}
-
-@media (max-width: 767px) {
-  .atl-pharma-logos__container {
-    flex-direction: column;
-    gap: var(--atl-sp-4);
-  }
-}
-
-/* ---- atl-footer ---- */
-.atl-footer {
-  padding: var(--atl-sp-8) 0;
-  background: var(--atl-pharma-grey);
-}
-
-.atl-footer__container {
-  max-width: 80vw;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: var(--atl-sp-6);
-}
-
-.atl-footer__logo img {
-  max-height: 48px;
-  width: auto;
-}
-
-.atl-footer__social {
-  display: flex;
-  gap: var(--atl-sp-4);
-  align-items: center;
-}
-
-.atl-footer__social a img {
-  max-height: 32px;
-  width: auto;
-  transition: opacity 0.2s ease;
-}
-
-.atl-footer__social a:hover img {
-  opacity: 0.7;
-}
-
-@media (max-width: 767px) {
-  .atl-footer__container {
-    flex-direction: column;
-    max-width: 90vw;
-  }
-}
-
-/* ---- atl-carousel (testimonial carousel) ---- */
-.atl-carousel {
-  padding: var(--atl-sp-12) 0;
-  overflow: hidden;
-}
-
-.atl-carousel__track {
-  display: flex;
-  transition: transform 0.4s ease;
-}
-
-.atl-carousel__slide {
-  min-width: 100%;
-  box-sizing: border-box;
-  padding: 0 10vw;
-}
-
-.atl-carousel__slide-inner {
-  display: flex;
-  align-items: center;
-  gap: var(--atl-sp-8);
-  max-width: var(--atl-container-max);
-  margin: 0 auto;
-}
-
-.atl-carousel__slide-content {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: var(--atl-sp-3);
-}
-
-.atl-carousel__slide-image {
-  width: 280px;
-  flex-shrink: 0;
-}
-
-.atl-carousel__slide-image img {
-  width: 100%;
-  height: auto;
-  border-radius: 4px;
-  object-fit: cover;
-}
-
-@media (max-width: 767px) {
-  .atl-carousel__slide-inner {
-    flex-direction: column;
-  }
-  .atl-carousel__slide-image {
-    width: 100%;
-    max-width: 300px;
-  }
-}
-
-.atl-carousel__nav {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: var(--atl-sp-4);
-  margin-top: var(--atl-sp-6);
-}
-
-.atl-carousel__prev,
-.atl-carousel__next {
-  background: none;
-  border: 1px solid var(--atl-border);
-  cursor: pointer;
-  padding: var(--atl-sp-2) var(--atl-sp-3);
-  font-size: 1.5rem;
-  border-radius: 4px;
-  line-height: 1;
-}
-
-.atl-carousel__prev:hover,
-.atl-carousel__next:hover {
-  background: var(--atl-pharma-grey);
-}
-
-.atl-carousel__dots {
-  display: flex;
-  gap: var(--atl-sp-2);
-}
-
-.atl-carousel__dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  border: none;
-  background: var(--atl-border);
-  cursor: pointer;
-  padding: 0;
-}
-
-.atl-carousel__dot.is-active {
-  background: var(--atl-pharma-green);
-}
-
-/* ---- atl-description (Why Farmacia text block) ---- */
-.atl-description {
-  padding: var(--atl-sp-12) 10vw;
-  max-width: var(--atl-container-max);
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: var(--atl-sp-4);
-}
-
-@media (max-width: 767px) {
-  .atl-description {
-    padding: var(--atl-sp-8) var(--atl-sp-4);
-  }
-}
-
-/* ---- atl-benefits (Benefits / perks section) ---- */
-.atl-benefits {
-  padding: var(--atl-sp-12) 10vw;
-  max-width: var(--atl-container-max);
-  margin: 0 auto;
-  background: var(--atl-pharma-grey);
-  display: flex;
-  flex-direction: column;
-  gap: var(--atl-sp-8);
-}
-
-.atl-benefits__grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--atl-sp-8);
-}
-
-@media (max-width: 767px) {
-  .atl-benefits {
-    padding: var(--atl-sp-8) var(--atl-sp-4);
-  }
-  .atl-benefits__grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-.atl-benefits__column-title {
-  font-family: var(--atl-font-black);
-  font-size: clamp(1.6rem, 2vw, 2.2rem);
-  color: var(--atl-pharma-green);
-  margin: 0 0 var(--atl-sp-4);
-  line-height: 1.2;
-}
-
-.atl-benefits__list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: var(--atl-sp-3);
-}
-
-/* ---- atl-perk-item (icon + text row) ---- */
-.atl-perk-item {
-  display: flex;
-  align-items: flex-start;
-  gap: var(--atl-sp-2);
-}
-
-.atl-perk-item img {
-  width: 32px;
-  height: 32px;
-  object-fit: contain;
-  flex-shrink: 0;
-  margin-top: 2px;
-}
-
-.atl-perk-item span {
-  font-family: var(--atl-font-book);
-  font-size: clamp(1rem, 1.2vw, 1.4rem);
-  color: var(--atl-dark);
-  line-height: 1.6;
-}
-
-/* ---- atl-footer ---- */
-.atl-footer {
-  padding: var(--atl-sp-8) 10vw;
-  background: var(--atl-pharma-grey);
-}
-
-.atl-footer__container {
-  max-width: var(--atl-container-max);
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: var(--atl-sp-4);
-  flex-wrap: wrap;
-}
-
-.atl-footer__logo img {
-  max-height: 48px;
-  width: auto;
-}
-
-.atl-footer__social {
-  display: flex;
-  gap: var(--atl-sp-3);
-  align-items: center;
-}
-
-.atl-footer__social a {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--atl-sp-1);
-  text-decoration: none;
-  font-family: var(--atl-font-medium);
-  font-size: 1.4rem;
-  color: var(--atl-dark);
-}
-
-.atl-footer__social a:hover {
-  color: var(--atl-pharma-green);
-}
-
-@media (max-width: 767px) {
-  .atl-footer {
-    padding: var(--atl-sp-6) var(--atl-sp-4);
-  }
-  .atl-footer__container {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-}
-</style>
+﻿<!DOCTYPE html>
+<html lang="hr-HR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Farmacia — Atlantic Grupa karijere</title>
+  <style>
+    @font-face {
+      font-family: 'custom1cdc72a1280c488ba8954';
+      src: url('https://rmkcdn.successfactors.com/fbe9912e/1cdc72a1-280c-488b-a895-4.otf');
+    }
+    @font-face {
+      font-family: 'custom7a590e3d1f3945ba91932';
+      src: url('https://rmkcdn.successfactors.com/fbe9912e/7a590e3d-1f39-45ba-9193-2.otf');
+    }
+    @font-face {
+      font-family: 'customa4cf9070d1c841e28b809';
+      src: url('https://rmkcdn.successfactors.com/fbe9912e/a4cf9070-d1c8-41e2-8b80-9.otf');
+    }
+    body { margin: 0; }
+  </style>
+  <link rel="stylesheet" href="../css/atl-global.css">
+  <style>
+    /* ============================================================ */
+    /* FARMACIA THEME                                                */
+    /* ============================================================ */
+
+    :root {
+      --atl-accent: #23BE55;
+      --atl-pharma-green: #23BE55;
+      --atl-pharma-grey: #F1F4F7;
+    }
+
+    /* ---- atl-intro (Farmacia hero) ---- */
+    .atl-intro {
+      background: var(--atl-pharma-grey);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 90vh;
+      padding: 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .atl-intro__container {
+      width: 80vw;
+      max-width: var(--atl-container-max);
+      display: flex;
+      align-items: stretch;
+      gap: var(--atl-sp-8);
+      height: 100%;
+    }
+
+    .atl-intro__content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: var(--atl-sp-2);
+      padding: var(--atl-sp-12) 0;
+    }
+
+    .atl-intro__image {
+      width: 50%;
+      flex-shrink: 0;
+      display: flex;
+      align-items: flex-end;
+    }
+
+    .atl-intro__image img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+
+    @media (max-width: 1024px) {
+      .atl-intro {
+        min-height: auto;
+        padding: var(--atl-sp-8) 0;
+      }
+      .atl-intro__container {
+        flex-direction: column;
+        align-items: center;
+        width: 90vw;
+      }
+      .atl-intro__image {
+        width: 100%;
+      }
+    }
+
+    /* ---- atl-categories (2x2 grid of category links) ---- */
+    .atl-categories {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--atl-sp-8);
+      padding: var(--atl-sp-12) 10vw;
+      max-width: var(--atl-container-max);
+      margin: 0 auto;
+    }
+
+    @media (max-width: 767px) {
+      .atl-categories {
+        grid-template-columns: 1fr;
+        padding: var(--atl-sp-8) var(--atl-sp-4);
+      }
+    }
+
+    .atl-category {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      text-decoration: none !important;
+      color: inherit;
+      transition: transform 0.1s ease;
+      gap: var(--atl-sp-4);
+    }
+
+    .atl-category:hover {
+      transform: scale(1.02);
+    }
+
+    .atl-category img {
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+    }
+
+    .atl-category__title {
+      font-family: var(--atl-font-black);
+      font-size: clamp(1.8rem, 2.5vw, 3rem);
+      color: var(--atl-pharma-green);
+    }
+
+    /* ---- atl-section--about (why Farmacia) ---- */
+    .atl-section--about strong {
+      color: var(--atl-pharma-green);
+      font-family: var(--atl-font-black);
+    }
+
+    /* ---- atl-section--benefits (perks grid, grey bg) ---- */
+    .atl-section--benefits {
+      background: var(--atl-pharma-grey);
+    }
+
+    .atl-benefits__grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--atl-sp-8);
+    }
+
+    @media (max-width: 767px) {
+      .atl-benefits__grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .atl-benefits__column-title {
+      font-family: var(--atl-font-black);
+      font-size: clamp(1.6rem, 2vw, 2.2rem);
+      color: var(--atl-pharma-green);
+      margin: 0 0 var(--atl-sp-4);
+      line-height: 1.2;
+    }
+
+    .atl-benefits__list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: var(--atl-sp-3);
+    }
+
+    /* ---- atl-perk-item (icon + text row) ---- */
+    .atl-perk-item {
+      display: flex;
+      align-items: flex-start;
+      gap: var(--atl-sp-2);
+    }
+
+    .atl-perk-item img {
+      width: 48px;
+      height: 48px;
+      object-fit: contain;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .atl-perk-item span {
+      font-family: var(--atl-font-book);
+      font-size: clamp(1rem, 1.2vw, 1.4rem);
+      color: var(--atl-dark);
+      line-height: 1.6;
+    }
+
+    /* ---- atl-section--roles (job role pairs) ---- */
+
+    .atl-roles__item {
+      display: flex;
+      align-items: center;
+      gap: var(--atl-sp-8);
+    }
+
+    .atl-roles__item img {
+      width: 100%;
+      max-width: 560px;
+      height: auto;
+    }
+
+    .atl-roles__content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: var(--atl-sp-3);
+    }
+
+    @media (max-width: 1024px) {
+      .atl-roles__item {
+        flex-direction: column;
+      }
+    }
+
+    /* ---- atl-apply (application CTA row) ---- */
+    .atl-apply-wrapper {
+      background: var(--atl-pharma-grey);
+    }
+
+    .atl-apply {
+      display: block;
+      text-decoration: none !important;
+      color: inherit;
+      padding: var(--atl-sp-8) 0;
+    }
+
+    .atl-apply__container {
+      max-width: var(--atl-container-max);
+      margin: 0 auto;
+      padding: 0 var(--atl-gap);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--atl-sp-8);
+    }
+
+    .atl-apply__text {
+      font-family: var(--atl-font-black);
+      font-size: clamp(1.4rem, 1.8vw, 2.4rem);
+      color: var(--atl-dark);
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--atl-sp-1);
+    }
+
+    .atl-apply__text .atl-apply__email {
+      color: var(--atl-pharma-green);
+      text-decoration: underline;
+    }
+
+    .atl-apply__arrow img {
+      max-height: 48px;
+      width: auto;
+      transition: opacity 0.2s ease;
+    }
+
+    .atl-apply:hover .atl-apply__arrow img {
+      opacity: 0.7;
+    }
+
+    @media (max-width: 767px) {
+      .atl-apply {
+        padding: var(--atl-sp-4) var(--atl-gap);
+      }
+      .atl-apply__container {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .atl-apply__text { font-size: 1.4rem; }
+    }
+
+    /* ---- atl-pharma-logos ---- */
+    .atl-pharma-logos {
+      padding: var(--atl-sp-8) 0 0;
+    }
+
+    .atl-pharma-logos__container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: var(--atl-sp-8);
+      max-width: 80vw;
+      margin: 0 auto;
+    }
+
+    .atl-pharma-logos__container img {
+      max-height: 64px;
+      width: auto;
+    }
+
+    @media (max-width: 767px) {
+      .atl-pharma-logos__container {
+        flex-direction: column;
+        gap: var(--atl-sp-4);
+      }
+    }
+
+
+    /* ---- atl-carousel (testimonial carousel) ---- */
+    .atl-carousel {
+      padding: var(--atl-sp-12) 0;
+      overflow: hidden;
+    }
+
+    .atl-carousel__track {
+      display: flex;
+      transition: transform 0.4s ease;
+    }
+
+    .atl-carousel__slide {
+      min-width: 100%;
+      box-sizing: border-box;
+      padding: 0 10vw;
+    }
+
+    .atl-carousel__slide-inner {
+      display: flex;
+      align-items: center;
+      gap: var(--atl-sp-8);
+      max-width: var(--atl-container-max);
+      margin: 0 auto;
+    }
+
+    .atl-carousel__slide-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: var(--atl-sp-3);
+    }
+
+    .atl-carousel__slide-image {
+      width: 280px;
+      flex-shrink: 0;
+    }
+
+    .atl-carousel__slide-image img {
+      width: 100%;
+      height: auto;
+      border-radius: 4px;
+      object-fit: cover;
+    }
+
+    @media (max-width: 767px) {
+      .atl-carousel__slide-inner {
+        flex-direction: column;
+      }
+      .atl-carousel__slide-image {
+        width: 100%;
+        max-width: 300px;
+      }
+    }
+
+    .atl-carousel__nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--atl-sp-4);
+      margin-top: var(--atl-sp-6);
+    }
+
+    .atl-carousel__prev,
+    .atl-carousel__next {
+      background: none;
+      border: 1px solid var(--atl-border);
+      cursor: pointer;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      font-size: 1.4rem;
+      line-height: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+    }
+
+    .atl-carousel__prev:hover,
+    .atl-carousel__next:hover {
+      background: var(--atl-pharma-grey);
+    }
+
+    .atl-carousel__dots {
+      display: flex;
+      gap: var(--atl-sp-2);
+    }
+
+    .atl-carousel__dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      border: none;
+      background: var(--atl-border);
+      cursor: pointer;
+      padding: 0;
+    }
+
+    .atl-carousel__dot.is-active {
+      background: var(--atl-pharma-green);
+    }
+  </style>
+</head>
+<body>
 
 <!-- ============================================================ -->
-<!-- SECTION: Intro hero                                          -->
+<!-- PAGE: Farmacia                                               -->
+<!-- SAP: paste <style> block + everything inside <body>         -->
+<!-- into the Custom Code component                              -->
 <!-- ============================================================ -->
-<div class="atl-intro">
-  <div class="atl-intro__container">
-    <div class="atl-intro__content">
-      <h1 class="atl-heading-1" style="color:var(--atl-dark)">Farmacia – mjesto za vrhunske farmaceutske eksperte</h1>
-    </div>
-    <div class="atl-intro__image">
-      <img src="https://rmkcdn.successfactors.com/fbe9912e/7fc08c7f-7062-4d2c-bd84-d.jpg" alt="Farmaceut">
-    </div>
+
+<!-- ============================================================ -->
+<!-- SECTION: Hero                                                -->
+<!-- ============================================================ -->
+<div class="atl-hero atl-hero--split" style="background-color: var(--atl-pharma-grey)">
+  <div class="atl-hero__content">
+    <h1 class="atl-heading-1" style="color:var(--atl-dark)">Farmacia – mjesto za vrhunske farmaceutske eksperte</h1>
   </div>
+  <div class="atl-hero__image">
+    <img src="https://rmkcdn.successfactors.com/fbe9912e/7fc08c7f-7062-4d2c-bd84-d.jpg" alt="Farmaceut">
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- DECORATION: Leaf                                             -->
+<!-- ============================================================ -->
+<div style="text-align: center; margin-top: -60px; position: relative; z-index: 2; pointer-events: none;">
+  <img src="https://rmkcdn.successfactors.com/fbe9912e/ee1dd2f6-c73f-4c76-bb45-0.png" alt="" style="height: 120px; width: auto; display: inline-block;">
 </div>
 
 <!-- ============================================================ -->
 <!-- SECTION: Categories grid                                     -->
 <!-- ============================================================ -->
-<div class="atl-categories">
-  <a class="atl-category" href="https://careers.atlanticgrupa.com/content/Farmaceut/?locale=hr_HR#">
-    <img src="https://rmkcdn.successfactors.com/fbe9912e/61313fa5-26e9-4a1c-a094-e.jpg" alt="Farmaceut">
-    <p class="atl-category__title">Farmaceut</p>
-    <a class="atl-btn atl-btn--primary" href="https://careers.atlanticgrupa.com/go/Sve-poslovne-mogucnosti/9208201/">Zaposli se</a>
-  </a>
-  <a class="atl-category" href="https://careers.atlanticgrupa.com/content/Farmaceutski%20Tehnicar/?locale=hr_HR#">
-    <img src="https://rmkcdn.successfactors.com/fbe9912e/21954a8c-9d53-4d05-ba3c-8.jpg" alt="Farmaceutski tehničar">
-    <p class="atl-category__title">Farmaceutski tehničar</p>
-    <a class="atl-btn atl-btn--primary" href="https://careers.atlanticgrupa.com/go/Sve-poslovne-mogucnosti/9208201/">Zaposli se</a>
-  </a>
+<div class="atl-section atl-section--categories">
+  <div class="atl-container">
+    <div class="atl-row">
+      <div class="atl-col-6">
+        <a class="atl-role-card" href="https://careers.atlanticgrupa.com/content/Farmaceut/?locale=hr_HR">
+          <div class="atl-role-card__image">
+            <img src="https://rmkcdn.successfactors.com/fbe9912e/61313fa5-26e9-4a1c-a094-e.jpg" alt="Farmaceut">
+          </div>
+          <h2 class="atl-subheading" style="color: var(--atl-pharma-green)">Farmaceut</h2>
+          <span class="atl-btn atl-btn--primary">Zaposli se</span>
+        </a>
+      </div>
+      <div class="atl-col-6">
+        <a class="atl-role-card" href="https://careers.atlanticgrupa.com/content/Farmaceutski%20Tehnicar/?locale=hr_HR">
+          <div class="atl-role-card__image">
+            <img src="https://rmkcdn.successfactors.com/fbe9912e/21954a8c-9d53-4d05-ba3c-8.jpg" alt="Farmaceutski tehničar">
+          </div>
+          <h2 class="atl-subheading" style="color: var(--atl-pharma-green)">Farmaceutski tehničar</h2>
+          <span class="atl-btn atl-btn--primary">Zaposli se</span>
+        </a>
+      </div>
+    </div>
+  </div>
 </div>
 
 <!-- ============================================================ -->
 <!-- SECTION: Testimonial carousel                                -->
 <!-- ============================================================ -->
-<div class="atl-carousel" style="background:var(--atl-bg)">
+<div class="atl-carousel" style="background:var(--atl-white)">
   <div class="atl-carousel__track">
     <div class="atl-carousel__slide">
       <div class="atl-carousel__slide-inner">
         <div class="atl-carousel__slide-content">
           <h3 class="atl-heading-3" style="color:var(--atl-pharma-green)">Tim vrhunskih eksperata koji zajedno stvara izvrsnost</h3>
-          <p class="atl-lead">Put u Farmaciji počela sam kao farmaceut pripravnik. U godinama rada u Farmaciji naučila sam koliko je važna podrška kolega. Kao voditeljici ljekarne cilj mi je uvijek bio stvoriti okruženje u kojem se svi osjećaju sigurno, motivirano i podržano u profesionalnom razvoju. Samo snažan tim može pružiti najbolju skrb pacijentima.</p>
+          <p class="atl-body">Put u Farmaciji počela sam kao farmaceut pripravnik. U godinama rada u Farmaciji naučila sam koliko je važna podrška kolega. Kao voditeljici ljekarne cilj mi je uvijek bio stvoriti okruženje u kojem se svi osjećaju sigurno, motivirano i podržano u profesionalnom razvoju. Samo snažan tim može pružiti najbolju skrb pacijentima.</p>
           <p class="atl-caption">– Mirela Dimitrović, mag.pharm.</p>
         </div>
         <div class="atl-carousel__slide-image">
@@ -634,7 +484,7 @@
       <div class="atl-carousel__slide-inner">
         <div class="atl-carousel__slide-content">
           <h3 class="atl-heading-3" style="color:var(--atl-pharma-green)">Mjesto gdje se prepoznaju vrhunska ekspertiza i uspjeh</h3>
-          <p class="atl-lead">Prije sedam godina bojala sam se izazova rada u ljekarni. Danas sam zamjenik voditelja i magistrica s najboljim radnim portfolijem u 2022. godini. Farmacia je prepoznala moju ambiciju i trud te mi omogućila daljnje usavršavanje. Ovdje nikada nisi sam – uspjesi su timski, a podrška je stalna.</p>
+          <p class="atl-body">Prije sedam godina bojala sam se izazova rada u ljekarni. Danas sam zamjenik voditelja i magistrica s najboljim radnim portfolijem u 2022. godini. Farmacia je prepoznala moju ambiciju i trud te mi omogućila daljnje usavršavanje. Ovdje nikada nisi sam – uspjesi su timski, a podrška je stalna.</p>
           <p class="atl-caption">– Lara Ismailovski, mag. pharm.</p>
         </div>
         <div class="atl-carousel__slide-image">
@@ -646,7 +496,7 @@
       <div class="atl-carousel__slide-inner">
         <div class="atl-carousel__slide-content">
           <h3 class="atl-heading-3" style="color:var(--atl-pharma-green)">Vrhunska ekspertiza koja se cijeni i nagrađuje</h3>
-          <p class="atl-lead">Farmacia je mjesto gdje se trud i znanje cijene. Dodatnim edukacijama, razvojem i mogućnostima napredovanja zaposlenici imaju priliku osigurati stabilnost i financijski rast. Nakon 29 godina karijere, od kojih sam već 10 u Farmaciji, mogu reći da je ovo posao koji pruža sigurnost i nagrađuje angažman.</p>
+          <p class="atl-body">Farmacia je mjesto gdje se trud i znanje cijene. Dodatnim edukacijama, razvojem i mogućnostima napredovanja zaposlenici imaju priliku osigurati stabilnost i financijski rast. Nakon 29 godina karijere, od kojih sam već 10 u Farmaciji, mogu reći da je ovo posao koji pruža sigurnost i nagrađuje angažman.</p>
           <p class="atl-caption">– Ivančica Drča, farm. teh.</p>
         </div>
         <div class="atl-carousel__slide-image">
@@ -658,7 +508,7 @@
       <div class="atl-carousel__slide-inner">
         <div class="atl-carousel__slide-content">
           <h3 class="atl-heading-3" style="color:var(--atl-pharma-green)">Prvi korak u karijeri vrhunskih farmaceutskih eksperata</h3>
-          <p class="atl-lead">Farmaciju sam odabrao za stažiranje, ali sam ostao jer sam pronašao sustav koji nudi razvoj, jasne strukture i priliku za napredak. Iskustvo koje sam stekao ovdje dalo mi je jasnu sliku javnog ljekarništva i njegove važnosti u zajednici.</p>
+          <p class="atl-body">Farmaciju sam odabrao za stažiranje, ali sam ostao jer sam pronašao sustav koji nudi razvoj, jasne strukture i priliku za napredak. Iskustvo koje sam stekao ovdje dalo mi je jasnu sliku javnog ljekarništva i njegove važnosti u zajednici.</p>
           <p class="atl-caption">– Tibor Gašparić, mag. pharm.</p>
         </div>
         <div class="atl-carousel__slide-image">
@@ -675,23 +525,32 @@
 </div>
 
 <!-- ============================================================ -->
+<!-- DECORATION: Leaf                                             -->
+<!-- ============================================================ -->
+<div style="text-align: center; margin-bottom: -100px; position: relative; z-index: 2; pointer-events: none;">
+  <img src="https://rmkcdn.successfactors.com/fbe9912e/d59d7abd-1d06-4edf-b0df-9.png" alt="" style="height: 200px; width: auto; display: inline-block;">
+</div>
+
+<!-- ============================================================ -->
 <!-- SECTION: Why Farmacia description                            -->
 <!-- ============================================================ -->
-<div class="atl-description">
-  <h2 class="atl-heading-2" style="color:var(--atl-dark)">Zašto odabrati Farmaciju?</h2>
-  <p class="atl-body">Farmacia posluje kao <strong>dio Atlantic Grupe s kojom je u posljednjih 15 godina značajno unaprijedila ljekarničko poslovanje</strong>, portfelj proizvoda i donijela brojne inovacije na tržištu.</p>
-  <p class="atl-body">Danas smo <strong>najveći privatni ljekarnički lanac</strong> koji se ističe modernim radnim procesima, specijaliziranim savjetovalištima i najnaprednijim programima usmjerenima na razvoj vrhunskih stručnjaka.</p>
-  <p class="atl-body">Farmacia je <strong>mjesto za vrhunske farmaceutske eksperte</strong> koji žele priliku razvijati se, usvajati vještine ključne za pružanje vrhunske skrbi za pacijente te unaprjeđivati javno-zdravstvenu ulogu koju farmaceuti ponosno ističu.</p>
-  <p class="atl-body"><strong>U Farmaciji vjerujemo da vrhunska skrb počinje vrhunskim farmaceutskim ekspertima – pridruži nam se i očekuj više.</strong></p>
+<div class="atl-section atl-section--about">
+  <div class="atl-container atl-stack-4">
+    <h2 class="atl-heading-2" style="color:var(--atl-dark)">Zašto odabrati Farmaciju?</h2>
+    <p class="atl-lead">Farmacia posluje kao <strong>dio Atlantic Grupe s kojom je u posljednjih 15 godina značajno unaprijedila ljekarničko poslovanje</strong>, portfelj proizvoda i donijela brojne inovacije na tržištu.</p>
+    <p class="atl-lead">Danas smo <strong>najveći privatni ljekarnički lanac</strong> koji se ističe modernim radnim procesima, specijaliziranim savjetovalištima i najnaprednijim programima usmjerenima na razvoj vrhunskih stručnjaka.</p>
+    <p class="atl-lead">Farmacia je <strong>mjesto za vrhunske farmaceutske eksperte</strong> koji žele priliku razvijati se, usvajati vještine ključne za pružanje vrhunske skrbi za pacijente te unaprjeđivati javno-zdravstvenu ulogu koju farmaceuti ponosno ističu.</p>
+    <p class="atl-lead"><strong>U Farmaciji vjerujemo da vrhunska skrb počinje vrhunskim farmaceutskim ekspertima – pridruži nam se i očekuj više.</strong></p>
+  </div>
 </div>
 
 <!-- ============================================================ -->
 <!-- SECTION: Benefits / Perks                                    -->
 <!-- ============================================================ -->
-<div class="atl-benefits">
-  <h2 class="atl-heading-2" style="color:var(--atl-dark)">Benefiti</h2>
-  <div class="atl-benefits__grid">
-    <!-- Column 1: Professional development -->
+<div class="atl-section atl-section--benefits">
+  <div class="atl-container atl-stack-8">
+    <h2 class="atl-heading-2" style="color:var(--atl-dark)">Benefiti</h2>
+    <div class="atl-benefits__grid">
     <div>
       <p class="atl-benefits__column-title">Tvoj razvoj do vrhunskog farmaceutskog eksperta</p>
       <ul class="atl-benefits__list">
@@ -705,7 +564,6 @@
         <li><div class="atl-perk-item"><img src="https://rmkcdn.successfactors.com/fbe9912e/c7c9fed3-2989-453c-9f27-8.png" alt=""><span><strong>Kotizacija za konferencije i kongrese</strong> – stručno usavršavanje bez dodatnih troškova.</span></div></li>
       </ul>
     </div>
-    <!-- Column 2: Wellbeing -->
     <div>
       <p class="atl-benefits__column-title">Tvoje zdravo radno okruženje</p>
       <ul class="atl-benefits__list">
@@ -720,44 +578,55 @@
         <li><div class="atl-perk-item"><img src="https://rmkcdn.successfactors.com/fbe9912e/067fada3-91ba-4ce8-818a-6.png" alt=""><span><strong>Programi volontiranja</strong> – doprinos zajednici humanitarnim aktivnostima.</span></div></li>
       </ul>
     </div>
+    </div>
   </div>
 </div>
 
 <!-- ============================================================ -->
 <!-- SECTION: Roles                                               -->
 <!-- ============================================================ -->
-<div class="atl-roles">
-  <div class="atl-roles__container">
-    <h2 class="atl-heading-2" style="color:var(--atl-dark);text-align:center">Pronađi svoje mjesto u Farmaciji!</h2>
+<div class="atl-section atl-section--roles">
+  <div class="atl-container">
+    <div style="display:flex; flex-direction:column; gap:var(--atl-sp-12);">
+    <h2 class="atl-heading-2" style="color:var(--atl-dark)">Pronađi svoje mjesto u Farmaciji!</h2>
     <div class="atl-roles__item">
       <img src="https://rmkcdn.successfactors.com/fbe9912e/7ad51f75-2147-41a6-8db0-c.jpg" alt="Farmaceutkinja u ljekarni">
       <div class="atl-roles__content">
-        <h3 class="atl-heading-3" style="color:var(--atl-pharma-green)">Farmaceuti i tehničari</h3>
+        <h3 class="atl-heading-4" style="color:var(--atl-pharma-green)">Farmaceuti i tehničari</h3>
         <p class="atl-body">Vrhunska skrb za pacijente počinje vrhunskom podrškom – u Farmaciji se možeš osloniti na tim s više od 600 farmaceutskih eksperata iz cijele Hrvatske, ekstenzivan sustav edukacija i savjetodavne centre kako bi s povjerenjem odgovorio na svaki ljekarnički upit.</p>
+        <div style="display:flex; gap: var(--atl-sp-2); flex-wrap: wrap; margin-top: var(--atl-sp-2);">
+          <a class="atl-btn atl-btn--primary" href="https://careers.atlanticgrupa.com/content/Farmaceut/?locale=hr_HR">Farmaceut</a>
+          <a class="atl-btn atl-btn--primary" href="https://careers.atlanticgrupa.com/content/Farmaceutski%20Tehnicar/?locale=hr_HR">Farmaceutski tehničar</a>
+        </div>
       </div>
     </div>
     <div class="atl-roles__item">
       <img src="https://rmkcdn.successfactors.com/fbe9912e/efa2d2e1-2113-47d9-8d9b-3.jpg" alt="Voditelj ljekarne">
       <div class="atl-roles__content">
-        <h3 class="atl-heading-3" style="color:var(--atl-pharma-green)">Voditelji ljekarni</h3>
+        <h3 class="atl-heading-4" style="color:var(--atl-pharma-green)">Voditelji ljekarni</h3>
         <p class="atl-body">Voditelji ljekarni u Farmaciji razvijaju liderske kompetencije edukacijama u Farmacia Centru ekspertize, s naglaskom na organizacijskim vještinama i odnosima s ljudima. Iskustvo pokazuje da promjena lokacija, izazovni zadaci i mentorska podrška seniorskih kolega pridonose njihovom profesionalnom rastu i razvoju voditeljskih sposobnosti.</p>
       </div>
     </div>
     <div class="atl-roles__item">
       <img src="https://rmkcdn.successfactors.com/fbe9912e/485aa22b-b150-4b82-bef9-5.jpg" alt="Studentica u laboratoriju">
       <div class="atl-roles__content">
-        <h3 class="atl-heading-3" style="color:var(--atl-pharma-green)">Studenti i stažisti</h3>
+        <h3 class="atl-heading-4" style="color:var(--atl-pharma-green)">Studenti i stažisti</h3>
         <p class="atl-body">Stipendisti Farmacije imaju osiguranu stručnu praksu za učenike koji se školuju za zvanje farmaceutskih tehničara nakon 3. razreda srednje škole te stručno osposobljavanje za studente farmacije nakon završene 5. godine studija. Radom uz iskusne magistre farmacije stječu ključne praktične vještine i primjenjuju teorijska znanja u radu s pacijentima. Nakon školovanja Farmacia stipendistima osigurava zaposlenje pružajući im stabilan početak karijere.</p>
       </div>
+    </div>
     </div>
   </div>
 </div>
 
 <!-- ============================================================ -->
+<!-- SECTION: Full-width image                                    -->
+<!-- ============================================================ -->
+<div class="atl-parallax" style="background-image: url('https://rmkcdn.successfactors.com/fbe9912e/63d1acf9-be4b-4ff3-b7a6-d.jpg');"></div>
+
+<!-- ============================================================ -->
 <!-- SECTION: Apply CTA                                           -->
 <!-- ============================================================ -->
 <div class="atl-apply-wrapper">
-  <div class="atl-apply-divider"></div>
   <a class="atl-apply" href="https://www.linkedin.com/showcase/farmaciahr/" target="_blank">
     <div class="atl-apply__container">
       <div class="atl-apply__text">
@@ -769,7 +638,7 @@
       </div>
     </div>
   </a>
-  <div class="atl-apply-divider"></div>
+  <div class="atl-container"><div style="height:1px; background:var(--atl-border);"></div></div>
   <a class="atl-apply" href="mailto:farmacia@atlanticgrupa.com">
     <div class="atl-apply__container">
       <div class="atl-apply__text">
@@ -781,37 +650,44 @@
       </div>
     </div>
   </a>
-  <div class="atl-apply-divider"></div>
-</div>
-
-<!-- ============================================================ -->
-<!-- SECTION: Pharma logos                                        -->
-<!-- ============================================================ -->
-<div class="atl-pharma-logos">
-  <div class="atl-pharma-logos__container">
-    <a href="https://www.farmacia.hr/"><img src="https://rmkcdn.successfactors.com/fbe9912e/f4f83b5b-28bd-4c73-b2b9-2.png" alt="Farmacia logotip 1"></a>
-    <a href="https://www.farmacia.hr/"><img src="https://rmkcdn.successfactors.com/fbe9912e/a4e39f8e-1968-4221-8145-4.png" alt="Farmacia logotip 2"></a>
-  </div>
 </div>
 
 <!-- ============================================================ -->
 <!-- SECTION: Footer                                              -->
 <!-- ============================================================ -->
-<div class="atl-footer">
-  <div class="atl-footer__container">
-    <div class="atl-footer__logo">
-      <img src="https://rmkcdn.successfactors.com/fbe9912e/9b39ff86-5998-4b65-8cce-0.png" alt="Atlantic Grupa">
+<footer class="atl-footer">
+  <div class="atl-container">
+    <div style="display:flex; justify-content:center; align-items:center; gap:var(--atl-sp-8); padding-bottom:var(--atl-sp-6); margin-bottom:var(--atl-sp-6);">
+      <a href="https://www.farmacia.hr/"><img src="https://rmkcdn.successfactors.com/fbe9912e/f4f83b5b-28bd-4c73-b2b9-2.png" alt="Farmacia" style="max-height:40px; width:auto;"></a>
+      <a href="https://www.farmacia.hr/"><img src="https://rmkcdn.successfactors.com/fbe9912e/a4e39f8e-1968-4221-8145-4.png" alt="Farmacia" style="max-height:40px; width:auto;"></a>
     </div>
-    <div class="atl-footer__social">
-      <a href="https://www.linkedin.com/showcase/farmaciahr/" target="_blank">
-        <img src="https://rmkcdn.successfactors.com/fbe9912e/ae077d4e-e9da-4812-b60a-3.png" alt="LinkedIn">
-      </a>
-      <a href="mailto:farmacia@atlanticgrupa.com">
-        <img src="https://rmkcdn.successfactors.com/fbe9912e/00165d7e-6db2-4322-b7e7-f.png" alt="Email">
-      </a>
+    <div class="atl-footer__inner">
+      <img src="https://rmkcdn.successfactors.com/fbe9912e/9b39ff86-5998-4b65-8cce-0.png" alt="Atlantic Grupa" class="atl-footer__logo">
+      <div class="atl-footer__social">
+        <a href="https://www.linkedin.com/showcase/farmaciahr/"><img src="https://rmkcdn.successfactors.com/fbe9912e/ae077d4e-e9da-4812-b60a-3.png" alt="LinkedIn"></a>
+        <a href="mailto:farmacia@atlanticgrupa.com"><img src="https://rmkcdn.successfactors.com/fbe9912e/00165d7e-6db2-4322-b7e7-f.png" alt="Email"></a>
+      </div>
     </div>
   </div>
-</div>
+</footer>
+
+<!-- ============================================================ -->
+<!-- SCRIPT: Parallax                                             -->
+<!-- ============================================================ -->
+<script>
+  (function() {
+    var el = document.querySelector('.atl-parallax');
+    function onScroll() {
+      var rect = el.getBoundingClientRect();
+      var center = rect.top + rect.height / 2;
+      var viewH = window.innerHeight;
+      var ratio = (center / viewH - 0.5) * 0.8;
+      el.style.backgroundPositionY = (50 + ratio * 100) + '%';
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  })();
+</script>
 
 <!-- ============================================================ -->
 <!-- SCRIPT: Carousel                                             -->
@@ -853,3 +729,6 @@
     render();
   })();
 </script>
+
+</body>
+</html>
