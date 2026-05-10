@@ -415,9 +415,9 @@ a {
   background: transparent;
   border: none;
   text-align: left;
-  padding: 24px 0;
+  padding: 32px 0;
   font-family: var(--atl-font-black);
-  font-size: clamp(1.4rem, 2vw, 2rem);
+  font-size: clamp(1.2rem, 1.4vw, 1.6rem);
   color: var(--atl-dark);
   cursor: pointer;
   display: flex;
@@ -452,6 +452,10 @@ a {
 
 .atl-accordion__panel.is-open {
   display: block;
+}
+
+.atl-accordion__panel .atl-btn {
+  margin-top: var(--atl-sp-4);
 }
 
 /* ---- atl-carousel ---- */

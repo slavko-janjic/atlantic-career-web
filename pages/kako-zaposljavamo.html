@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="hr-HR">
 <head>
   <meta charset="UTF-8">
@@ -18,6 +18,13 @@
       src: url('https://rmkcdn.successfactors.com/fbe9912e/a4cf9070-d1c8-41e2-8b80-9.otf');
     }
     body { margin: 0; }
+
+    /* ---- job link rows ---- */
+    .atl-apply-wrapper { background: var(--atl-bg); }
+    .atl-apply { display: block; text-decoration: none !important; color: inherit; padding: var(--atl-sp-8) 0; }
+    .atl-apply__inner { display: flex; align-items: center; justify-content: space-between; gap: var(--atl-sp-8); }
+    .atl-apply__text { font-family: var(--atl-font-black); font-size: clamp(1.4rem, 1.8vw, 2.4rem); color: var(--atl-red); }
+    .atl-apply__arrow { flex-shrink: 0; }
   </style>
   <link rel="stylesheet" href="../css/atl-global.css">
 </head>
@@ -29,9 +36,12 @@
 <!-- ============================================================ -->
 
 <!-- ============================================================ -->
-<!-- SECTION: Hero Banner                                         -->
+<!-- SECTION: Hero                                                -->
 <!-- ============================================================ -->
-<div class="atl-hero" style="background-image: url('https://rmkcdn.successfactors.com/fbe9912e/78a23aea-a06e-42e2-aae1-d.jpg')">
+<div class="atl-hero atl-hero--split" style="background-color: #fff; overflow: hidden; padding: 0;">
+  <div class="atl-hero__image" style="justify-content: flex-start;">
+    <img src="https://rmkcdn.successfactors.com/fbe9912e/78a23aea-a06e-42e2-aae1-d.jpg" alt="Kako postati Atlantikovac" style="object-position: left bottom;">
+  </div>
   <div class="atl-hero__content">
     <h1 class="atl-heading-1">Kako postati Atlantikovac?</h1>
     <p class="atl-lead">Zaviri u našu bogatu smočnicu poslova, saznaj kako zapošljavamo i otkrij naš recept za uspjeh!</p>
@@ -41,31 +51,30 @@
 <!-- ============================================================ -->
 <!-- SECTION: Intro                                               -->
 <!-- ============================================================ -->
-<div class="atl-section">
+<div class="atl-section atl-section--intro">
   <div class="atl-container">
-    <div class="atl-two-col">
-      <img src="https://rmkcdn.successfactors.com/fbe9912e/78a23aea-a06e-42e2-aae1-d.jpg" alt="Kako postati Atlantikovac">
-      <div class="atl-stack-4">
-        <h2 class="atl-heading-2">Česta pitanja</h2>
-        <p class="atl-body">Tko pita, ne skita! A kad je Atlantic u pitanju, imamo sve odgovore! Slobodno traži repete.</p>
-      </div>
+    <div class="atl-stack-4">
+      <h2 class="atl-heading-2">Česta pitanja</h2>
+      <p class="atl-lead">Tko pita, ne skita! A kad je Atlantic u pitanju, imamo sve odgovore! Slobodno traži repete.</p>
     </div>
   </div>
 </div>
 
 <!-- ============================================================ -->
-<!-- SECTION: FAQ accordion — Općenito                           -->
+<!-- SECTION: FAQ — Općenito                                      -->
 <!-- ============================================================ -->
-<div class="atl-section atl-section--alt">
+<div class="atl-section atl-section--faq-general atl-section--alt">
   <div class="atl-container">
-    <h2 class="atl-heading-2" style="margin-bottom:8px">Općenito</h2>
-    <p class="atl-body" style="margin-bottom:48px">Najčešća pitanja u jednoj zdjeli.</p>
-    <div class="atl-accordion">
+    <div class="atl-stack-4">
+      <h2 class="atl-heading-3">Općenito</h2>
+      <p class="atl-body">Najčešća pitanja u jednoj zdjeli.</p>
+    </div>
+    <div class="atl-accordion" style="margin-top: var(--atl-sp-6);">
 
       <div class="atl-accordion__item">
         <button class="atl-accordion__trigger">Gdje mogu saznati više o objavljenim natječajima u Atlantic Grupi?</button>
         <div class="atl-accordion__panel">
-          <p class="atl-body">Otvorena radna mjesta oglašavamo na karijernoj stranici gdje uz pojedini oglas za posao stoji i link za prijavu.
+          <p class="atl-caption">Otvorena radna mjesta oglašavamo na karijernoj stranici gdje uz pojedini oglas za posao stoji i link za prijavu.
             Nakon što pročitaš uvjete natječaja i odlučiš se prijaviti, ispuni kratki obrazac za prijavu i priloži životopis.
             Time je postupak prijave završen, a potvrdu o tome da je prijava uspješna dobit ćeš na mail.</p>
           <a class="atl-btn atl-btn--primary" href="https://careers.atlanticgrupa.com/search/?createNewAlert=false&q=&locationsearch=&locale=hr_HR" target="_blank">Meni poslova</a>
@@ -75,7 +84,7 @@
       <div class="atl-accordion__item">
         <button class="atl-accordion__trigger">Mogu li se istovremeno prijaviti na više od jednog natječaja?</button>
         <div class="atl-accordion__panel">
-          <p class="atl-body">Zašto ne! Nije rijetko da se osoba prepozna u više od jednog opisa posla i sasvim je u redu konkurirati za više
+          <p class="atl-caption">Zašto ne! Nije rijetko da se osoba prepozna u više od jednog opisa posla i sasvim je u redu konkurirati za više
             pozicija. Naši specijalisti za zapošljavanje će pregledom tvoje prijave i procijeniti za koju poziciju najviše
             odgovaraš. Pritom obrati pažnju da se prijavljuješ na natječaje koji te zaista zanimaju te da ispunjavaš osnovne
             uvjete tih natječaja.</p>
@@ -85,7 +94,7 @@
       <div class="atl-accordion__item">
         <button class="atl-accordion__trigger">Mogu li se prijaviti na oglas iako ne udovoljavam svim uvjetima natječaja?</button>
         <div class="atl-accordion__panel">
-          <p class="atl-body">Naravno! Ako si zainteresiran za neko radno mjesto, a ne udovoljavaš svim zahtjevima i dalje se možeš prijaviti,
+          <p class="atl-caption">Naravno! Ako si zainteresiran za neko radno mjesto, a ne udovoljavaš svim zahtjevima i dalje se možeš prijaviti,
             ali obrati pažnju da odgovaraš onim uvjetima koji su kritični za tu poziciju. Budući da naši specijalisti za
             zapošljavanje pri pregledu prijava daju prednost onim kandidatima koji u najvećoj mjeri zadovoljavaju uvjete
             natječaja, pripazi da u svom životopisu navedeš sve relevantne informacije za tu poziciju.<br><br>
@@ -97,7 +106,7 @@
       <div class="atl-accordion__item">
         <button class="atl-accordion__trigger">Mogu li se prijaviti preko mobitela?</button>
         <div class="atl-accordion__panel">
-          <p class="atl-body">Možeš se prijaviti preko mobitela, međutim ako se radi o prijavi na natječaj objavljen na našoj Karijernoj
+          <p class="atl-caption">Možeš se prijaviti preko mobitela, međutim ako se radi o prijavi na natječaj objavljen na našoj Karijernoj
             stranici, savjetujemo ti da se prijaviš putem računala ili laptopa zbog bolje preglednosti i funkcionalnosti
             sustava u tom slučaju.</p>
         </div>
@@ -106,7 +115,7 @@
       <div class="atl-accordion__item">
         <button class="atl-accordion__trigger">Prije sam radio u Atlantic Grupi, mogu li se ponovno prijaviti?</button>
         <div class="atl-accordion__panel">
-          <p class="atl-body">Drago nam je da smo ostavili dobar dojam i da želiš ponovno biti dio Atlantic obitelji. Naša su vrata uvijek
+          <p class="atl-caption">Drago nam je da smo ostavili dobar dojam i da želiš ponovno biti dio Atlantic obitelji. Naša su vrata uvijek
             otvorena za pozitivne ljude, slobodno se prijavi na oglas koji te zanima. Zadovoljstvo nam je vidjeti stara lica!</p>
         </div>
       </div>
@@ -114,7 +123,7 @@
       <div class="atl-accordion__item">
         <button class="atl-accordion__trigger">Mogu li naši zaposlenici preporučiti kandidata za posao u Atlanticu? Koji je proces selekcije?</button>
         <div class="atl-accordion__panel">
-          <p class="atl-body">Dapače, ohrabrujemo naše zaposlenike da preporuče kandidate za koje smatraju da bi se dobro uklopili u našu
+          <p class="atl-caption">Dapače, ohrabrujemo naše zaposlenike da preporuče kandidate za koje smatraju da bi se dobro uklopili u našu
             kompaniju i posjeduju potrebne kvalifikacije za određeno radno mjesto. Istraživanja su pokazala da se preporuke
             brže uklope u kulturu kompanije i samim time i ostaju dulje.<br><br>
             Proces selekcije za preporuke je isti kao i kod kandidata koji su se prijavili preko naših oglasa. Nakon što naši
@@ -128,18 +137,20 @@
 </div>
 
 <!-- ============================================================ -->
-<!-- SECTION: FAQ accordion — Prijava                            -->
+<!-- SECTION: FAQ — Prijava                                       -->
 <!-- ============================================================ -->
-<div class="atl-section">
+<div class="atl-section atl-section--faq-apply">
   <div class="atl-container">
-    <h2 class="atl-heading-2" style="margin-bottom:8px">(Pri)javi se!</h2>
-    <p class="atl-body" style="margin-bottom:48px">Imamo istančano nepce za istančana nepca, a ako si tu, definitivno imaš dobar ukus! Pošalji nam CV i stekni zavidan karijerni temeljac!</p>
-    <div class="atl-accordion">
+    <div class="atl-stack-4">
+      <h2 class="atl-heading-3">(Pri)javi se!</h2>
+      <p class="atl-body">Imamo istančano nepce za istančana nepca, a ako si tu, definitivno imaš dobar ukus! Pošalji nam CV i stekni zavidan karijerni temeljac!</p>
+    </div>
+    <div class="atl-accordion" style="margin-top: var(--atl-sp-6);">
 
       <div class="atl-accordion__item">
         <button class="atl-accordion__trigger">Zapošljavate li studente?</button>
         <div class="atl-accordion__panel">
-          <p class="atl-body">Postoje različiti oblici studentskih angažmana unutar Atlantic Grupe. Atlantic Grupa nudi mogućnost studentima za
+          <p class="atl-caption">Postoje različiti oblici studentskih angažmana unutar Atlantic Grupe. Atlantic Grupa nudi mogućnost studentima za
             obavljanje praksi propisanih od strane fakulteta (uz obavezno priloženu potvrdu fakulteta kojom se dokazuje
             obaveza obavljanja prakse). Osim prilike za buduće praktikante, Atlantic Grupa nudi studentima i mogućnost
             sezonskog rada preko student servisa.<br><br>
@@ -153,7 +164,7 @@
       <div class="atl-accordion__item">
         <button class="atl-accordion__trigger">Koje sve dokumente treba sadržavati prijava?</button>
         <div class="atl-accordion__panel">
-          <p class="atl-body">Svaka prijava trebala bi minimalno sadržavati životopis u kojem su navedene najnovije informacije vezane uz tvoje
+          <p class="atl-caption">Svaka prijava trebala bi minimalno sadržavati životopis u kojem su navedene najnovije informacije vezane uz tvoje
             obrazovanje, radno iskustvo i vještine koje posjeduješ, zajedno s ispunjenim predselekcijskim upitnikom (nalazi se
             unutar prijavnice za željenu poziciju), ukoliko ga ta prijava sadrži.</p>
         </div>
@@ -162,9 +173,9 @@
       <div class="atl-accordion__item">
         <button class="atl-accordion__trigger">Mogu li povući/izbrisati svoju prijavu na oglas?</button>
         <div class="atl-accordion__panel">
-          <p class="atl-body">Ako nakon što si poslao prijavu na neki naš natječaj ipak zaključiš da je želiš povući, to možeš učiniti tako da
+          <p class="atl-caption">Ako nakon što si poslao prijavu na neki naš natječaj ipak zaključiš da je želiš povući, to možeš učiniti tako da
             se ponovno prijaviš u svoj AG Success factor profil i pratiš sljedeće upute:</p>
-          <ul class="atl-body">
+          <ul class="atl-caption">
             <li>Kada uđeš u svoj profil idi na "UPRAVLJANJE POSLOM" te izaberi "POSLOVI NA KOJE STE SE PRIJAVILI"</li>
             <li>Kod pozicije za koju želiš povući/izbrisati prijavu stisni na padajući izbornik "RADNJE" i izaberi opciju "PONIŠTI PRIJAVU"</li>
             <li>Potvrdi izmjene i stisni "OK"</li>
@@ -175,7 +186,7 @@
       <div class="atl-accordion__item">
         <button class="atl-accordion__trigger">Kako najbolje sastaviti životopis? Imate li savjet?</button>
         <div class="atl-accordion__panel">
-          <p class="atl-body">Cijenimo različitost u osobnoj prezentaciji i tvoju kreativnost, međutim postoje određene smjernice koje se tiču
+          <p class="atl-caption">Cijenimo različitost u osobnoj prezentaciji i tvoju kreativnost, međutim postoje određene smjernice koje se tiču
             strukture i informacija koje bi tvoj životopis trebao sadržavati. Ako želiš saznati više o osnovama pisanja
             životopisa te ti treba pokoji savjet, riješi kviz koji smo kreirali za tebe i saznaj više!</p>
           <a class="atl-btn atl-btn--primary" href="https://bit.ly/2FHIdMH" target="_blank">CV kviz</a>
@@ -185,8 +196,8 @@
       <div class="atl-accordion__item">
         <button class="atl-accordion__trigger">Mogu li naknadno uređivati životopis koji sam predao na prijavi za posao?</button>
         <div class="atl-accordion__panel">
-          <p class="atl-body">Naravno! Sve što trebaš napraviti je ponovno ući u svoj AG Success factor profil i pratiti sljedeće korake:</p>
-          <ul class="atl-body">
+          <p class="atl-caption">Naravno! Sve što trebaš napraviti je ponovno ući u svoj AG Success factor profil i pratiti sljedeće korake:</p>
+          <ul class="atl-caption">
             <li>Kada uđeš u svoj profil idi na "UPRAVLJANJE POSLOM" te izaberi "POSLOVI NA KOJE STE SE PRIJAVILI"</li>
             <li>Kod pozicije za koju želiš naknadno urediti svoj životopis stisni na padajući izbornik "RADNJE" i izaberi opciju "POGLEDAJ/UREDI PRIJAVU I DODAJ PRILOGE"</li>
             <li>Odvest će te na prijavnicu gdje si prethodno umetnuo i svoj CV</li>
@@ -201,20 +212,22 @@
 </div>
 
 <!-- ============================================================ -->
-<!-- SECTION: FAQ accordion — Selekcija                          -->
+<!-- SECTION: FAQ — Selekcija                                     -->
 <!-- ============================================================ -->
-<div class="atl-section atl-section--alt">
+<div class="atl-section atl-section--faq-selection atl-section--alt">
   <div class="atl-container">
-    <h2 class="atl-heading-2" style="margin-bottom:8px">Selekcija — biramo najbolje!</h2>
-    <p class="atl-body" style="margin-bottom:48px">Odabir novog kolege sličan je odabiru pravog sastojka pri kuhanju. Moramo biti otvoreni u
-      isprobavanju nečeg novog, ali i dosljedni u praćenju provjerenih receptura. Detaljnim procesom selekcije bolje ćemo
-      se upoznati i omogućiti da ispečeš zanat na poslovima koji ti najviše odgovaraju!</p>
-    <div class="atl-accordion">
+    <div class="atl-stack-4">
+      <h2 class="atl-heading-3">Selekcija — biramo najbolje!</h2>
+      <p class="atl-body">Odabir novog kolege sličan je odabiru pravog sastojka pri kuhanju. Moramo biti otvoreni u
+        isprobavanju nečeg novog, ali i dosljedni u praćenju provjerenih receptura. Detaljnim procesom selekcije bolje ćemo
+        se upoznati i omogućiti da ispečeš zanat na poslovima koji ti najviše odgovaraju!</p>
+    </div>
+    <div class="atl-accordion" style="margin-top: var(--atl-sp-6);">
 
       <div class="atl-accordion__item">
         <button class="atl-accordion__trigger">Završio sam prijavu na oglas. Što nakon toga?</button>
         <div class="atl-accordion__panel">
-          <p class="atl-body">Sada kada si predao svoj životopis, naš tim specijalista će proći kroz tvoju prijavu i detaljno analizirati tvoje
+          <p class="atl-caption">Sada kada si predao svoj životopis, naš tim specijalista će proći kroz tvoju prijavu i detaljno analizirati tvoje
             kvalifikacije i radno iskustvo. Sljedeći korak u procesu i njegovo vremensko trajanje će ovisiti o poziciji za
             koju konkuriraš i broju osoba koje su se prijavile na isti oglas. Ako tvoje kvalifikacije i radno iskustvo
             odgovaraju uvjetima natječaja, očekuj poziv naših specijalista kroz 10-15 radnih dana koji će te informirati o
@@ -225,7 +238,7 @@
       <div class="atl-accordion__item">
         <button class="atl-accordion__trigger">Nisam dobio potvrdni e-mail prilikom prijave. Kako mogu biti siguran da je moja prijava uspješno zaprimljena?</button>
         <div class="atl-accordion__panel">
-          <p class="atl-body">Ako nakon prijave nisi zaprimio mail kojim potvrđujemo da je tvoja prijava bila uspješna, pričekaj koji trenutak
+          <p class="atl-caption">Ako nakon prijave nisi zaprimio mail kojim potvrđujemo da je tvoja prijava bila uspješna, pričekaj koji trenutak
             — možda je došlo do tehničkog problema — ili provjeri spam poštu. U krajnjem slučaju, ako si napravio sve navedene
             korake i još uvijek ne vidiš ništa u svom e-mail sandučiću, pokušaj se prijaviti ponovno.</p>
         </div>
@@ -234,10 +247,10 @@
       <div class="atl-accordion__item">
         <button class="atl-accordion__trigger">Od čega se sve sastoji proces selekcije unutar Atlantica?</button>
         <div class="atl-accordion__panel">
-          <p class="atl-body">Nakon što si dovršio svoju online prijavu i time ušao u našu bazu kandidata, sljedeći koraci selekcijskog procesa
+          <p class="atl-caption">Nakon što si dovršio svoju online prijavu i time ušao u našu bazu kandidata, sljedeći koraci selekcijskog procesa
             u Atlanticu se razlikuju od pozicije do pozicije.<br><br>
             Neki od načina kroz koje ćemo te bolje upoznati su:</p>
-          <ul class="atl-body">
+          <ul class="atl-caption">
             <li>Razgovor s našim specijalistima za zapošljavanje</li>
             <li>Razgovor s osobom koja zapošljava tu poziciju</li>
             <li>Online testiranja</li>
@@ -248,8 +261,8 @@
       <div class="atl-accordion__item">
         <button class="atl-accordion__trigger">Na koji način procjenjujete kandidate prilikom zapošljavanja?</button>
         <div class="atl-accordion__panel">
-          <p class="atl-body">Prilikom zapošljavanja naši specijalisti za zapošljavanje obraćaju pažnju na:</p>
-          <ul class="atl-body">
+          <p class="atl-caption">Prilikom zapošljavanja naši specijalisti za zapošljavanje obraćaju pažnju na:</p>
+          <ul class="atl-caption">
             <li>Tvoje dosadašnje radno iskustvo s naglaskom na konkretnim primjerima zadataka koje si obavljao, u čemu imaš
               najviše iskustva, a oko čega ti treba dodatna edukacija i sl.</li>
             <li>Tvoju motivaciju za posao za koji konkuriraš i aspiracije za daljnji razvoj karijere</li>
@@ -264,18 +277,20 @@
 </div>
 
 <!-- ============================================================ -->
-<!-- SECTION: FAQ accordion — Povratna informacija               -->
+<!-- SECTION: FAQ — Povratna informacija                          -->
 <!-- ============================================================ -->
-<div class="atl-section">
+<div class="atl-section atl-section--faq-feedback">
   <div class="atl-container">
-    <h2 class="atl-heading-2" style="margin-bottom:8px">Povratna informacija</h2>
-    <p class="atl-body" style="margin-bottom:48px">Kakvi na jelu, takvi na djelu! Ni jednu prijavu ne puštamo na cjedilu. Povratnu informaciju dobit ćeš prije deserta. Ne kaže se feed-back bezveze…</p>
-    <div class="atl-accordion">
+    <div class="atl-stack-4">
+      <h2 class="atl-heading-3">Povratna informacija</h2>
+      <p class="atl-body">Kakvi na jelu, takvi na djelu! Ni jednu prijavu ne puštamo na cjedilu. Povratnu informaciju dobit ćeš prije deserta. Ne kaže se feed-back bezveze…</p>
+    </div>
+    <div class="atl-accordion" style="margin-top: var(--atl-sp-6);">
 
       <div class="atl-accordion__item">
         <button class="atl-accordion__trigger">Kada mogu očekivati povratnu informaciju vezanu za selekcijski postupak?</button>
         <div class="atl-accordion__panel">
-          <p class="atl-body">Vrijeme dobivanja povratne informacije ovisi o poziciji za koju konkuriraš kao i brojnim drugim čimbenicima poput dostupnosti naših voditelja timova za razgovor, broju prijava, broju aktivnih oglasa za posao i slično. Ipak, možemo reći da ono u prosjeku iznosi oko 15 radnih dana.<br><br>
+          <p class="atl-caption">Vrijeme dobivanja povratne informacije ovisi o poziciji za koju konkuriraš kao i brojnim drugim čimbenicima poput dostupnosti naših voditelja timova za razgovor, broju prijava, broju aktivnih oglasa za posao i slično. Ipak, možemo reći da ono u prosjeku iznosi oko 15 radnih dana.<br><br>
             Ako niste dobili povratnu informaciju nakon tog perioda, slobodno nas kontaktirajte.</p>
         </div>
       </div>
@@ -283,14 +298,14 @@
       <div class="atl-accordion__item">
         <button class="atl-accordion__trigger">Dajete li povratne informacije i kandidatima koji nisu odabrani, odnosno nisu uključeni u daljnji korak selekcije?</button>
         <div class="atl-accordion__panel">
-          <p class="atl-body">Nastojimo dati povratnu informaciju svim kandidatima koji su bili u selekcijskom procesu pa tako i kandidatima koji nisu odabrani ili uključeni u daljnji korak selekcije. Očekuj povratnu informaciju vezanu za konačnu odluku o zaposlenju kroz 15 radnih dana. Ako nisi dobio povratnu informaciju nakon tog perioda, slobodno nas kontaktiraj.</p>
+          <p class="atl-caption">Nastojimo dati povratnu informaciju svim kandidatima koji su bili u selekcijskom procesu pa tako i kandidatima koji nisu odabrani ili uključeni u daljnji korak selekcije. Očekuj povratnu informaciju vezanu za konačnu odluku o zaposlenju kroz 15 radnih dana. Ako nisi dobio povratnu informaciju nakon tog perioda, slobodno nas kontaktiraj.</p>
         </div>
       </div>
 
       <div class="atl-accordion__item">
         <button class="atl-accordion__trigger">Mogu li se ponovno prijaviti ako sam već jednom primio odbijenicu?</button>
         <div class="atl-accordion__panel">
-          <p class="atl-body">Dapače, ohrabrujemo te u tome! Ako si u određenom selekcijskom procesu zaprimiš odbijenicu, to ne znači da te ne želimo razmatrati za buduća zapošljavanja. U većini slučajeva odbijenica je vezana za određeno radno mjesto, određenu potrebu u tom trenutku i druge kandidate koji su bili u procesu selekcije. Stoga se slobodno prijavi na naše druge oglase, ukoliko mi odgovaraju tvojim aspiracijama za nastavak karijere!</p>
+          <p class="atl-caption">Dapače, ohrabrujemo te u tome! Ako si u određenom selekcijskom procesu zaprimiš odbijenicu, to ne znači da te ne želimo razmatrati za buduća zapošljavanja. U većini slučajeva odbijenica je vezana za određeno radno mjesto, određenu potrebu u tom trenutku i druge kandidate koji su bili u procesu selekcije. Stoga se slobodno prijavi na naše druge oglase, ukoliko mi odgovaraju tvojim aspiracijama za nastavak karijere!</p>
         </div>
       </div>
 
@@ -299,19 +314,35 @@
 </div>
 
 <!-- ============================================================ -->
-<!-- SECTION: CTA                                                 -->
+<!-- SECTION: Jobs                                                -->
 <!-- ============================================================ -->
-<div class="atl-cta">
-  <div class="atl-cta__cell">
-    <h3 class="atl-heading-3">Pregledaj otvorene pozicije</h3>
-    <p class="atl-body">Pronađi svoju sljedeću priliku u Atlantic Grupi.</p>
-    <a class="atl-btn atl-btn--primary" href="https://careers.atlanticgrupa.com/go/Sve-poslovne-mogucnosti/9208201/">Pogledaj poslove</a>
+<div class="atl-section atl-section--jobs" style="padding-bottom: var(--atl-sp-8);">
+  <div class="atl-container">
+    <h2 class="atl-heading-2">Prilika je na stolu, odaberi svoju!</h2>
   </div>
-  <div class="atl-cta__cell">
-    <h3 class="atl-heading-3">Prijavi se u bazu kandidata</h3>
-    <p class="atl-body">Ostavi nam podatke i javi se kada se otvori prava pozicija.</p>
-    <a class="atl-btn atl-btn--outline" href="https://careers.atlanticgrupa.com/content/Talent-Community/">Ostavi podatke</a>
-  </div>
+</div>
+<div class="atl-apply-wrapper">
+  <a class="atl-apply" href="https://careers.atlanticgrupa.com/go/Sve-poslovne-mogucnosti/9208201/">
+    <div class="atl-container">
+      <div class="atl-apply__inner">
+        <span class="atl-apply__text">Meni poslova - Pogledaj trenutno otvorene pozicije!</span>
+        <div class="atl-apply__arrow">
+          <img src="https://rmkcdn.successfactors.com/fbe9912e/b0393cdf-434c-414e-bff2-d.png" alt="" style="width:48px; height:auto;">
+        </div>
+      </div>
+    </div>
+  </a>
+  <div class="atl-container"><div style="height: 1px; background: var(--atl-border);"></div></div>
+  <a class="atl-apply" href="https://careers.atlanticgrupa.com/content/Talent-Community/">
+    <div class="atl-container">
+      <div class="atl-apply__inner">
+        <span class="atl-apply__text">Postani dio našeg tima - upiši se u bazu potencijalnih kandidata!</span>
+        <div class="atl-apply__arrow">
+          <img src="https://rmkcdn.successfactors.com/fbe9912e/b0393cdf-434c-414e-bff2-d.png" alt="" style="width:48px; height:auto;">
+        </div>
+      </div>
+    </div>
+  </a>
 </div>
 
 <!-- ============================================================ -->
@@ -334,6 +365,7 @@
     });
   });
 </script>
+
 <!-- ============================================================ -->
 <!-- SECTION: Footer                                              -->
 <!-- ============================================================ -->
