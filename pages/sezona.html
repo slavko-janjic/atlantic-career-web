@@ -20,6 +20,34 @@
     body { margin: 0; }
   </style>
   <link rel="stylesheet" href="../css/atl-global.css">
+  <style>
+    .atl-brand-logos {
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      gap: var(--atl-sp-4) var(--atl-sp-3);
+      align-items: center;
+      justify-items: center;
+      padding: 0 var(--atl-gap);
+    }
+
+    .atl-brand-logos img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    @media (max-width: 1279px) and (min-width: 768px) {
+      .atl-brand-logos {
+        grid-template-columns: repeat(6, 1fr);
+      }
+    }
+
+    @media (max-width: 767px) {
+      .atl-brand-logos {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -40,7 +68,7 @@
 <!-- ============================================================ -->
 <!-- SECTION: Role cards — Unapredjivac & Skladistar             -->
 <!-- ============================================================ -->
-<div class="atl-section">
+<div class="atl-section atl-section--roles">
   <div class="atl-container">
     <div class="atl-row">
       <div class="atl-col-6">
@@ -68,7 +96,7 @@
 <!-- ============================================================ -->
 <!-- SECTION: Features — key stats and tagline                    -->
 <!-- ============================================================ -->
-<div class="atl-section">
+<div class="atl-section atl-section--stats">
   <div class="atl-container">
     <div class="atl-two-col">
       <div class="atl-stack-4">
@@ -87,59 +115,42 @@
 <!-- ============================================================ -->
 <!-- SECTION: Brand logos                                         -->
 <!-- ============================================================ -->
-<div class="atl-section atl-section--alt">
-  <div class="atl-container">
-    <div class="atl-row" style="flex-wrap: wrap; align-items: center; gap: 2.4rem;">
-      <img src="https://rmkcdn.successfactors.com/fbe9912e/22d8a8d1-76d8-4606-8180-0.png" alt="" style="height: 40px; width: auto;">
-      <img src="https://rmkcdn.successfactors.com/fbe9912e/31d50f72-b0bd-4044-93fa-7.png" alt="" style="height: 40px; width: auto;">
-      <img src="https://rmkcdn.successfactors.com/fbe9912e/9c8de50d-fffe-475f-bdb0-f.png" alt="" style="height: 40px; width: auto;">
-      <img src="https://rmkcdn.successfactors.com/fbe9912e/41a54a8f-c543-4147-a58e-3.png" alt="" style="height: 40px; width: auto;">
-      <img src="https://rmkcdn.successfactors.com/fbe9912e/ab8ab7d4-a967-4e17-b9a8-e.png" alt="" style="height: 40px; width: auto;">
-      <img src="https://rmkcdn.successfactors.com/fbe9912e/7902b179-cbce-49f4-b77e-1.png" alt="" style="height: 40px; width: auto;">
-      <img src="https://rmkcdn.successfactors.com/fbe9912e/3b590c06-9461-4680-ba2b-7.png" alt="" style="height: 40px; width: auto;">
-      <img src="https://rmkcdn.successfactors.com/fbe9912e/0a27cf36-5a95-4277-824e-6.png" alt="" style="height: 40px; width: auto;">
-      <img src="https://rmkcdn.successfactors.com/fbe9912e/137fd594-50ad-4b3e-bfad-9.png" alt="" style="height: 40px; width: auto;">
-      <img src="https://rmkcdn.successfactors.com/fbe9912e/1a2bbeda-23ad-4324-b2a0-1.png" alt="" style="height: 40px; width: auto;">
-      <img src="https://rmkcdn.successfactors.com/fbe9912e/480f976c-0846-47bc-82eb-3.png" alt="" style="height: 40px; width: auto;">
-      <img src="https://rmkcdn.successfactors.com/fbe9912e/c1ca54c4-803e-4fa8-b329-6.png" alt="" style="height: 40px; width: auto;">
-      <img src="https://rmkcdn.successfactors.com/fbe9912e/cd2af927-1742-485c-b8e0-7.png" alt="" style="height: 40px; width: auto;">
-      <img src="https://rmkcdn.successfactors.com/fbe9912e/04e0902a-fcca-40f1-bf43-9.png" alt="" style="height: 40px; width: auto;">
-      <img src="https://rmkcdn.successfactors.com/fbe9912e/6c4cbfef-46a9-4595-b078-f.png" alt="" style="height: 40px; width: auto;">
-      <img src="https://rmkcdn.successfactors.com/fbe9912e/1655e788-d2c6-4fb1-9e62-b.png" alt="" style="height: 40px; width: auto;">
-      <img src="https://rmkcdn.successfactors.com/fbe9912e/8c94e02f-8fd4-4309-b9de-7.png" alt="" style="height: 40px; width: auto;">
-      <img src="https://rmkcdn.successfactors.com/fbe9912e/0fbadd44-bb44-4932-ba5e-e.png" alt="" style="height: 40px; width: auto;">
-      <img src="https://rmkcdn.successfactors.com/fbe9912e/f3b23bce-f9b6-42a4-8a80-8.png" alt="" style="height: 40px; width: auto;">
-      <img src="https://rmkcdn.successfactors.com/fbe9912e/66dd1f31-69c3-466f-9af3-9.png" alt="" style="height: 40px; width: auto;">
-      <img src="https://rmkcdn.successfactors.com/fbe9912e/bb3f02c8-d65c-4fd5-a3e2-8.png" alt="" style="height: 40px; width: auto;">
-      <img src="https://rmkcdn.successfactors.com/fbe9912e/cf384098-f0e7-4152-a2e2-1.png" alt="" style="height: 40px; width: auto;">
+<div class="atl-section atl-section--brands">
+  <div class="atl-brand-logos">
+      <img src="https://rmkcdn.successfactors.com/fbe9912e/22d8a8d1-76d8-4606-8180-0.png" alt="">
+      <img src="https://rmkcdn.successfactors.com/fbe9912e/31d50f72-b0bd-4044-93fa-7.png" alt="">
+      <img src="https://rmkcdn.successfactors.com/fbe9912e/9c8de50d-fffe-475f-bdb0-f.png" alt="">
+      <img src="https://rmkcdn.successfactors.com/fbe9912e/41a54a8f-c543-4147-a58e-3.png" alt="">
+      <img src="https://rmkcdn.successfactors.com/fbe9912e/ab8ab7d4-a967-4e17-b9a8-e.png" alt="">
+      <img src="https://rmkcdn.successfactors.com/fbe9912e/7902b179-cbce-49f4-b77e-1.png" alt="">
+      <img src="https://rmkcdn.successfactors.com/fbe9912e/3b590c06-9461-4680-ba2b-7.png" alt="">
+      <img src="https://rmkcdn.successfactors.com/fbe9912e/0a27cf36-5a95-4277-824e-6.png" alt="">
+      <img src="https://rmkcdn.successfactors.com/fbe9912e/137fd594-50ad-4b3e-bfad-9.png" alt="">
+      <img src="https://rmkcdn.successfactors.com/fbe9912e/1a2bbeda-23ad-4324-b2a0-1.png" alt="">
+      <img src="https://rmkcdn.successfactors.com/fbe9912e/480f976c-0846-47bc-82eb-3.png" alt="">
+      <img src="https://rmkcdn.successfactors.com/fbe9912e/c1ca54c4-803e-4fa8-b329-6.png" alt="">
+      <img src="https://rmkcdn.successfactors.com/fbe9912e/cd2af927-1742-485c-b8e0-7.png" alt="">
+      <img src="https://rmkcdn.successfactors.com/fbe9912e/04e0902a-fcca-40f1-bf43-9.png" alt="">
+      <img src="https://rmkcdn.successfactors.com/fbe9912e/6c4cbfef-46a9-4595-b078-f.png" alt="">
+      <img src="https://rmkcdn.successfactors.com/fbe9912e/1655e788-d2c6-4fb1-9e62-b.png" alt="">
+      <img src="https://rmkcdn.successfactors.com/fbe9912e/8c94e02f-8fd4-4309-b9de-7.png" alt="">
+      <img src="https://rmkcdn.successfactors.com/fbe9912e/0fbadd44-bb44-4932-ba5e-e.png" alt="">
+      <img src="https://rmkcdn.successfactors.com/fbe9912e/f3b23bce-f9b6-42a4-8a80-8.png" alt="">
+      <img src="https://rmkcdn.successfactors.com/fbe9912e/66dd1f31-69c3-466f-9af3-9.png" alt="">
+      <img src="https://rmkcdn.successfactors.com/fbe9912e/bb3f02c8-d65c-4fd5-a3e2-8.png" alt="">
+      <img src="https://rmkcdn.successfactors.com/fbe9912e/cf384098-f0e7-4152-a2e2-1.png" alt="">
     </div>
-  </div>
 </div>
 
 <!-- ============================================================ -->
 <!-- SECTION: Employer branding banner                            -->
 <!-- ============================================================ -->
-<div class="atl-hero atl-bg-alt">
+<div class="atl-hero" style="background-color: var(--atl-red);">
   <div class="atl-hero__content">
-    <h2 class="atl-heading-2">Atlantic Grupa je među TOP 10 najboljih poslodavaca u Hrvatskoj petu godinu uzastopce.</h2>
+    <h2 class="atl-heading-2 atl-color-white">Atlantic Grupa je među TOP 10 najboljih poslodavaca u Hrvatskoj petu godinu uzastopce.</h2>
   </div>
 </div>
 
-<!-- ============================================================ -->
-<!-- SECTION: CTA                                                 -->
-<!-- ============================================================ -->
-<div class="atl-cta">
-  <div class="atl-cta__cell">
-    <h3 class="atl-heading-3">Pregledaj otvorene pozicije</h3>
-    <p class="atl-body">Pronađi svoju sljedeću priliku u Atlantic Grupi.</p>
-    <a class="atl-btn atl-btn--primary" href="https://careers.atlanticgrupa.com/go/Sve-poslovne-mogucnosti/9208201/">Pogledaj poslove</a>
-  </div>
-  <div class="atl-cta__cell">
-    <h3 class="atl-heading-3">Prijavi se u bazu kandidata</h3>
-    <p class="atl-body">Ostavi nam podatke i javi se kada se otvori prava pozicija.</p>
-    <a class="atl-btn atl-btn--outline" href="https://careers.atlanticgrupa.com/content/Talent-Community/">Ostavi podatke</a>
-  </div>
-</div></div></div>
 <!-- ============================================================ -->
 <!-- SECTION: Footer                                              -->
 <!-- ============================================================ -->
