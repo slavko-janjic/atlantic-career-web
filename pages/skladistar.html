@@ -19,9 +19,10 @@
     }
     body { margin: 0; }
 
-    .atl-perk-list { list-style: none; padding: 0; }
+    .atl-perk-list { list-style: none; padding: 0; columns: 2; column-gap: 4rem; }
     .atl-perk-list li { padding: 1.2rem 0; border-bottom: 1px solid currentColor; break-inside: avoid; }
     .atl-perk-list li:last-child { border-bottom: none; }
+    @media (max-width: 767px) { .atl-perk-list { columns: 1; } }
   </style>
   <link rel="stylesheet" href="../css/atl-global.css">
 </head>
@@ -66,7 +67,7 @@
   <div class="atl-container">
     <div class="atl-stack-8">
       <h2 class="atl-heading-2">Zašto je ovo slatka prilika za tebe</h2>
-      <ul class="atl-body atl-perk-list" style="columns: 2; column-gap: 4rem;">
+      <ul class="atl-body atl-perk-list">
         <li>Dočekat će te <strong>paket dobrodošlice</strong></li>
         <li>Dobiješ svog <strong>super-mentora</strong>, čovjeka koji zna što radi i koji ti pomaže od prvog dana</li>
         <li>Imaš <strong>točno definiran smjenski rad</strong></li>
