@@ -560,6 +560,10 @@ a {
     align-items: flex-start;
     gap: var(--atl-sp-4);
   }
+  .atl-apply-banner__arrow {
+    width: 56px;
+    margin-left: 0;
+  }
 }
 
 /* ---- atl-cta ---- */
