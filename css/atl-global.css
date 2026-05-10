@@ -525,6 +525,7 @@ a {
   font-size: clamp(1.4rem, 2vw, 2.2rem);
   line-height: 1.3;
   transition: opacity 0.2s ease;
+  overflow: hidden;
 }
 
 .atl-apply-banner:hover {
@@ -551,6 +552,16 @@ a {
   height: auto;
   margin-left: var(--atl-sp-4);
   display: block;
+}
+
+@media (max-width: 767px) {
+  .atl-apply-banner__inner {
+    padding-top: var(--atl-sp-6);
+    padding-bottom: var(--atl-sp-6);
+  }
+  .atl-apply-banner__arrow {
+    width: 56px;
+  }
 }
 
 /* ---- atl-cta ---- */
