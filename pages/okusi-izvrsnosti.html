@@ -18,6 +18,13 @@
       src: url('https://rmkcdn.successfactors.com/fbe9912e/a4cf9070-d1c8-41e2-8b80-9.otf');
     }
     body { margin: 0; }
+
+    /* ---- job link rows ---- */
+    .atl-apply-wrapper { background: var(--atl-bg); }
+    .atl-apply { display: block; text-decoration: none !important; color: inherit; padding: var(--atl-sp-8) 0; }
+    .atl-apply__inner { display: flex; align-items: center; justify-content: space-between; gap: var(--atl-sp-8); }
+    .atl-apply__text { font-family: var(--atl-font-black); font-size: clamp(1.4rem, 1.8vw, 2.4rem); color: var(--atl-red); }
+    .atl-apply__arrow { flex-shrink: 0; }
   </style>
   <link rel="stylesheet" href="../css/atl-global.css">
 </head>
@@ -27,15 +34,6 @@
 <!-- PAGE: Okusi izvrsnosti                                       -->
 <!-- SAP: copy everything inside <body> into Custom Code         -->
 <!-- ============================================================ -->
-
-<!-- ============================================================ -->
-<!-- SECTION: Hero                                                -->
-<!-- ============================================================ -->
-<div class="atl-hero" style="background-image: url('https://rmkcdn.successfactors.com/fbe9912e/54022ef0-446c-46fc-94be-2.jpg')">
-  <div class="atl-hero__content">
-    <h1 class="atl-heading-1">Okusi izvrsnosti</h1>
-  </div>
-</div>
 
 <!-- ============================================================ -->
 <!-- SECTION: Intro                                               -->
@@ -204,19 +202,35 @@
 </div>
 
 <!-- ============================================================ -->
-<!-- SECTION: CTA                                                 -->
+<!-- SECTION: Jobs                                                -->
 <!-- ============================================================ -->
-<div class="atl-cta">
-  <div class="atl-cta__cell">
-    <h3 class="atl-heading-3">Pregledaj otvorene pozicije</h3>
-    <p class="atl-body">Pronađi svoju sljedeću priliku u Atlantic Grupi.</p>
-    <a class="atl-btn atl-btn--primary" href="https://careers.atlanticgrupa.com/go/Sve-poslovne-mogucnosti/9208201/">Pogledaj poslove</a>
+<div class="atl-section atl-section--jobs" style="padding-bottom: var(--atl-sp-8);">
+  <div class="atl-container">
+    <h2 class="atl-heading-2">Prilika je na stolu, odaberi svoju!</h2>
   </div>
-  <div class="atl-cta__cell">
-    <h3 class="atl-heading-3">Prijavi se u bazu kandidata</h3>
-    <p class="atl-body">Ostavi nam podatke i javi se kada se otvori prava pozicija.</p>
-    <a class="atl-btn atl-btn--outline" href="https://careers.atlanticgrupa.com/content/Talent-Community/">Ostavi podatke</a>
-  </div>
+</div>
+<div class="atl-apply-wrapper">
+  <a class="atl-apply" href="https://careers.atlanticgrupa.com/go/Sve-poslovne-mogucnosti/9208201/">
+    <div class="atl-container">
+      <div class="atl-apply__inner">
+        <span class="atl-apply__text">Meni poslova - Pogledaj trenutno otvorene pozicije!</span>
+        <div class="atl-apply__arrow">
+          <img src="https://rmkcdn.successfactors.com/fbe9912e/b0393cdf-434c-414e-bff2-d.png" alt="" style="width:48px; height:auto;">
+        </div>
+      </div>
+    </div>
+  </a>
+  <div class="atl-container"><div style="height: 1px; background: var(--atl-border);"></div></div>
+  <a class="atl-apply" href="https://careers.atlanticgrupa.com/content/Talent-Community/">
+    <div class="atl-container">
+      <div class="atl-apply__inner">
+        <span class="atl-apply__text">Postani dio našeg tima - upiši se u bazu potencijalnih kandidata!</span>
+        <div class="atl-apply__arrow">
+          <img src="https://rmkcdn.successfactors.com/fbe9912e/b0393cdf-434c-414e-bff2-d.png" alt="" style="width:48px; height:auto;">
+        </div>
+      </div>
+    </div>
+  </a>
 </div>
 
 <!-- ============================================================ -->
