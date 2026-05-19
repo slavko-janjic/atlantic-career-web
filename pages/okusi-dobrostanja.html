@@ -25,6 +25,55 @@
     .atl-apply__inner { display: flex; align-items: center; justify-content: space-between; gap: var(--atl-sp-8); }
     .atl-apply__text { font-family: var(--atl-font-black); font-size: clamp(1.4rem, 1.8vw, 2.4rem); color: var(--atl-red); }
     .atl-apply__arrow { flex-shrink: 0; }
+
+    /* ---- parallax section ---- */
+    .atl-parallax {
+      position: relative;
+      overflow: hidden;
+      min-height: 400px;
+      display: flex;
+      align-items: center;
+      background-size: cover;
+      background-position: center;
+    }
+    .atl-parallax__content {
+      position: relative;
+      z-index: 2;
+      max-width: 900px;
+      padding: var(--atl-sp-8);
+      text-align: left;
+    }
+    .atl-parallax__heading {
+      color: white;
+      font-size: clamp(2.6rem, 4.8vw, 6rem);
+    }
+
+    /* ---- desktop parallax spacing ---- */
+    @media (min-width: 769px) {
+      .atl-parallax__content {
+        padding-left: var(--atl-sp-16);
+      }
+    }
+
+    /* ---- mobile spacing ---- */
+    @media (max-width: 768px) {
+      .atl-section--intro {
+        padding-bottom: var(--atl-sp-2) !important;
+      }
+      .atl-two-col {
+        gap: var(--atl-sp-4) !important;
+      }
+      .atl-two-col img {
+        padding: var(--atl-sp-3) !important;
+      }
+      .atl-section--content {
+        padding-top: var(--atl-sp-2) !important;
+      }
+      .atl-parallax {
+        min-height: 300px;
+        background-attachment: scroll;
+      }
+    }
   </style>
   <link rel="stylesheet" href="../css/atl-global.css">
 </head>
@@ -103,6 +152,30 @@
             <p class="atl-body">Redovito se okupljamo na velikom korporativnom sportskom događaju — <strong>Sportskom vikendu</strong>. Kako biste shvatili koliko smo strastveni u sportu reći ćemo vam da se prijave za 700 slobodnih mjesta u Sportskom vikendu popune u roku od jedne minute od otvaranja.</p>
           </div>
         </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- SECTION: Parallax                                             -->
+<!-- ============================================================ -->
+<div class="atl-parallax" style="background-image: url('https://rmkcdn.successfactors.com/fbe9912e/91ce96f5-197f-4355-860a-3.jpg');">
+  <div class="atl-parallax__content">
+    <h2 class="atl-parallax__heading">Atlantic je office first, remote friendly organizacija</h2>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- SECTION: Content (continued)                                  -->
+<!-- ============================================================ -->
+<div class="atl-section atl-section--content">
+  <div class="atl-container">
+    <div class="atl-row" style="row-gap: var(--atl-sp-8);">
+
+      <div class="atl-col-12">
+        <p class="atl-lead">Ravnoteža poslovnog i privatnog života nam je važna, stoga smo odlučili uvesti fleksibilne oblike rada kao standard, a ne iznimku.</p>
       </div>
 
       <div class="atl-col-12">
@@ -204,6 +277,28 @@
     </div>
   </a>
 </div>
+
+<!-- ============================================================ -->
+<!-- SCRIPT: Parallax                                             -->
+<!-- ============================================================ -->
+<script>
+  (function() {
+    var el = document.querySelector('.atl-parallax');
+    function onScroll() {
+      var rect = el.getBoundingClientRect();
+      var center = rect.top + rect.height / 2;
+      var viewH = window.innerHeight;
+      var ratio = (center / viewH - 0.5) * 0.8;
+      var isMobile = window.innerWidth <= 768;
+      if (isMobile) {
+        el.style.backgroundPositionX = 'right';
+      }
+      el.style.backgroundPositionY = (50 + ratio * 100) + '%';
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  })();
+</script>
 
 <!-- ============================================================ -->
 <!-- SECTION: Footer                                              -->
