@@ -25,6 +25,16 @@
     .atl-apply__inner { display: flex; align-items: center; justify-content: space-between; gap: var(--atl-sp-8); }
     .atl-apply__text { font-family: var(--atl-font-black); font-size: clamp(1.4rem, 1.8vw, 2.4rem); color: var(--atl-red); }
     .atl-apply__arrow { flex-shrink: 0; }
+
+    /* ---- mobile spacing ---- */
+    @media (max-width: 768px) {
+      .atl-two-col {
+        gap: var(--atl-sp-4) !important;
+      }
+      .atl-two-col img {
+        padding: var(--atl-sp-3) !important;
+      }
+    }
   </style>
   <link rel="stylesheet" href="../css/atl-global.css">
 </head>
@@ -38,7 +48,7 @@
 <!-- ============================================================ -->
 <!-- SECTION: Hero                                                -->
 <!-- ============================================================ -->
-<div class="atl-hero" style="padding: 0; overflow: hidden; height: 80vh; min-height: 400px; max-height: 80vh;">
+<div class="atl-hero" style="padding: 0; overflow: hidden; height: clamp(320px, 55vh, 80vh);">
   <img src="https://rmkcdn.successfactors.com/fbe9912e/038afa4a-e9b3-42f9-b6a9-d.jpg" alt="Benefiti rada u Atlantic Grupi" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block;">
 </div>
 

@@ -25,6 +25,22 @@
     .atl-apply__inner { display: flex; align-items: center; justify-content: space-between; gap: var(--atl-sp-8); }
     .atl-apply__text { font-family: var(--atl-font-black); font-size: clamp(1.4rem, 1.8vw, 2.4rem); color: var(--atl-red); }
     .atl-apply__arrow { flex-shrink: 0; }
+
+    /* ---- mobile spacing ---- */
+    @media (max-width: 768px) {
+      .atl-section--intro {
+        padding-bottom: var(--atl-sp-2) !important;
+      }
+      .atl-two-col {
+        gap: var(--atl-sp-4) !important;
+      }
+      .atl-two-col img {
+        padding: var(--atl-sp-3) !important;
+      }
+      .atl-section--content {
+        padding-top: var(--atl-sp-2) !important;
+      }
+    }
   </style>
   <link rel="stylesheet" href="../css/atl-global.css">
 </head>
