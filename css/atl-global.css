@@ -82,7 +82,7 @@ a {
 
 .atl-heading-3 {
   font-family: var(--atl-font-black);
-  font-size: clamp(1.6rem, 2.2vw, 2.8rem);
+  font-size: clamp(1.6rem, 2.2vw, 2.4rem);
   color: var(--atl-red);
   line-height: 1.15;
   margin: 0;
@@ -116,15 +116,15 @@ a {
 
 .atl-body {
   font-family: var(--atl-font-book);
-  font-size: clamp(1rem, 1.2vw, 1.6rem);
+  font-size: clamp(1rem, 1.2vw, 1.2rem);
   color: var(--atl-dark);
-  line-height: 1.7;
+  line-height: 1.4;
   margin: 0;
 }
 
 .atl-caption {
   font-family: var(--atl-font-book);
-  font-size: clamp(0.9rem, 1.2vw, 1.2rem);
+  font-size: clamp(0.9rem, 1.2vw, 1rem);
   color: #666;
   line-height: 1.5;
   margin: 0;

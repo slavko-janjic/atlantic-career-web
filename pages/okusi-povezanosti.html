@@ -19,6 +19,17 @@
     }
     body { margin: 0; }
 
+    /* ---- parallax effect ---- */
+    .atl-parallax {
+      position: relative;
+      overflow: hidden;
+      min-height: 400px;
+      display: flex;
+      align-items: center;
+      background-size: cover;
+      background-position: center;
+    }
+
     /* ---- job link rows ---- */
     .atl-apply-wrapper { background: var(--atl-bg); }
     .atl-apply { display: block; text-decoration: none !important; color: inherit; padding: var(--atl-sp-8) 0; }
@@ -61,6 +72,13 @@
       <p class="atl-lead">Preko 5.000 Atlantikovaca svakodnevno udružuje snage u serviranju svježih ideja i strategija s ciljem razvoja više od 20 jedinstvenih brendova koji se vole generacijama! Kombiniramo različite ukuse kako bi stvorili nove okuse i unaprijedili one postojeće. Jer u Atlanticu svi pričamo istim jezikom. Mi smo Taste Buddies! (okusni pupoljci) i kod nas svaki se ukusni prika računa!</p>
     </div>
   </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- SECTION: Parallax                                            -->
+<!-- ============================================================ -->
+<div class="atl-section">
+  <div class="atl-parallax" style="background-image: url('https://rmkcdn.successfactors.com/fbe9912e/5e867755-f9cc-45de-9709-0.jpg');"></div>
 </div>
 
 <!-- ============================================================ -->
@@ -178,5 +196,17 @@
     </div>
   </div>
 </footer>
+
+<script>
+  // Parallax effect
+  const parallax = document.querySelector('.atl-parallax');
+  if (parallax) {
+    window.addEventListener('scroll', function() {
+      const scrollPosition = window.pageYOffset;
+      const parallaxOffset = scrollPosition * 0.5;
+      parallax.style.backgroundPositionY = parallaxOffset + 'px';
+    });
+  }
+</script>
 </body>
 </html>
