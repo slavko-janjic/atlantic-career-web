@@ -207,16 +207,26 @@
   </div>
 </footer>
 
+<!-- ============================================================ -->
+<!-- PARALLAX SCRIPT                                               -->
+<!-- ============================================================ -->
 <script>
-  // Parallax effect
-  const parallax = document.querySelector('.atl-parallax');
-  if (parallax) {
-    window.addEventListener('scroll', function() {
-      const scrollPosition = window.pageYOffset;
-      const parallaxOffset = scrollPosition * 0.5;
-      parallax.style.backgroundPositionY = parallaxOffset + 'px';
-    });
+(function() {
+  var el = document.querySelector('.atl-parallax');
+  function onScroll() {
+    var rect = el.getBoundingClientRect();
+    var center = rect.top + rect.height / 2;
+    var viewH = window.innerHeight;
+    var ratio = (center / viewH - 0.5) * 0.8;
+    var isMobile = window.innerWidth <= 768;
+    if (isMobile) {
+      el.style.backgroundPositionX = 'center';
+    }
+    el.style.backgroundPositionY = (50 + ratio * 100) + '%';
   }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+})();
 </script>
 </body>
 </html>
